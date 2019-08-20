@@ -1,0 +1,22 @@
+#btn2{
+    color:white;
+    background-color: rgb(0, 26, 54); 
+    border: 0px none;
+    margin: 20px;
+    padding: 8px;
+    font-weight: bolder;
+    outline: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+  @media screen and (max-width: 425px){
+    #btn2 {
+     border-radius: 20px;
+     padding: 5px;
+     top: 100%;
+     left: 0%;
+     border: 2px solid rgba(255, 255, 255, 0.2);
+ 
+    }
+  }
+ 

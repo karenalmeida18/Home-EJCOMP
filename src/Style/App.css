@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    background-image: url("../Imagem/background.jpg");
+    width: auto;
+    height: 100vh;
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;  
+}
+#containerLogo{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+#containerButtons{
+    text-align: center;
+    align-items: center;
+    flex: 1;
+}
+#containerButtonOrçamento{
+    position: absolute;
+    top: 65%;
+}
+#containerIcones{
+    display: flex;
+    position: absolute;
+    top: 77%;
+}
+@media screen and (max-width: 760px){
+     #containerLogo {
+         top: -5%;
+         left: 20%;
+    }
+    #containerButtonOrçamento {
+       top: 78%;
+    }
+      #containerIcones {
+       top: 90%; 
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 979px){
+    #containerLogo{
+        top: -5%;
+    }
+  #containerButtonOrçamento { 
+      width: 30%;
+      top: 87%;
+      justify-content: center;
+   }
+    #containerIcones {
+       top: 90%;
+       left: 80%;
+    }
+}

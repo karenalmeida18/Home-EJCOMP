@@ -1,0 +1,27 @@
+#fb{
+    margin: 1px;
+    outline: 0;
+    width: 80%; 
+    border-radius: 20px;
+}
+#ig{
+    margin: 1px;
+    outline: 0;
+    width: 80%;   
+}
+#ld{
+    margin: 1px;
+    outline: 0;
+    width: 80%;   
+}
+#fb:hover{
+    border-radius: 20px;
+    background-color: rgb(1, 193, 241);
+}
+#ig:hover {
+    border-radius: 10px;
+    background-color:  rgb(1, 193, 241);
+}
+#ld:hover{
+    background-color:  rgb(1, 193, 241);
+}
