@@ -6,7 +6,7 @@
     outline: 0px;
     font-weight: bold;    
     background-color: transparent;
-    border: 1px solid white;
+    border: 1.2px solid white;
     border-radius: 30px;
 }
 #btn:hover {
@@ -15,7 +15,7 @@
   outline: 0px;
   border: 0px;
   transition-property: background-color;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
 }
 #texto{
@@ -104,10 +104,7 @@
 }
 @media screen and (max-width: 425px){
     #btn {
-      width: 90%;
-      align-items: flex-start; 
-      text-align: center;  
-    
+      display: none;
     }
   }
   

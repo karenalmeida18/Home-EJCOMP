@@ -1,0 +1,80 @@
+#dropdown{
+   outline: 0;
+   background-color: transparent; 
+   border: 0;
+}
+#menuItens{
+    background-color: rgba(0, 0, 0, 0.877);
+    position: absolute;
+    color: white;
+    height: 100vh;
+    width: 100vh;
+    left: 0%;
+    top: 0%;
+}
+ul li {
+    display: block;
+    padding: 8px;
+    text-align: start;
+    font: normal 13pt arial;
+    margin-top: 20px;
+}
+ul li:hover{
+  color:blue;
+}
+#icone{
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 84%;
+    left: 45%;
+}
+#container{
+    margin-top: 50px;
+    margin-left: 15px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+hr{
+    width: 50%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+#icones{
+    top: 84%;
+    position: absolute;
+    left: 2%;
+}
+#face{
+   height: 20px;
+}
+#insta{
+    width: 21px;
+}
+#linkd{
+    width: 20px;
+}
+@media screen and (min-width: 375px ) and (min-height: 731px){
+    #container{
+        margin-top: 50px;   
+    }
+    hr{
+        width: 43%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    ul li{
+        font-size: 15pt;
+        margin-top: 42px;
+    }
+    #icone{
+        left: 40%;
+        top: 92%;
+    }
+    #icones{
+        top: 92%;
+    }
+}

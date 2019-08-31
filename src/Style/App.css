@@ -13,9 +13,28 @@
     justify-content: center;
     align-items: center;  
 }
+#btn2{
+    color:white;
+    background-color: rgb(0, 26, 54); 
+    border-radius: 15px;
+    border: 0px none;
+    margin: 20px;
+    padding: 8px;
+    font-weight: bolder;
+    outline: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#btn3{
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    font: bold 15pt arial;
+    color: aliceblue;
+    
+}
 #containerLogo{
     position: absolute;
-    top: 3%;
+    top: 19%;
     left: 3%;
 }
 #containerButtons{
@@ -25,36 +44,48 @@
 }
 #containerButtonOrçamento{
     position: absolute;
-    top: 65%;
+    top: 75%;
 }
 #containerIcones{
     display: flex;
     position: absolute;
     top: 77%;
 }
+#containerApp{
+    position: absolute;
+    top: 65%;
+}
+#menu{
+  position: fixed;
+  width: 100%;
+  padding: 8px;
+  box-shadow: 0px 1px 17px rgba(2, 2, 2, 0.5);
+  top: 0%;
+  background-color: rgba(255, 255, 255, 0.966);
+}
 @media screen and (max-width: 760px){
      #containerLogo {
-         top: -5%;
-         left: 20%;
+         left: 17%;
+         top: 40%;
     }
     #containerButtonOrçamento {
-       top: 78%;
+       display: none;
     }
       #containerIcones {
-       top: 90%; 
+        display: none;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 979px){
-    #containerLogo{
-        top: -5%;
+@media screen and (min-width: 768px) {
+    #menu{
+        display: none;
     }
   #containerButtonOrçamento { 
       width: 30%;
-      top: 87%;
-      justify-content: center;
+      text-align: center;
    }
     #containerIcones {
        top: 90%;
-       left: 80%;
+       left: 90%;
     }
 }
+
