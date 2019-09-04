@@ -43,14 +43,13 @@ export default class Barra extends React.Component {
                             <li>BLOG</li>
                             <li>ORÇAMENTO</li>
                             <hr size="1" />
-                        </div>
                         <div id="icones">
                             <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" ><img id="face" alt="icone" src={facebook} /></a>
                             <a href="https://www.instagram.com/ejcompunesp/" target="_blank" rel="noopener noreferrer" ><img id="insta" alt="icone" src={instagram} /></a>
                             <a href="https://pt.linkedin.com/company/ejcomp" target="_blank" rel="noopener noreferrer" ><img id="linkd" alt="icone" src={linkedin} /></a>
                         </div>
                         <button onClick={this.esconderMenu} id="icone"><img alt="fechar" src={icone} /></button>
-
+                       </div>
                     </ul>
                     :
                     null
