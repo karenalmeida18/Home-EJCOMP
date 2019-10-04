@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Style/App.css';
-import { ButtonHome, ButtonEmpresa, ButtonMej, ButtonServiços, ButtonEquipe, ButtonBlog } from './Buttons';
+import ButtonsHome from './Buttons';
 import ejcomp from '../Imagem/ejcomp.png'
 import facebook from '../Imagem/facebook.png'
 import instagram from '../Imagem/instagram.png'
@@ -14,17 +14,17 @@ export default class TelaHome extends React.Component {
         <div id="containerLogo">
           <img src={ejcomp} alt="logo" /></div>
         <div id="containerButtons">
-          <ButtonHome nome="HOME" />
-          <ButtonEmpresa nome="EMPRESA" />
-          <ButtonMej nome="MEJ" />
-          <ButtonServiços nome="SERVIÇOS" />
-          <ButtonEquipe nome="EQUIPE" />
-          <ButtonBlog nome="BLOG" />
+          <ButtonsHome nome="HOME" idTexto="texto" Texto='There are many variations of passages of Lorem Ipsum available, but the majority' />
+          <ButtonsHome nome="EMPRESA" idTexto="texto2" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
+          <ButtonsHome nome="MEJ" idTexto="texto3" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
+          <ButtonsHome nome="SERVIÇOS" idTexto="texto4" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
+          <ButtonsHome nome="EQUIPE" idTexto="texto5" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
+          <ButtonsHome nome="BLOG" idTexto="texto6" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
         </div>
         <div id="containerApp"><button id="btn3">APLICATIVOS</button></div>
         <div id="containerButtonOrçamento"><button id="btn2">FAÇA UM ORÇAMENTO</button></div>
         <div id="menu">
-          <MenuMobile/>
+          <MenuMobile />
         </div>
         <div id="containerIcones">
           <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" ><img id="fb" alt="icone" src={facebook} /></a>

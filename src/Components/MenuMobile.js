@@ -33,7 +33,7 @@ export default class Barra extends React.Component {
                 <button onClick={this.mostrarMenu} id="dropdown"><img src={barra} /></button>
                 {this.state.open ?
                     <ul id="menuItens">
-                        <div id="container">
+                        <div id="containerBtnMenu">
                             <hr size="1" />
                             <li>HOME</li>
                             <li>EMPRESA</li>

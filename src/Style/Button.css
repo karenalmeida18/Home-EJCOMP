@@ -7,16 +7,7 @@
     font-weight: bold;    
     background-color: transparent;
     border: 1.2px solid white;
-    border-radius: 30px;
-}
-#btn:hover {
-  background-color: white;
-  color: black;
-  outline: 0px;
-  border: 0px;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+    border-radius: 30px;  
 }
 #texto{
   background-color : transparent;
