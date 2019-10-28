@@ -1,36 +1,38 @@
 import React from 'react'
-import barra from '../Imagem/barra.png'
 import '../Style/MenuMobile.css'
-import icone from '../Imagem/iconeMobile.png'
-import facebook from '../Imagem/facebook.png'
-import instagram from '../Imagem/instagram.png'
-import linkedin from '../Imagem/linkedin.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 export default class Barra extends React.Component {
     constructor() {
         super();
         this.state = {
             open: false,
+            icon: faBars,
         }
     }
     mostrarMenu = () => {
-        this.setState(state => {
+        if (this.state.icon === faBars) {
+            this.setState(state => {
+                return {
+                    open: !state.open,
+                    icon: faTimes
+                };
+            });
+        } else this.setState(state => {
             return {
-                open: !state.open
+                open: !state.open,
+                icon: faBars
             };
         });
     };
-    esconderMenu = event => {
-        this.setState(state => {
-            return {
-                open: !state.open
-            };
-        });
-    }
     render() {
         return (
             <React.Fragment>
-                <button onClick={this.mostrarMenu} id="dropdown"><img src={barra} /></button>
+                <button onClick={this.mostrarMenu} id="dropdown">
+                    <FontAwesomeIcon icon={this.state.icon} size ='2x' color='gray' />
+                </button>
                 {this.state.open ?
                     <ul id="menuItens">
                         <div id="containerBtnMenu">
@@ -43,13 +45,18 @@ export default class Barra extends React.Component {
                             <li>BLOG</li>
                             <li>ORÇAMENTO</li>
                             <hr size="1" />
-                        <div id="icones">
-                            <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" ><img id="face" alt="icone" src={facebook} /></a>
-                            <a href="https://www.instagram.com/ejcompunesp/" target="_blank" rel="noopener noreferrer" ><img id="insta" alt="icone" src={instagram} /></a>
-                            <a href="https://pt.linkedin.com/company/ejcomp" target="_blank" rel="noopener noreferrer" ><img id="linkd" alt="icone" src={linkedin} /></a>
+                            <div id="icones">
+                                <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" >
+                                    <FontAwesomeIcon icon={faFacebook} size='lg' color='black' className='midiaMobile'/>
+                                </a>
+                                <a href="https://www.instagram.com/ejcompunesp/" target="_blank" rel="noopener noreferrer" >
+                                    <FontAwesomeIcon icon={faInstagram} size='lg' color='black' className='midiaMobile' />
+                                </a>
+                                <a href="https://pt.linkedin.com/company/ejcomp" target="_blank" rel="noopener noreferrer" >
+                                    <FontAwesomeIcon icon={faLinkedin} size='lg' color='black' className='midiaMobile'/>
+                                </a>
+                            </div>
                         </div>
-                        <button onClick={this.esconderMenu} id="icone"><img alt="fechar" src={icone} /></button>
-                       </div>
                     </ul>
                     :
                     null
