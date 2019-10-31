@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Style/Button.css';
+import './Button.css';
 
 export default class ButtonsHome extends React.Component {
     constructor(props) {

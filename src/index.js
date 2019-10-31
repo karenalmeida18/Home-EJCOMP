@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TelaHome from './Components/TelaHome';
+import TelaHome from './Components/Home/TelaHome';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<TelaHome />, document.getElementById('root'));

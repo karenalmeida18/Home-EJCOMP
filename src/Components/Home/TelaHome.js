@@ -1,8 +1,8 @@
 import React from 'react';
-import '../Style/App.css';
-import ButtonsHome from './Buttons';
-import ejcomp from '../Imagem/ejcomp.png'
-import MenuMobile from '../Components/MenuMobile'
+import './App.css'
+import ButtonsHome from '../Buttons/Buttons'
+import ejcomp from '../../Imagem/ejcomp.png'
+import MenuMobile from '../MenuMobile/MenuMobile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
