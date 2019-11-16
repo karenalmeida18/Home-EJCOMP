@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  .TelaMej{
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    background-image: url("../../Imagem/backgroundMej.jpeg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% 100%;
+    flex-wrap: wrap;
+  }
+  .tittle{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+    color: rgb(43, 14, 71);
+    font: normal 20pt small-caps;
+  }
+  .row-1{
+    border-top: 15px solid rgb(7, 37, 61);
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    color: gray;
+    border-bottom: 15px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+  }
+  #LogoBrJr{
+      border-radius: 100px;
+      width: 280px;
+      margin: 20px;
+  }
+  #TextBrJr{
+    margin: 30px;
+  }
+  .row-2{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+  }
+  #TextMej{
+    margin: 30px;
+  }
+  #LogoMej{
+    border-radius: 40px;
+    width: 320px;
+    margin: 20px;
+  }
+  @media screen and (max-width: 768px){
+     .TelaMej{
+        height: auto;
+        display: block;
+     }
+     .row-1{
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+     }
+     .row-2{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+     }
+  }
+  
