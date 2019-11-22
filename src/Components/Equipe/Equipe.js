@@ -3,6 +3,9 @@ import Membros from './Membros'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './Equipe.css'
+import Navbar from '../Navbar/Navbar'
+import Logo from '../../Imagem/ejcomp.png'
+import MenuMobile from '../MenuMobile/MenuMobile'
 
 const responsive = {
   superLargeDesktop: {
@@ -26,6 +29,8 @@ const responsive = {
 export default function Equipe() {
   return (
     <div className="Equipe">
+      <Navbar color='white' logo={Logo} className='itemMenu' />
+      <div id="menuEquipe"> <MenuMobile /> </div>
       <div className="TittleEquipe">
         <h1>NOSSA EQUIPE</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>

@@ -5,7 +5,7 @@
   }
   .TelaMej{
     display: grid;
-    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
     background-image: url("../../Imagem/backgroundMej.jpeg");
     background-repeat: no-repeat;
     height: 100vh;
@@ -54,6 +54,26 @@
     width: 320px;
     margin: 20px;
   }
+  .itemMenuMej{
+    margin-left: 40px;
+    display: flex;
+    align-self: center;
+    flex-direction: r;
+    text-decoration:none;
+  }
+  #menuMej{
+    width: 100%;
+    padding: 8px;
+    box-shadow: 0px 1px 17px rgba(2, 2, 2, 0.5);
+    top: 0%;
+    text-align: end;
+    z-index: 100000;
+    background-color: white
+
+  }
+  .itemMenuMej:hover{
+    border-bottom: 1px solid black;
+  }
   @media screen and (max-width: 768px){
      .TelaMej{
         height: auto;
@@ -70,4 +90,13 @@
       flex-direction: column;
      }
   }
-  
+  @media screen and (min-width: 768px){
+      #menuMej{
+        display: none;
+      }
+  }
+  @media screen and (max-width: 1024px){
+    .itemMenuMej{
+      margin-left: 20px;
+    }
+  }

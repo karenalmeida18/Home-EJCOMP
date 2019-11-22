@@ -2,10 +2,15 @@ import React from 'react';
 import './Mej.css'
 import LogoBrJr from '../../Imagem/logo_brasiljr.jpg'
 import LogoMej from '../../Imagem/mej.png'
+import Navbar from '../Navbar/Navbar'
+import Logo from '../../Imagem/logo.png'
+import MenuMobile from '../MenuMobile/MenuMobile'
 
 export default function TelaMej() {
   return (
     <div className="TelaMej">
+      <Navbar backgroundColor = 'white' className='itemMenuMej' logo={Logo}/>
+      <div id="menuMej"> <MenuMobile /> </div>
       <div className="tittle"><p>MEJ</p>
       </div>
       <div className="row-1">

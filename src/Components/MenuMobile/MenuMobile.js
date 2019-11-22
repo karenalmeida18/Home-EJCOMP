@@ -3,6 +3,7 @@ import './MenuMobile.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import {Link} from 'react-router-dom'
 
 export default class Barra extends React.Component {
     constructor() {
@@ -37,11 +38,11 @@ export default class Barra extends React.Component {
                     <ul id="menuItens">
                         <div id="containerBtnMenu">
                             <hr size="1" />
-                            <li>HOME</li>
+                            <Link to='/'><li>HOME</li></Link>
                             <li>EMPRESA</li>
-                            <li>MEJ</li>
+                            <Link to='/mej'><li>MEJ</li></Link>
                             <li>SERVIÇOS</li>
-                            <li>EQUIPE</li>
+                            <Link to='/equipe'><li>EQUIPE</li></Link>
                             <li>BLOG</li>
                             <li>ORÇAMENTO</li>
                             <hr size="1" />

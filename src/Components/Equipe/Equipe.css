@@ -9,9 +9,16 @@
     height: 100vh;
     background-size: 100% 100%;
     display: grid;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    
+  }
+  #menuEquipe{
+    width: 100%;
+    padding: 8px;
+    box-shadow: 0px 1px 17px rgba(2, 2, 2, 0.5);
+    top: 0%;
+    text-align: end;
+    z-index: 100000;
+    background-color: white
   }
   .FotoMembro{
     width: 220px;
@@ -26,6 +33,16 @@
     border-radius: 30px ;
     transition: box-shadow 300ms;
   }
+  .itemMenu:hover{
+    color: blue;
+  }
+  .itemMenu{
+    margin-left: 40px;
+    display: flex;
+    align-self: center;
+    flex-direction: r;
+    text-decoration:none;
+  }
   .FotoMembro:hover{
     box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.918);
     -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
@@ -34,10 +51,19 @@
   .TittleEquipe{
     text-align: center;
     color:white;
-   
   }
   .NomeMembro{
     color: rgba(255, 255, 255, 0.87);
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
   }
+  @media screen and (max-width: 1024px){
+    .itemMenu{
+      margin-left: 20px;
+    }
+  }
+  @media screen and (min-width: 768px){
+    #menuEquipe{
+      display: none;
+    }
+}
