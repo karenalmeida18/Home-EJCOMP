@@ -2,95 +2,51 @@
     margin: 0.7%;
     padding: 10px;
     color: white;
-    font-size: 18px; 
+    font-size: 20px;
     outline: 0px;
-    font-family: Arial, Helvetica, sans-serif;    
     background-color: transparent;
-    border: 1.2px solid white;
     border-radius: 30px;
     transition-duration: 0.3s;  
 }
 #texto{
   background-color : transparent;
-  width: 30%;
-  height: 30%;
-  left: 10%;
   position: absolute;
-  top: 57%;
+  top: 70%;
   font: normal 10pt Arial;
   color: white;
-  text-align: start;
-  align-items: flex-end;
-  display: flex;
-  border-left: 2px solid white;
 }
 #texto2{
   background-color : transparent;
-  width: 30%;
-  height: 30%;
-  left: 25%;
   position: absolute;
-  top: 12%;
-  text-align: start;
-  align-items: flex-start;
-  display: flex;
-  border-left: 2px solid white;
+  top: 23%;
   font: normal 10pt Arial;
   color: white;
 }
 #texto3{
   background-color : transparent;
-  width: 30%;
-  height: 30%;
-  left: 39%;
   position: absolute;
-  top: 12%;
-  text-align: start;
-  align-items: flex-start;
-  display: flex;
-  border-left: 2px solid white;
+  top: 23%;
   font: normal 10pt Arial;
   color: white;
 }
 #texto4{
   background-color : transparent;
-  width: 30%;
-  height: 30%;
-  left: 53%;
   position: absolute;
-  top: 12%;
-  text-align: start;
-  align-items: flex-start;
-  display: flex;
-  border-left: 2px solid white;
+  top: 23%;
   font: normal 10pt Arial;
   color: white;
 }
 #texto5{
   background-color : transparent;
-  width: 30%;
-  height: 30%;
-  left: 66%;
   position: absolute;
-  top: 12%;
-  text-align: start;
-  align-items: flex-start;
-  display: flex;
-  border-left: 2px solid white;
+  top: 23%;
   font: normal 10pt Arial;
   color: white;
 }
 #texto6{
   background-color : transparent;
-  width: 20%;
-  height: 30%;
-  left: 80%;
   position: absolute;
-  top: 57%;
-  text-align: start;
-  align-items: flex-end;
-  display: flex;
-  border-left: 2px solid white;
+  top: 70%;
   font: normal 10pt Arial;
   color: white;
 }

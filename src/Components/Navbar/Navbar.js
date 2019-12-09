@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css'
-import Logo from '../../Imagem/logo.png'
 import { Link } from 'react-router-dom'
 export default class Navbar extends React.Component {
     constructor(props) {

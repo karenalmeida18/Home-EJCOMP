@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import ButtonsHome from '../Buttons/Buttons'
-import ejcomp from '../../Imagem/ejcomp.png'
+import ejcomp from '../../Imagem/logo.png'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -12,7 +12,7 @@ export default class TelaHome extends React.Component {
     return (
       <div className="App">
         <div id="containerLogo">
-          <img src={ejcomp} alt="logo" /></div>
+          <img id="logoPrincipal" src={ejcomp} alt="logo" /></div>
         <div id="containerButtons" >
           <ButtonsHome nome="HOME" idTexto="texto" Texto='There are many variations of passages of Lorem Ipsum available, but the majority' />
           <ButtonsHome nome="EMPRESA" idTexto="texto2" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
@@ -21,6 +21,7 @@ export default class TelaHome extends React.Component {
           <Link to='/equipe'><ButtonsHome nome="EQUIPE" idTexto="texto5" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
           <ButtonsHome nome="BLOG" idTexto="texto6" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
         </div>
+         {/*Versao mobile do site */}
         <div id="menu"> <MenuMobile /> </div>
         <div id="grid-row3">
           <div id="containerApp"><button id="btn3">APLICATIVOS</button></div>
