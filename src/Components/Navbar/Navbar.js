@@ -17,7 +17,7 @@ export default class Navbar extends React.Component {
     render() {
         return (
             <div id="Navbar" style={{ color: this.props.color, backgroundColor: this.props.backgroundColor }}>
-                <div className="itemLogo"><li><img id='imgLogo' src={this.props.logo} /></li></div>
+                <div className="itemLogo"><li><img id='imgLogo' src={this.props.logo} alt='logo'/></li></div>
                 <div className="itensNav">
                     <div className={this.props.className}><li><Link to='/'>HOME</Link></li></div>
                     <div className={this.props.className}><li>EMPRESA</li></div>

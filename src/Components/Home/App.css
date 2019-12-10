@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .App{
-    background-image: url("../../Imagem/fundoprov.jpg");
+    background-image: url("../../Imagem/fundoprov1.jpg");
     width: auto;
     height: 100vh;
     background-size: 100% 100%;
@@ -53,13 +53,21 @@
     font-family: Arial, Helvetica, sans-serif;
     box-shadow:  0 4px 4px black;
 }
+#btn2:hover{
+    background-color: rgb(1, 38, 77);
+    transition: background-color .5s ease;
+}
 #btn3{
     background-color: transparent;
     outline: 0;
     border: 0;
     font: bold 17pt arial;
     color: yellow;
-    text-shadow:  0.2em 0.1em 0.2em black;
+    text-shadow:  0.2em 0.2em 0.2em black;
+}
+#btn3:hover{
+    text-shadow:  0.2em 0.2em 0.9em black;
+    transition: text-shadow .5s ease;
 }
 #menu{
   position: fixed;
