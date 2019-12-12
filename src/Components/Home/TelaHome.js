@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css'
 import ButtonsHome from '../Buttons/Buttons'
-import ejcomp from '../../Imagem/logo.png'
+import ejcomp from '../../Imagem/logoazul.png'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -20,8 +20,6 @@ export default class TelaHome extends React.Component {
   hideModal = () => {
     this.setState({ isVisible: false });
   };
-
-
   render() {
     return (
       <div className="App">
@@ -40,10 +38,10 @@ export default class TelaHome extends React.Component {
         <div id="grid-row3">
           <div id="containerApp"><button id="btn3">APLICATIVOS</button></div>
           <div id="containerButtonOrçamento"><button onClick={this.showModal} id="btn2">FAÇA UM ORÇAMENTO</button>
-          {this.state.isVisible ? 
-          <Contato click={this.hideModal}/>
-          : null
-          }
+            {this.state.isVisible ?
+              <Contato click={this.hideModal} />
+              : null
+            }
           </div>
           <div id="containerIcones">
             <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" >

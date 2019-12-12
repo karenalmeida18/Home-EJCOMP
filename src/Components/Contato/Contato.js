@@ -9,7 +9,7 @@ export default class Modal extends React.Component {
             <div className="modal">
                 <form className="modalForms">
                     <div className="Header">
-                        <FontAwesomeIcon icon={faTimes} color="yellow" className="Cancel" onClick={this.props.click} />
+                        <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={this.props.click} />
                         <h2>Contato</h2>
                     </div>
                     <input type="text" name="name" placeholder="Nome*" required />

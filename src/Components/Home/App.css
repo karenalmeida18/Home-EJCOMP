@@ -43,7 +43,7 @@
 }
 #btn2{
     color: white;
-    background-color: rgb(0, 26, 54); 
+    background-color: #001F3F; 
     border-radius: 28px;
     border: 0px none;
     margin: 20px;
@@ -54,7 +54,7 @@
     box-shadow:  0 4px 4px black;
 }
 #btn2:hover{
-    background-color: rgb(1, 38, 77);
+    background-color: rgb(2, 44, 90);
     transition: background-color .5s ease;
 }
 #btn3{
