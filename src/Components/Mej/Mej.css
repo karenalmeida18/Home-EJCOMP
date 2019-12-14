@@ -1,8 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
+
   .TelaMej{
     display: grid;
     grid-template-rows: 0.1fr 0.1fr 1fr 1fr;

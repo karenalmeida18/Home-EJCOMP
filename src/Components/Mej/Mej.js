@@ -1,10 +1,10 @@
 import React from 'react';
 import './Mej.css'
-import LogoBrJr from '../../Imagem/logo_brasiljr.jpg'
-import LogoMej from '../../Imagem/mej.png'
 import Navbar from '../Navbar/Navbar'
 import Logo from '../../Imagem/logo.png'
 import MenuMobile from '../MenuMobile/MenuMobile'
+import LogoBrJr from '../../Imagem/logo_brasiljr.jpg'
+import LogoMej from '../../Imagem/mej.png'
 
 export default function TelaMej() {
   return (

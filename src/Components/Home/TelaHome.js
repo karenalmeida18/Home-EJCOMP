@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css'
 import ButtonsHome from '../Buttons/Buttons'
-import ejcomp from '../../Imagem/logoazul.png'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { Link } from 'react-router-dom'
 import Contato from '../Contato/Contato'
+import ejcomp from '../../Imagem/logoazul.png'
 
 export default class TelaHome extends React.Component {
   constructor(props) {
@@ -33,8 +33,7 @@ export default class TelaHome extends React.Component {
           <Link to='/equipe'><ButtonsHome nome="EQUIPE" idTexto="texto5" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
           <ButtonsHome nome="BLOG" idTexto="texto6" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
         </div>
-        {/*Versao mobile do site */}
-        <div id="menu"> <MenuMobile /> </div>
+        <div id="menu"> <MenuMobile /> </div> {/*Versao mobile do site */}
         <div id="grid-row3">
           <div id="containerApp"><button id="btn3">APLICATIVOS</button></div>
           <div id="containerButtonOrçamento"><button onClick={this.showModal} id="btn2">FAÇA UM ORÇAMENTO</button>
