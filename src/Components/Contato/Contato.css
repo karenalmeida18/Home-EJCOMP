@@ -22,6 +22,7 @@
     box-shadow:  0 4px 4px black;
     animation-name: fade;
     animation-duration: 1.1s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 @keyframes fade{
     from{
@@ -35,12 +36,13 @@
 }
 .modalForms > input{
     border: 1px solid blue;
-    padding: 8px 30px 8px 30px;
-    border-radius: 20px;
-    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
     outline: 0;
-    display: flex;
+    display: block;
     margin: 25px;   
+    width: 250px;
+    font-family: 'Roboto';
 }
 .modalForms > button {
     background-color: blue;
@@ -53,7 +55,7 @@
     font-size: 23pt;
 }
 .Cancel:hover{
-    color: yellow;
+    color: blue;
     transition: color .5s ease;
 
 }
@@ -63,4 +65,15 @@
 .envio:hover{
     background-color: black;
     transition: background-color .5s ease;
+}
+.modalForms > textarea{
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 15px;
+    outline: 0;
+    display: block;
+    margin: 25px;   
+    width: 250px;
+    height: 120px;
+    max-width: 250px;
 }

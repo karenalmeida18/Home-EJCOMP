@@ -29,7 +29,7 @@ export default class TelaHome extends React.Component {
           <ButtonsHome nome="HOME" idTexto="texto" Texto='There are many variations of passages of Lorem Ipsum available, but the majority' />
           <ButtonsHome nome="EMPRESA" idTexto="texto2" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
           <Link to='/mej'><ButtonsHome nome="MEJ" idTexto="texto3" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
-          <ButtonsHome nome="SERVIÇOS" idTexto="texto4" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
+         <Link to = './serviços'><ButtonsHome nome="SERVIÇOS" idTexto="texto4" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
           <Link to='/equipe'><ButtonsHome nome="EQUIPE" idTexto="texto5" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
           <ButtonsHome nome="BLOG" idTexto="texto6" Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
         </div>

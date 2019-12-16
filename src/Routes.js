@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './Components/Home/TelaHome'
 import Mej from './Components/Mej/Mej'
 import Equipe from './Components/Equipe/Equipe' 
+import Serviços from './Components/Cards/index'
 
 export default function Routes() {
     return (
@@ -11,6 +12,7 @@ export default function Routes() {
             <Route exact path="/" component={Home} />
             <Route exact path="/mej" component={Mej} />
             <Route exact path="/equipe" component={Equipe} />
+            <Route exact path="/serviços" component={Serviços} />
             <Route path="*" component={() => <h1>Page not found</h1>} />
             </Switch>
         </BrowserRouter>

@@ -15,7 +15,7 @@ export default class Modal extends React.Component {
                     <input type="text" name="name" placeholder="Nome*" required />
                     <input type="email" name="email" placeholder="E-mail*" required />
                     <input type="tel" name="tel" placeholder="Telefone" />
-                    <input type="text" name="text" placeholder="Mensagem*" required />
+                    <textarea type="text" name="text" placeholder="Mensagem*" required />
                     <button onClick={this.props.click} className="envio" type="submit">Enviar</button>
                 </form>
             </div>
