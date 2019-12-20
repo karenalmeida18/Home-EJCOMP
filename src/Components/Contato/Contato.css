@@ -16,13 +16,13 @@
 }
 .modalForms{
     flex-direction: column;
-    padding: 25px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.911);
     box-shadow:  0 4px 4px black;
     animation-name: fade;
     animation-duration: 1.1s;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
 }
 @keyframes fade{
     from{
@@ -52,7 +52,7 @@
     outline: 0;
 }
 .Cancel{
-    font-size: 23pt;
+    font-size: 20pt;
 }
 .Cancel:hover{
     color: blue;
@@ -76,4 +76,15 @@
     width: 250px;
     height: 120px;
     max-width: 250px;
+}
+@media screen and (max-width: 320px){
+    .modalForms{
+        padding: 15px;
+    }
+    .modalForms > textarea {
+        margin: 12px;
+    }
+    .modalForms >  input {
+        margin: 12px;
+    }
 }

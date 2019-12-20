@@ -1,4 +1,4 @@
-#Navbar {
+    #Navbar {
     list-style-type: none;
     display: grid;
     flex-direction: row;
@@ -6,6 +6,7 @@
     outline: none;
     font-size: 17px;
     text-decoration:none;
+    font-family: 'Roboto', sans-serif;
   }
 .itensNav{
     display: flex;

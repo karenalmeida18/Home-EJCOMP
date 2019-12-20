@@ -32,7 +32,7 @@ export default function Equipe() {
       <Navbar color='white' logo={Logo} className='itemMenu' />
       <div id="menuEquipe"> <MenuMobile /> </div>
       <div className="TittleEquipe">
-        <h1>NOSSA EQUIPE</h1>
+        <h2>NOSSA EQUIPE</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>
       </div>
       <Carousel additionalTransfrom={0}

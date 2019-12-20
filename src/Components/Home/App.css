@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@
     align-items: center;
     grid-template-rows: 1fr 0.1fr 1fr;
     margin: auto;
+    font-family: 'Roboto', sans-serif;
 }
 #grid-row3{
      display: flex;
@@ -50,7 +52,7 @@
     padding: 14px;
     font-weight: bolder;
     outline: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-shadow:  0 4px 4px black;
 }
 #btn2:hover{
@@ -63,6 +65,7 @@
     font: bold 17pt arial;
     color: yellow;
     text-shadow:  0.2em 0.2em 0.2em black;
+    font-family: 'Roboto', sans-serif;
 }
 #btn3:hover{
     text-shadow:  0.2em 0.2em 0.9em black;

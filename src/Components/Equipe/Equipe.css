@@ -10,6 +10,7 @@
     background-size: 100% 100%;
     display: grid;
     grid-template-rows: 0.1fr 0.1fr 0.9fr 0.9fr;
+    font-family: 'Roboto', sans-serif;
   }
   #menuEquipe{
     width: 100%;
