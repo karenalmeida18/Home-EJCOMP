@@ -1,0 +1,71 @@
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.Intext{
+    display:flex;
+    flex-direction: row;
+    color:white;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.textfooter{
+    margin-left: 20px;
+
+}
+
+.IconesMidiaFooter:hover{
+    color: rgb(0, 119, 255);
+    animation-name: rodaroda;
+    animation-duration: 0.5s;
+   animation-timing-function: linear;
+  
+
+}
+.Coluna2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+#IconesFooter{
+    width: fit-content;
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+@keyframes rodaroda {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.TextEj{
+    margin-top: 15px;
+    position: fixed;
+    bottom: 10px;
+}
+
+
+
+ 

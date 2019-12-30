@@ -55,11 +55,11 @@ export default function Equipe() {
         slidesToSlide={3}
         swipeable
       >
-        <Membros titulo='João Pedro' funçao='cargo' classImg='FotoMembro m1' />
-        <Membros titulo='Gabriel' funçao='cargo' classImg='FotoMembro m2' />
-        <Membros titulo='Karen' funçao='cargo' classImg='FotoMembro m3' />
-        <Membros titulo='Maria Eduarda' funçao='cargo' classImg='FotoMembro m4' />
-        <Membros titulo='Guilherme Couto' funçao='cargo' classImg='FotoMembro m5' />
+        <Membros titulo='João Pedro' funçao='Diretor de Relações Externas' classImg='FotoMembro m1' />
+        <Membros titulo='Gabriel' funçao='Membro de Projetos' classImg='FotoMembro m2' />
+        <Membros titulo='Karen' funçao='Membro de Projetos' classImg='FotoMembro m3' />
+        <Membros titulo='Maria Eduarda' funçao='Membro de Relações Externas' classImg='FotoMembro m4' />
+        <Membros titulo='Guilherme Couto' funçao='Gerente de Projetos' classImg='FotoMembro m5' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m6' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m7' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m8' />
@@ -84,12 +84,12 @@ export default function Equipe() {
         sliderClass=""
         slidesToSlide={3}
         swipeable>
-        <Membros titulo='Maykon' funçao='cargo' classImg='FotoMembro m9' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m10' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m11' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m12' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
+        <Membros titulo='Maykon' funçao='Membro de Projetos' classImg='FotoMembro m9' />
+        <Membros titulo='Evandro' funçao='Membro de Projetos' classImg='FotoMembro m10' />
+        <Membros titulo='Breno' funçao='Membro de Projetos' classImg='FotoMembro m11' />
+        <Membros titulo='Ana Luisa' funçao='Diretor de Projetos' classImg='FotoMembro m12' />
+        <Membros titulo='Bruna' funçao='Membro de Recurso Humanos' classImg='FotoMembro m13' />
+        <Membros titulo='Lucas' funçao='Membro de Projetos' classImg='FotoMembro m14' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
       </Carousel>

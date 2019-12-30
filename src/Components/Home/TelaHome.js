@@ -42,17 +42,17 @@ export default class TelaHome extends React.Component {
         <div id="containerLogo"></div>
         <div id="containerButtons" >
           <ButtonsHome nome="HOME" idTexto="texto"
-            Texto='There are many variations of passages of Lorem Ipsum available, but the majority' />
+            Texto=' Página inicial' />
           <Link to ='./empresa'><ButtonsHome nome="EMPRESA" idTexto="texto2"
-            Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
+            Texto=' Conheça mais sobre a EJComp ' /></Link>
           <Link to='/mej'><ButtonsHome nome="MEJ" idTexto="texto3"
-            Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
+            Texto='Movimento Empresa Júnior, saiba mais. ' /></Link>
           <Link to='./serviços'><ButtonsHome nome="SERVIÇOS" idTexto="texto4"
-            Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
+            Texto='Os principais serviços prestados pela EJComp ' /></Link>
           <Link to='/equipe'><ButtonsHome nome="EQUIPE" idTexto="texto5"
-            Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' /></Link>
+            Texto='Conheça quem são os integrantes da Empresa Júnior ' /></Link>
           <ButtonsHome nome="BLOG" idTexto="texto6"
-            Texto='There are many variations of passages of Lorem Ipsum available, but the majority ' />
+            Texto='Conteúdos, informações e notícias ' />
         </div>
         <div id="menu"> <MenuMobile /> </div> {/*Versao mobile do site */}
         <div id="grid-row3">

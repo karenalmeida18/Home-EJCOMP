@@ -22,7 +22,7 @@ export default class Navbar extends React.Component {
                     <div className={this.props.className}><li><Link to='/'>HOME</Link></li></div>
                     <div className={this.props.className}><li><Link to='./empresa'>EMPRESA</Link></li></div>
                     <div className={this.props.className}><li><Link to='Mej'>MEJ</Link></li></div>
-                    <div className={this.props.className} onMouseEnter={this.showLi} onMouseLeave={this.hideLi}><li>SERVIÇOS</li>
+                    <div className={this.props.className}onMouseEnter={this.showLi} onMouseLeave={this.hideLi}><li> <Link to='./serviços'>SERVIÇOS</Link></li> 
                         {this.state.isVisible ?
                             <ul className='dropdownLi' >
                                 <li>PORTIFÓLIO</li>

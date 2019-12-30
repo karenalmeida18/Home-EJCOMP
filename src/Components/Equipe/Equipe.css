@@ -61,6 +61,13 @@
     background-image: url('../../Imagem/membro9.jpeg');
   }
 
+  .m13{
+    background-image: url('../../Imagem/membro10.jpeg');
+
+  }
+  .m14{
+    background-image: url('../../Imagem/membro11.jpeg');
+  }
   .itemMenu:hover{
     color: blue;
   }
