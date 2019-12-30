@@ -3,7 +3,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import { Storage, Laptop, Smartphone } from '@material-ui/icons';
 import Navbar from '../Navbar/Navbar'
-import Logo from '../../Imagem/ejcomp.png'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import "./cards.css";
 
@@ -29,7 +28,7 @@ export default class Card extends Component{
     render (){ 
     return (   
         <>   
-        <Navbar color='white' logo={Logo} className='itemMenu'/>
+        <Navbar  logo= 'logoNav' className='itemMenu'/>
         <div id="menuCards"> 
             <MenuMobile/> 
         </div>

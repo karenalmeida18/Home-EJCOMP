@@ -22,10 +22,9 @@
     background-color: white;
   }
   .FotoMembro{
-    width: 220px;
-    height: 180px;
+    width: 230px;
+    height: 200px;
     background-size: 100% 100%;
-    background-image: url('../../Imagem/membro.jpg');
     display: flex;
     align-items: center;
     text-align: center;
@@ -34,6 +33,34 @@
     border-radius: 30px ;
     transition: box-shadow 300ms;
   }
+  .m1{
+    background-image: url('../../Imagem/membro1.jpeg');
+  }
+  .m2{
+    background-image: url('../../Imagem/membro2.jpeg');
+  }
+  .m3{
+    background-image: url('../../Imagem/membro3.jpeg');
+  }
+  .m4{
+    background-image: url('../../Imagem/membro4.jpeg');
+  }
+  .m5{
+    background-image: url('../../Imagem/membro5.jpeg');
+  }
+  .m9{
+    background-image: url('../../Imagem/membro6.jpeg');
+  }
+  .m10 {
+    background-image: url('../../Imagem/membro7.jpeg');
+  }
+  .m11{
+    background-image: url('../../Imagem/membro8.jpeg');
+  }
+  .m12{
+    background-image: url('../../Imagem/membro9.jpeg');
+  }
+
   .itemMenu:hover{
     color: blue;
   }
@@ -57,6 +84,12 @@
     color: rgba(255, 255, 255, 0.87);
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+  .logo{
+    background: url('../../Imagem/ejcomp.png');
+    width: 180px;
+    height: 42px;
+    background-size: 100% 100%;
   }
   @media screen and (max-width: 1024px){
     .itemMenu{

@@ -28,10 +28,13 @@
   #LogoBrJr{
       border-radius: 100px;
       width: 280px;
+      height: 170px;
+      background-size: 100% 100%;
       margin: 20px;
       box-shadow:  0 4px 4px black;
       animation-name: fade;
       animation-duration: 1s;
+      background-image: url('../../Imagem/logo_brasiljr.jpg');
   }
   #TextBrJr{
     margin: 30px;
@@ -52,11 +55,14 @@
   }
   #LogoMej{
     border-radius: 40px;
-    width: 320px;
+    width: 300px;
+    height: 170px;
     margin: 20px;
     box-shadow:  0 4px 4px black;
     animation-name: fade;
     animation-duration: 1s;
+    background-image: url('../../Imagem/mej.png');
+    background-size: 100% 100%;
   }
   .itemMenuMej{
     margin-left: 40px;
@@ -76,6 +82,12 @@
   }
   .itemMenuMej:hover{
     border-bottom: 1px solid black;
+  }
+  .logoNav{
+    background: url('../../Imagem/logo.png');
+    width: 180px;
+    height: 42px;
+    background-size: 100% 100%;
   }
   @media screen and (max-width: 768px){
      .TelaMej{

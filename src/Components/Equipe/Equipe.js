@@ -4,7 +4,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './Equipe.css'
 import Navbar from '../Navbar/Navbar'
-import Logo from '../../Imagem/ejcomp.png'
 import MenuMobile from '../MenuMobile/MenuMobile'
 
 const responsive = {
@@ -29,7 +28,7 @@ const responsive = {
 export default function Equipe() {
   return (
     <div className="Equipe">
-      <Navbar color='white' logo={Logo} className='itemMenu' />
+      <Navbar color='white' logo='logo' className='itemMenu' />
       <div id="menuEquipe"> <MenuMobile /> </div>
       <div className="TittleEquipe">
         <h2>NOSSA EQUIPE</h2>
@@ -56,14 +55,14 @@ export default function Equipe() {
         slidesToSlide={3}
         swipeable
       >
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
+        <Membros titulo='João Pedro' funçao='cargo' classImg='FotoMembro m1' />
+        <Membros titulo='Gabriel' funçao='cargo' classImg='FotoMembro m2' />
+        <Membros titulo='Karen' funçao='cargo' classImg='FotoMembro m3' />
+        <Membros titulo='Maria Eduarda' funçao='cargo' classImg='FotoMembro m4' />
+        <Membros titulo='Guilherme Couto' funçao='cargo' classImg='FotoMembro m5' />
+        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m6' />
+        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m7' />
+        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m8' />
       </Carousel>
       <Carousel additionalTransfrom={0}
         arrows
@@ -85,10 +84,10 @@ export default function Equipe() {
         sliderClass=""
         slidesToSlide={3}
         swipeable>
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
+        <Membros titulo='Maykon' funçao='cargo' classImg='FotoMembro m9' />
+        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m10' />
+        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m11' />
+        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m12' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
         <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />

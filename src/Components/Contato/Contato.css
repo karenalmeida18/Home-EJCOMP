@@ -23,6 +23,8 @@
     animation-name: fade;
     animation-duration: 1.1s;
     font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0px;
 }
 @keyframes fade{
     from{

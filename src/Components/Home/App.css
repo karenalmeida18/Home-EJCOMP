@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 .App{
-    background-image: url("../../Imagem/fundoprov1.jpg");
+    background-image: url("../../Imagem/backgroundHome.jpeg");
     width: auto;
     height: 100vh;
     background-size: 100% 100%;
@@ -14,6 +14,9 @@
     grid-template-rows: 1fr 0.1fr 1fr;
     margin: auto;
     font-family: 'Roboto', sans-serif;
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.918);
+    -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
+    -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
 }
 #grid-row3{
      display: flex;
@@ -21,7 +24,10 @@
 }
 #containerLogo{
    margin-left: 50px;
-   width: fit-content;
+   background-image: url('../../Imagem/logoazul.png');
+   background-size: 100% 100%;
+   width: 280px;
+   height: 80px;
 }
 #logoPrincipal{
     width: 300px;

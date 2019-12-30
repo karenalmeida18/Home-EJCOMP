@@ -2,13 +2,16 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    color: blue;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 .bg-image {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url('../Imagem/Empresa_sample.jpg');
+    background: url('../../Imagem/Empresa_sample.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -18,17 +21,15 @@
     -ms-filter: blur(5px);
     filter: blur(5px);
     z-index: 1;
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.918);
+    -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
+    -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);   
 }
 .content {
     position: absolute;
     z-index: 2;
 }
-* {
-    color: blue;
-    margin: 0;
-}
-
-.content h2 {
+.content > h2 {
     font-size: 32px;
     margin-left: 20%;
     margin-top: 15% !important;
@@ -37,12 +38,21 @@
     margin-left: 20%;
     width: 60%;
 }
-button {
+.buttonEmpresa {
     margin-left: 20% !important;
     margin-top: 10% !important;
     border-radius: 100px !important;
+    background-color: #12264A;
+    color: white;
+    padding: 10px;
+    outline: 0;
 } 
 .content p {
     font-size: 24px;
-
+}
+.logoAzul{
+    background: url('../../Imagem/logoazul.png');
+    width: 180px;
+    height: 42px;
+    background-size: 100% 100%;
 }
