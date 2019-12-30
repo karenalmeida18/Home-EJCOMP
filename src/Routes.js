@@ -5,6 +5,7 @@ import Mej from './Components/Mej/Mej'
 import Equipe from './Components/Equipe/Equipe' 
 import Serviços from './Components/Cards/index'
 import Empresa from './Components/Empresa/Empresa'
+import Blog from './Components/Blog/Blog'
 
 export default function Routes() {
     return (
@@ -15,6 +16,7 @@ export default function Routes() {
             <Route exact path="/empresa" component={Empresa} />
             <Route exact path="/equipe" component={Equipe} />
             <Route exact path="/serviços" component={Serviços} />
+            <Route exact path="/blog" component={Blog} />
             <Route path="*" component={() => <h1>Page not found</h1>} />
             </Switch>
         </BrowserRouter>

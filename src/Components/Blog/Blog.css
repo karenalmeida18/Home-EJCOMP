@@ -1,0 +1,46 @@
+.Blog{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;  
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+
+   
+}
+.TextBlog{
+    animation-name: moveLeft;
+    animation-duration: 1s;
+}
+.ContainerBlog{
+   margin:auto;
+   position:absolute;
+   top:50%;
+   transform: translate(-50%,-50%);
+   left: 50%;
+      
+}
+
+.IconBlog{
+    margin-bottom: 50px;
+    font-size: 100px;
+    animation-name: moveLeft;
+    animation-duration: 1s;
+}
+
+@keyframes rodaroda {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.IconBlog:hover{
+    color: rgb(0, 119, 255);
+    animation-name: rodaroda;
+    animation-duration: 0.5s;
+   animation-timing-function: linear;
+}

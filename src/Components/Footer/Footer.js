@@ -40,7 +40,7 @@ export default class Footer extends React.Component{
             width: "70%",
             height: "50%",
 
-            marginRight: "0px",
+            marginRight: "5px",
             marginBottom: "10px"            }} allowfullscreen="">
 
              </iframe>

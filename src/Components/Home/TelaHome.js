@@ -43,16 +43,16 @@ export default class TelaHome extends React.Component {
         <div id="containerButtons" >
           <ButtonsHome nome="HOME" idTexto="texto"
             Texto=' Página inicial' />
-          <Link to ='./empresa'><ButtonsHome nome="EMPRESA" idTexto="texto2"
+          <Link to ='/empresa'><ButtonsHome nome="EMPRESA" idTexto="texto2"
             Texto=' Conheça mais sobre a EJComp ' /></Link>
           <Link to='/mej'><ButtonsHome nome="MEJ" idTexto="texto3"
             Texto='Movimento Empresa Júnior, saiba mais. ' /></Link>
-          <Link to='./serviços'><ButtonsHome nome="SERVIÇOS" idTexto="texto4"
+          <Link to='/serviços'><ButtonsHome nome="SERVIÇOS" idTexto="texto4"
             Texto='Os principais serviços prestados pela EJComp ' /></Link>
           <Link to='/equipe'><ButtonsHome nome="EQUIPE" idTexto="texto5"
             Texto='Conheça quem são os integrantes da Empresa Júnior ' /></Link>
-          <ButtonsHome nome="BLOG" idTexto="texto6"
-            Texto='Conteúdos, informações e notícias ' />
+          <Link to='/blog'><ButtonsHome nome="BLOG" idTexto="texto6"
+            Texto='Conteúdos, informações e notícias ' /></Link>
         </div>
         <div id="menu"> <MenuMobile /> </div> {/*Versao mobile do site */}
         <div id="grid-row3">

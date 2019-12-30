@@ -20,9 +20,9 @@ export default class Navbar extends React.Component {
                 <div className='itemLogo'><li className={this.props.logo}>{/*logo muda de acordo com a tela*/}</li></div>
                 <div className="itensNav">
                     <div className={this.props.className}><li><Link to='/'>HOME</Link></li></div>
-                    <div className={this.props.className}><li><Link to='./empresa'>EMPRESA</Link></li></div>
-                    <div className={this.props.className}><li><Link to='Mej'>MEJ</Link></li></div>
-                    <div className={this.props.className}onMouseEnter={this.showLi} onMouseLeave={this.hideLi}><li> <Link to='./serviços'>SERVIÇOS</Link></li> 
+                    <div className={this.props.className}><li><Link to='/empresa'>EMPRESA</Link></li></div>
+                    <div className={this.props.className}><li><Link to='/mej'>MEJ</Link></li></div>
+                    <div className={this.props.className}onMouseEnter={this.showLi} onMouseLeave={this.hideLi}><li> <Link to='/serviços'>SERVIÇOS</Link></li> 
                         {this.state.isVisible ?
                             <ul className='dropdownLi' >
                                 <li>PORTIFÓLIO</li>
@@ -32,7 +32,7 @@ export default class Navbar extends React.Component {
 
                     </div>
                     <div className={this.props.className}><li><Link to='/equipe'>EQUIPE</Link></li></div>
-                    <div className={this.props.className}><li>BLOG</li></div>
+                    <div className={this.props.className}><li><Link to='/blog'>BLOG</Link></li></div>
                 </div>
             </div>
         )

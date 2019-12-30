@@ -2,7 +2,10 @@
   .TelaMej{
     display: grid;
     grid-template-rows: 0.1fr 0.1fr 1fr 1fr;
-    background-color: #001F3F;
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.8);
+    background-image:  url("../../Imagem/fundomej.png");;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;

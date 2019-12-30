@@ -23,7 +23,7 @@ export default class Empresa extends React.Component {
                     <Navbar color='white' logo='logoAzul' className='itemMenu' />
                     <h2>A EMPRESA</h2>
                     <div className="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non felis libero. Aenean sed nisi sit amet neque scelerisque elementum. Sed suscipit auctor quam quis sagittis.</p>
+                        <p>Fundada em 2006 e reestruturada 10 anos depois, a EJCOMP é uma Empresa Júnior de computação inteiramente composta e gerida por alunos do curso Ciência da Computação, da FCT - Unesp de Presidente Prudente. Em 2016 voltamos à ativa, e em 2018 conquistamos a nossa federação à FEJESP. Assim, passamos a atuar cada vez mais fortes e competentes dentro do estado de São Paulo, e Brasil adentro.</p>
                     </div>
                     <Button onClick={this.showModal} className='buttonEmpresa' primary>ENTRE EM CONTATO</Button>
                     {this.state.isVisible ?
