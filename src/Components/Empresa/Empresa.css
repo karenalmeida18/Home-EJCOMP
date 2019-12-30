@@ -26,11 +26,17 @@
     -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);   
 }
 #logo_ej {
+    background: url('../../Imagem/EJBRANCO.png');
+    background-size: 100% 100%;
     margin-top: 15% !important;
-    width: 20%;
-    position: absolute;
+    width: 250px;
+    height: 250px;
     margin-left: 2%;
+    position: absolute;
+    animation: gira 9s linear infinite;
 }
+
+
 .content {
     position: absolute;
     z-index: 2;
@@ -47,14 +53,23 @@
     width: 60%;
 }
 .buttonEmpresa {
-    margin-left: 40% !important;
-    margin-top: 10% !important;
-    border-radius: 0 !important;
+    margin-left: 25% !important;
+    border-radius: 100px !important;
     background-color: #12264A;
     color: white;
-    padding: 10px;
+    margin-top: 5% !important;
+    padding: 15px;
     outline: 0;
+    
 } 
+
+@keyframes gira {
+    
+    to {
+        transform:rotate(360deg);
+    }
+}
+
 .content p {
     font-size: 24px;
 }
