@@ -30,7 +30,7 @@ export default function Equipe() {
     <div className="Equipe">
       <Navbar color='white' logo='logo' className='itemMenu' />
       <div id="menuEquipe"> <MenuMobile /> </div>
-      <div className="TittleEquipe">
+      <div className="TittleEquipe fadeBottom">
         <h5>NOSSA EQUIPE</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>
       </div>
@@ -54,6 +54,7 @@ export default function Equipe() {
         sliderClass=""
         slidesToSlide={3}
         swipeable
+        className="fadeScale"
       >
         <Membros titulo='João Pedro' funçao='Diretor de Relações Externas' classImg='FotoMembro m1' />
         <Membros titulo='Gabriel Santos' funçao='Membro de Projetos' classImg='FotoMembro m2' />
@@ -91,7 +92,8 @@ export default function Equipe() {
         showDots
         sliderClass=""
         slidesToSlide={3}
-        swipeable>
+        swipeable
+        className="fadeScale">
         <Membros titulo='Maykon' funçao='Membro de Projetos' classImg='FotoMembro m9' />
         <Membros titulo='Evandro' funçao='Membro de Projetos' classImg='FotoMembro m10' />
         <Membros titulo='Breno' funçao='Membro de Projetos' classImg='FotoMembro m11' />

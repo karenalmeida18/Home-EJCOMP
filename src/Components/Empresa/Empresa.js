@@ -20,21 +20,21 @@ export default class Empresa extends React.Component {
         return (
             <div className="empresa">
                 <div className="bg-image"></div>
-                <div className="content">
-                    <Navbar color='white' logo='logoAzul' className='itemMenu' />
-                    <div id="logo_ej"> </div> 
-                    <h2>A EMPRESA</h2>
-                    <div className="text">
-                        <p>Fundada em 2006 e reestruturada 10 anos depois, a EJCOMP é uma Empresa Júnior de computação inteiramente composta e gerida por alunos do curso Ciência da Computação, da FCT - Unesp de Presidente Prudente. Em 2016 voltamos à ativa, e em 2018 conquistamos a nossa federação à FEJESP. Assim, passamos a atuar cada vez mais fortes e competentes dentro do estado de São Paulo, e Brasil adentro.</p>
-                    </div>
-                    <Button onClick={this.showModal} className='buttonEmpresa' primary>ENTRE EM CONTATO</Button>
-                    {this.state.isVisible ?
-                        <Contato click={this.hideModal} />
-                        : null
-                    }
+                    <div className="content">
+                        <Navbar color='white' logo='logoAzul' className='itemMenu' />
+                        <div id="logo_ej" className="fadeRight"> </div> 
+                        <h2 className="fadeTop">A EMPRESA</h2>
+                        <div className="text fadeLeft">
+                            <p>Fundada em 2006 e reestruturada 10 anos depois, a EJCOMP é uma Empresa Júnior de computação inteiramente composta e gerida por alunos do curso Ciência da Computação, da FCT - Unesp de Presidente Prudente. Em 2016 voltamos à ativa, e em 2018 conquistamos a nossa federação à FEJESP. Assim, passamos a atuar cada vez mais fortes e competentes dentro do estado de São Paulo, e Brasil adentro.</p>
+                        </div>
+                        <Button onClick={this.showModal} className='buttonEmpresa fadeRight' primary>ENTRE EM CONTATO</Button>
+                        {this.state.isVisible ?
+                            <Contato click={this.hideModal} />
+                            : null
+                        }
 
+                    </div>
                 </div>
-            </div>
 
         )
     }

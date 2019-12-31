@@ -40,7 +40,7 @@ export default class Card extends Component{
             </div>
           <Grid container spacing={2}>
             <Grid item xs>
-            <div className="cardsproj">
+            <div className="cardsproj fadeTop">
                 <IconButton onMouseEnter={this.sites}>
                     <Laptop style={{fontSize: '150px', color: '#12264A'}}/>
                 </IconButton>
@@ -48,7 +48,7 @@ export default class Card extends Component{
             <div id="divSites"></div>
             </Grid>
             <Grid item xs>
-            <div className="cardsproj">
+            <div className="cardsproj fadeTop">
                 <IconButton onMouseEnter={this.aplicativos}>
                     <Smartphone style={{fontSize: '150px',  color: '#12264A'}}/>
                 </IconButton>
@@ -56,7 +56,7 @@ export default class Card extends Component{
             <div id = "divApps"></div>
             </Grid>
             <Grid item xs>
-            <div className="cardsproj">
+            <div className="cardsproj fadeTop">
                 <IconButton onMouseEnter={this.sistemas}>
                     <Storage style={{fontSize: '150px', color: '#12264A'}}/>
                 </IconButton> 

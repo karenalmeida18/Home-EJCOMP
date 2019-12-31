@@ -35,7 +35,7 @@
       background-size: 100% 100%;
       margin: 20px;
       box-shadow:  0 4px 4px black;
-      animation-name: fade;
+      animation-name: fadeScale;
       animation-duration: 1s;
       background-image: url('../../Imagem/logo_brasiljr.jpg');
   }
@@ -62,7 +62,7 @@
     height: 170px;
     margin: 20px;
     box-shadow:  0 4px 4px black;
-    animation-name: fade;
+    animation-name: fadeScale;
     animation-duration: 1s;
     background-image: url('../../Imagem/mej.png');
     background-size: 100% 100%;

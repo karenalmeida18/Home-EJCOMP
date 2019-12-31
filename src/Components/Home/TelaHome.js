@@ -39,8 +39,8 @@ export default class TelaHome extends React.Component {
   render() {
     return (
       <div className="App">
-        <div id="containerLogo"></div>
-        <div id="containerButtons" >
+        <div id="containerLogo" className="fadeRight"></div>
+        <div id="containerButtons">
           <ButtonsHome nome="HOME" idTexto="texto"
             Texto=' Página inicial' />
           <Link to ='/empresa'><ButtonsHome nome="EMPRESA" idTexto="texto2"
@@ -61,7 +61,7 @@ export default class TelaHome extends React.Component {
               {this.state.string}
             </button></Link>
           </div>
-          <div id="containerButtonOrçamento"><button onClick={this.showModal} id="btn2">FAÇA UM ORÇAMENTO</button>
+          <div id="containerButtonOrçamento"><button onClick={this.showModal} id="btn2" className="fadeBottom">FAÇA UM ORÇAMENTO</button>
             {this.state.isVisible ?
               <Contato click={this.hideModal} />
               : null
