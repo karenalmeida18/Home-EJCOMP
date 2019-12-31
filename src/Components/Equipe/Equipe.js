@@ -31,7 +31,7 @@ export default function Equipe() {
       <Navbar color='white' logo='logo' className='itemMenu' />
       <div id="menuEquipe"> <MenuMobile /> </div>
       <div className="TittleEquipe">
-        <h2>NOSSA EQUIPE</h2>
+        <h5>NOSSA EQUIPE</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>
       </div>
       <Carousel additionalTransfrom={0}
@@ -56,13 +56,21 @@ export default function Equipe() {
         swipeable
       >
         <Membros titulo='João Pedro' funçao='Diretor de Relações Externas' classImg='FotoMembro m1' />
-        <Membros titulo='Gabriel' funçao='Membro de Projetos' classImg='FotoMembro m2' />
+        <Membros titulo='Gabriel Santos' funçao='Membro de Projetos' classImg='FotoMembro m2' />
         <Membros titulo='Karen' funçao='Membro de Projetos' classImg='FotoMembro m3' />
         <Membros titulo='Maria Eduarda' funçao='Membro de Relações Externas' classImg='FotoMembro m4' />
         <Membros titulo='Guilherme Couto' funçao='Gerente de Projetos' classImg='FotoMembro m5' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m6' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m7' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro m8' />
+        <Membros titulo='Gabriel Rocha' funçao='Diretor de Finanças e Administração' classImg='FotoMembro m6' />
+        <Membros titulo='Gabriela Tamashiro' funçao='Membro de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Jõao Guilherme' funçao='Presidente' classImg='FotoMembro m6' />
+        <Membros titulo='Lóren' funçao='Membro de Recursos Humanos' classImg='FotoMembro m6' />
+        <Membros titulo='Leonardo Lucas' funçao='Membro de Recursos Humanos' classImg='FotoMembro m6' />
+        <Membros titulo='Carlos Alberto' funçao='Membro de Relações Externas' classImg='FotoMembro m6' />
+        <Membros titulo='Luiz Guilherme' funçao='Gerente de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Andrey' funçao='Membro de Relações Externas' classImg='FotoMembro m6' /> 
+        <Membros titulo='Luiz Filipe' funçao='Gerente de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Andre' funçao='Membro de Recursos Humanos' classImg='FotoMembro m7' />
+       
       </Carousel>
       <Carousel additionalTransfrom={0}
         arrows
@@ -87,11 +95,18 @@ export default function Equipe() {
         <Membros titulo='Maykon' funçao='Membro de Projetos' classImg='FotoMembro m9' />
         <Membros titulo='Evandro' funçao='Membro de Projetos' classImg='FotoMembro m10' />
         <Membros titulo='Breno' funçao='Membro de Projetos' classImg='FotoMembro m11' />
-        <Membros titulo='Ana Luisa' funçao='Diretor de Projetos' classImg='FotoMembro m12' />
+        <Membros titulo='Ana Luisa' funçao='Diretora de Projetos' classImg='FotoMembro m12' />
         <Membros titulo='Bruna' funçao='Membro de Recurso Humanos' classImg='FotoMembro m13' />
         <Membros titulo='Lucas' funçao='Membro de Projetos' classImg='FotoMembro m14' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
-        <Membros titulo='Nome' funçao='cargo' classImg='FotoMembro' />
+        <Membros titulo='Erik' funçao='Membro de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Vinicius' funçao='Membro de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Mauricio' funçao='Diretor de Recursos Humanos e Vice-Presidente' classImg='FotoMembro m6' />
+        <Membros titulo='Leonardo Higuti' funçao='Membro de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Lucas Leal' funçao='Gerente de Relações Externas' classImg='FotoMembro m6' />
+        <Membros titulo='Juan Cardoso' funçao='Membro de Projetos' classImg='FotoMembro m6' />
+        <Membros titulo='Gustavo Oliveira' funçao='Membro de Finanças e Administração' classImg='FotoMembro m6' />
+        <Membros titulo='Weslley' funçao='Membro de Relações Externas' classImg='FotoMembro m6' />
+
       </Carousel>
 
     </div>

@@ -8,7 +8,7 @@ export default function TelaMej() {
     <div className="TelaMej">
       <Navbar backgroundColor = 'white' logo= 'logoNav' className='itemMenuMej'/>
       <div id="menuMej"> <MenuMobile /> </div>
-      <div className="tittle"><p>MEJ</p>
+       <div className="tittle"><h5>MEJ</h5>
       </div>
       <div className="row-1">
         <div id="LogoBrJr" />

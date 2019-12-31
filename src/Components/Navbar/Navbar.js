@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { NavLink,Link } from 'react-router-dom'
+
 export default class Navbar extends React.Component {
     constructor(props) {
         super(props);
@@ -22,15 +23,17 @@ export default class Navbar extends React.Component {
                     <div className={this.props.className}><li><Link to='/'>HOME</Link></li></div>
                     <div className={this.props.className}><li><Link to='/empresa'>EMPRESA</Link></li></div>
                     <div className={this.props.className}><li><Link to='/mej'>MEJ</Link></li></div>
-                    <div className={this.props.className}onMouseEnter={this.showLi} onMouseLeave={this.hideLi}><li> <Link to='/serviços'>SERVIÇOS</Link></li> 
-                        {this.state.isVisible ?
+                   
+                      < NavLink to='/serviços' className={this.props.className}onMouseEnter={this.showLi} onMouseLeave={this.hideLi}> <li>SERVIÇOS</li>
+                        {this.state.isVisible ? 
                             <ul className='dropdownLi' >
+                                
                                 <li>PORTIFÓLIO</li>
                                 <li>PROJETOS</li>
                             </ul>
                             : null}
-
-                    </div>
+                        </NavLink>
+                    
                     <div className={this.props.className}><li><Link to='/equipe'>EQUIPE</Link></li></div>
                     <div className={this.props.className}><li><Link to='/blog'>BLOG</Link></li></div>
                 </div>

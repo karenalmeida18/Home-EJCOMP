@@ -48,6 +48,13 @@
   .m5{
     background-image: url('../../Imagem/membro5.jpeg');
   }
+  .m7{
+    background-image: url('../../Imagem/m12.jpeg');
+  }
+  .m6{
+    background-image: url('../../Imagem/perfilsemfoto.jpg');
+  }
+  
   .m9{
     background-image: url('../../Imagem/membro6.jpeg');
   }
@@ -68,6 +75,7 @@
   .m14{
     background-image: url('../../Imagem/membro11.jpeg');
   }
+  
   .itemMenu:hover{
     color: blue;
   }
@@ -83,9 +91,15 @@
     -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
     -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
   }
-  .TittleEquipe{
+  .TittleEquipe {
     text-align: center;
     color:white;
+    
+  }
+
+  .TittleEquipe > h5{
+    font-size: 15pt;
+
   }
   .NomeMembro{
     color: rgba(255, 255, 255, 0.87);
