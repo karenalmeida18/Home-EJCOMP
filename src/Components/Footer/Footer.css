@@ -2,13 +2,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 15px;
-    position: fixed;
+    position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: black;
   color: white;
   text-align: center;
+  margin-top:5px;
   font-family: 'Roboto', sans-serif;
 }
 .Intext{
@@ -42,14 +43,18 @@
 #IconesFooter{
     width: fit-content;
     display: flex;
-    position: fixed;
+    position: absolute;
     bottom: 50px;
     justify-content: center;
     align-items: center;
     text-align: center;
 
 }
-
+.TextEj{
+    margin-top: 15px;
+    position: absolute;
+    bottom: 10px;
+}
 
 @keyframes rodaroda {
     from {
@@ -60,11 +65,7 @@
     }
 }
 
-.TextEj{
-    margin-top: 15px;
-    position: fixed;
-    bottom: 10px;
-}
+
 
 @media screen and (max-width: 768px){
 

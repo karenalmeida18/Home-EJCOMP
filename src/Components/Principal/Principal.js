@@ -9,9 +9,10 @@ export default class Principal extends React.Component{
         return(
            <div className='Principal'>
                <Home/>
-               <Mej/>
                <Empresa/>
+               <Mej/>
                <Footer/>
+              
                
            </div>
 
