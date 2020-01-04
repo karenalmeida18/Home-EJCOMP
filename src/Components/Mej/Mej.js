@@ -5,9 +5,8 @@ import Navbar from '../Navbar/Navbar'
 export default function TelaMej() {
   return (
     <div className="TelaMej">
-      <Navbar backgroundColor = 'white' logo= 'logoNav' className='itemMenuMej'/>
-       <div className="tittle"><h5></h5>
-      </div>
+      <Navbar backgroundColor='white' logo='logoNav' className='itemMenuMej' />
+      <div className="tittle"><h5>MEJ</h5></div>
       <div className="row-1">
         <div id="LogoBrJr" />
         <div id="TextBrJr">
@@ -27,7 +26,7 @@ export default function TelaMej() {
            of letters, as opposed to using 'Content here, content here', making it look like readable English.
          Many desktop publishing packages and web page.</p>
         </div>
-        <div id="LogoMej"/>
+        <div id="LogoMej" />
       </div>
     </div>
   );

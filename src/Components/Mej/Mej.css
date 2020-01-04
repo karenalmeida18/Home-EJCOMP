@@ -8,7 +8,7 @@
     background-image:  url("../../Imagem/fundomej.png");;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-size: 100% 100%;
   }
   .tittle{

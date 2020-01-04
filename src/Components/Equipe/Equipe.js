@@ -38,7 +38,6 @@ export default function Equipe() {
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        className="CarouselStyle"
         containerClass="container"
         dotListClass="DotStyle"
         draggable
@@ -77,7 +76,6 @@ export default function Equipe() {
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        className=""
         containerClass="container"
         dotListClass=""
         draggable
