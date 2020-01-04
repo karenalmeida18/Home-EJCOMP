@@ -10,8 +10,8 @@ export default class Footer extends React.Component{
         return(
             <div className='footer'>
                <div id='InfoFooter'>
-              <div className='Intext'> <FontAwesomeIcon icon={faPhoneAlt} size='1x' color='white' borderRadius='30px' className="IconesMidiaFooter" />  <p className='textfooter'> (18) 3229-5466 </p></div> 
-             <div className='Intext'> <FontAwesomeIcon icon={faMapMarkedAlt} size='1x' color='white' borderRadius='30px' className="IconesMidiaFooter" />   <p className='textfooter'>
+              <div className='Intext'> <FontAwesomeIcon icon={faPhoneAlt} size='1x' color='white'  className="IconesMidiaFooter" />  <p className='textfooter'> (18) 3229-5466 </p></div> 
+             <div className='Intext'> <FontAwesomeIcon icon={faMapMarkedAlt} size='1x' color='white'  className="IconesMidiaFooter" />   <p className='textfooter'>
                 Rua Roberto Simonsen, 305.
                 19060-900 Presidente Prudente</p></div>
                 <div className='Intext'><FontAwesomeIcon icon={faEnvelopeOpenText} size='1x' color='white' borderRadius='30px' className="IconesMidiaFooter" /> <p className='textfooter'>computacaojr@gmail.com</p></div>
@@ -26,7 +26,7 @@ export default class Footer extends React.Component{
               <FontAwesomeIcon icon={faInstagram} size='2x' color='white' className="IconesMidia" />
             </a>
             <a href="https://pt.linkedin.com/company/ejcomp" target="_blank" rel="noopener noreferrer" >
-              <FontAwesomeIcon icon={faLinkedin} size='2x' color='white' borderRadius='30px' className="IconesMidia" />
+              <FontAwesomeIcon icon={faLinkedin} size='2x' color='white' className="IconesMidia" />
               
             </a>
           </div>

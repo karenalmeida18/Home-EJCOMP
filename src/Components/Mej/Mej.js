@@ -1,13 +1,11 @@
 import React from 'react';
 import './Mej.css'
 import Navbar from '../Navbar/Navbar'
-import MenuMobile from '../MenuMobile/MenuMobile'
 
 export default function TelaMej() {
   return (
     <div className="TelaMej">
       <Navbar backgroundColor = 'white' logo= 'logoNav' className='itemMenuMej'/>
-      <div id="menuMej"> <MenuMobile /> </div>
        <div className="tittle"><h5></h5>
       </div>
       <div className="row-1">
@@ -30,7 +28,6 @@ export default function TelaMej() {
          Many desktop publishing packages and web page.</p>
         </div>
         <div id="LogoMej"/>
-
       </div>
     </div>
   );

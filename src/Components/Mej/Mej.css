@@ -10,7 +10,6 @@
     height: 100vh;
     width: 100vw;
     background-size: 100% 100%;
-    animation: colors 7s infinite;
   }
   .tittle{
     text-align: center;
@@ -140,15 +139,4 @@
         opacity: 1;
         transform: translateY(0%);
     }
-}
-@keyframes colors {
-  0% {
-    background-color: #001F3F;
-  }
-  50% {
-    background-color: black;
-  }
-  100% {
-    background-color: #001F3F;
-  }
 }

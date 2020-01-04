@@ -1,78 +1,82 @@
 .empresa {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     color: blue;
     font-family: 'Roboto', sans-serif;
-    background-color: black;
-}
-
-.bg-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.918);
+    -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
+    -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904); 
     background: url('../../Imagem/Empresa_.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    z-index: 0;
-    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.918);
-    -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
-    -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);   
+    display: grid;
+
 }
 #logo_ej {
     background: url('../../Imagem/EJBRANCO.png');
     background-size: 100% 100%;
     width: 250px;
     height: 250px;
-    margin-left: 2%;
-   
+    margin-left: 6%;
     animation: gira 9s linear infinite;
-}
 
-
-.content {
-    z-index: 2;
 }
-.content > h2 {
+.EmpresaRow1{
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto auto;    
+}
+.tituloEmpresa {
     font-size: 28px;
-    margin-left: 25%;
-    margin-bottom: 5%;
-
+    margin-left: 3%;
 }
-.content .text {
-    margin-left: 25%;
-    width: 60%;
+
+ .textEmpresa {
+    margin-top: 4%;
+    font-size: 22px;
+    width: 75%;
+    margin-left: 3%;
+
 }
 .buttonEmpresa {
-    margin-left: 25% !important;
-    border-radius: 100px !important;
+    border-radius: 100px;
     background-color: #12264A;
     color: white;
-    margin-top: 5% !important;
-    padding: 15px;
+    padding: 14px;
     outline: 0;
-    margin-bottom: 10px;
-    
-} 
+    margin-top: 10%;
+    font-weight: bolder;
+    margin-left: 3%;
 
+} 
 @keyframes gira {
     
     to {
         transform:rotate(360deg);
     }
 }
-
-.content p {
-    font-size: 24px;
-}
 .logoAzul{
     background: url('../../Imagem/logoazul.png');
     width: 180px;
     height: 42px;
     background-size: 100% 100%;
+}
+@media screen and (max-width: 768px){
+    .EmpresaRow1{
+        display: block;
+    }
+    .empresa{
+        display: flex;
+        height: auto;
+      }
+    .buttonEmpresa{
+        margin-bottom: 10px;
+    }
+    .textEmpresa, .tituloEmpresa{
+       font-size: 15pt;
+    }
+    .tituloEmpresa{
+        margin-top: 15px;
+    }
 }
