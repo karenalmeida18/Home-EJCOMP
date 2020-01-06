@@ -28,7 +28,7 @@ export default class Card extends Component{
     render (){ 
     return (   
         <>   
-        <Navbar  logo= 'logoNav' className='itemMenu'/>
+        <Navbar  logo= 'logoNav' className='itemMenu' link='./'/>
         <div id="menuCards"> 
             <MenuMobile/> 
         </div>

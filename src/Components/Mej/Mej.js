@@ -1,12 +1,9 @@
 import React from 'react';
 import './Mej.css'
-import Navbar from '../Navbar/Navbar'
-
-export default function TelaMej() {
+export default class TelaMej extends React.Component {
+  render(){
   return (
-    <div className="TelaMej">
-      <Navbar backgroundColor='white' logo='logoNav' className='itemMenuMej' />
-      <div className="tittle"><h5>MEJ</h5></div>
+    <div className="TelaMej" id={this.props.id}>
       <div className="row-1">
         <div id="LogoBrJr" />
         <div id="TextBrJr">
@@ -30,4 +27,5 @@ export default function TelaMej() {
       </div>
     </div>
   );
+  }
 }

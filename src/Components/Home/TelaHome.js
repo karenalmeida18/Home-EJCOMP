@@ -4,9 +4,8 @@ import ButtonsHome from '../Buttons/Buttons'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { Link } from 'react-router-dom'
 import Contato from '../Contato/Contato'
-
+import { HashLink as Link } from 'react-router-hash-link';
 export default class TelaHome extends React.Component {
   constructor(props) {
     super(props);
@@ -38,14 +37,14 @@ export default class TelaHome extends React.Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="App" id={this.props.id}>
         <div id="containerLogo" className="fadeRight"></div>
         <div id="containerButtons">
           <ButtonsHome nome="HOME" idTexto="texto"
             Texto=' Página inicial' />
-          <Link to ='/empresa'><ButtonsHome nome="EMPRESA" idTexto="texto2"
+          <Link smooth to={'/#section2'}><ButtonsHome nome="EMPRESA" idTexto="texto2"
             Texto=' Conheça mais sobre a EJComp ' /></Link>
-          <Link to='/mej'><ButtonsHome nome="MEJ" idTexto="texto3"
+          <Link smooth to={'/#section3'}><ButtonsHome nome="MEJ" idTexto="texto3"
             Texto='Movimento Empresa Júnior, saiba mais. ' /></Link>
           <Link to='/serviços'><ButtonsHome nome="SERVIÇOS" idTexto="texto4"
             Texto='Os principais serviços prestados pela EJComp ' /></Link>

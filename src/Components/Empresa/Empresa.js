@@ -16,7 +16,7 @@ export default class Empresa extends React.Component {
     };
     render() {
         return (
-            <div className="empresa">
+            <div className="empresa" id={this.props.id}>
                 <div className="EmpresaRow1">
                     <div id="logo_ej" className="fadeRight"> </div>
                     <div>

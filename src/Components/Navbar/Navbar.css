@@ -1,4 +1,5 @@
     #Navbar {
+        position: sticky;
     list-style-type: none;
     display: grid;
     flex-direction: row;
@@ -7,6 +8,8 @@
     font-size: 17px;
     text-decoration:none;
     font-family: 'Roboto', sans-serif;
+    top: 0;
+    z-index: 50;
 
   }
 .itensNav{
