@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import './portfolio.css';
 import Navbar from '../Navbar/Navbar';
+import MenuMobile from '../MenuMobile/MenuMobile'
 import PortCard from './PortCard';
 import capjr from '../../Imagem/port/cap1.jpg'
 import dvora from '../../Imagem/port/dvora2.png'
@@ -87,7 +88,8 @@ const imagesPort = [
 const Portfolio = function () {
   return(
     <div id='portfolio'>
-    <Navbar color='#12264A' logo='logo' className='itemMenu' />
+    <Navbar backgroundColor='white' color='#12264A' logo='logo' className='itemMenu' />    
+    <div id="menuEquipe"> <MenuMobile /> </div>
     <div className="Portfolio">
       <p style={{marginBottom: '10px', fontSize: '200%', color: '#12264A'}}>NOSSO PORTFÓLIO</p>
             <div className="hr-style" style={{alignSelf: 'center'}}></div>

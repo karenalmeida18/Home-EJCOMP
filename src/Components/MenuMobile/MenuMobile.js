@@ -3,7 +3,7 @@ import './MenuMobile.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 import Contato from '../Contato/Contato'
 
 export default class Barra extends React.Component {
@@ -16,7 +16,7 @@ export default class Barra extends React.Component {
         }
     }
     mostrarMenu = () => {
-        if (this.state.icon === faBars) {
+        if (this.state.icon === faBars || this.state.open === false ) {
             this.setState(state => {
                 return {
                     open: !state.open,
@@ -46,11 +46,12 @@ export default class Barra extends React.Component {
                     <ul id="menuItens">
                         <div id="containerBtnMenu">
                             <hr size="1" />
-                            <Link to='/'><li>HOME</li></Link>
-                            <li>EMPRESA</li>
-                            <Link to='/mej'><li>MEJ</li></Link>
-                            <Link to='/serviços'><li>SERVIÇOS</li></Link>
-                            <Link to='/equipe'><li>EQUIPE</li></Link>
+                            <Link smooth to={'/#section1'}><li >HOME</li></Link>
+                            <Link smooth to={'/#section2'}><li>EMPRESA</li></Link>
+                            <Link smooth to={'/#section3'}><li>MEJ</li></Link>
+                            <Link smooth to={'/serviços'}><li>SERVIÇOS</li></Link>
+                            <Link smooth to={'/portfolio'}><li>PORTFOLIO</li></Link>
+                            <Link smooth to={'/equipe'}><li>EQUIPE</li></Link>
                             <li>BLOG</li>
                             <li onClick={this.showModal}>ORÇAMENTO
                             </li>

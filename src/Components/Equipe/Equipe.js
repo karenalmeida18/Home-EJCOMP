@@ -38,7 +38,7 @@ export default function Equipe() {
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        containerClass="container"
+        containerClass=""
         dotListClass="DotStyle"
         draggable
         focusOnSelect={false}
@@ -76,7 +76,7 @@ export default function Equipe() {
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        containerClass="container"
+        containerClass=""
         dotListClass=""
         draggable
         focusOnSelect={false}

@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { Storage, Laptop, Smartphone } from '@material-ui/icons';
 import "./cards.css";
 import Navbar from '../Navbar/Navbar';
+import MenuMobile from '../MenuMobile/MenuMobile'
 
 export default class Card extends Component{
     constructor(props){
@@ -31,6 +32,7 @@ export default class Card extends Component{
         <>   
         <div className="services">
         <Navbar color='#12264A' logo='logo' className='itemMenu' />
+        <div id="menuEquipe"> <MenuMobile /> </div>
             <p style={{marginBottom: '10px', fontSize: '200%', color: '#12264A'}}>O QUE FAZEMOS?</p>
             <div className="hr-style" style={{alignSelf: 'center'}}>
             </div>

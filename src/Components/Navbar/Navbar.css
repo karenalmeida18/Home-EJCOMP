@@ -1,5 +1,5 @@
     #Navbar {
-        position: sticky;
+    position: sticky;
     list-style-type: none;
     display: grid;
     flex-direction: row;
@@ -36,14 +36,14 @@ a { color: inherit; }
      padding: 26px 27px;
      position: absolute;
      z-index: 1;
+     list-style-type: none;
 }
 .dropdownLi > li{
-    font-size: 10pt;
     text-decoration: none;
     list-style-type: none;
 }
 .dropdownLi > li:hover{
-    border-bottom: 1px solid black;   
+    border-bottom: 2px solid black;   
 }
 @media screen and (max-width: 768px){
     #Navbar{
