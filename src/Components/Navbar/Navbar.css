@@ -3,19 +3,23 @@
     list-style-type: none;
     display: grid;
     flex-direction: row;
-    grid-template-columns: 1fr 1fr;
     outline: none;
+    grid-template-columns: 1fr 1fr;
     font-size: 17px;
     text-decoration:none;
     font-family: 'Roboto', sans-serif;
     top: 0;
     z-index: 50;
 
+
   }
 .itensNav{
+   margin-right: 40px;
     display: flex;
     flex-direction: row;
     text-decoration:none;
+
+
 }
 a:link{
     text-decoration:none;
@@ -30,20 +34,6 @@ a { color: inherit; }
     margin-top: 20px;
     display: flex;
     align-self: center;
-}
-.dropdownLi {
-     display: inline-block;
-     padding: 26px 27px;
-     position: absolute;
-     z-index: 1;
-     list-style-type: none;
-}
-.dropdownLi > li{
-    text-decoration: none;
-    list-style-type: none;
-}
-.dropdownLi > li:hover{
-    border-bottom: 2px solid black;   
 }
 @media screen and (max-width: 768px){
     #Navbar{

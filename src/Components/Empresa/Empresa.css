@@ -1,11 +1,11 @@
 .empresa {
     width: 100%;
     height: 100vh;
-    color: blue;
+    color:#EDEAE0;
     font-family: 'Roboto', sans-serif;
-    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.918);
-    -moz-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904);
-    -webkit-box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.904); 
+    box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
+    -moz-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
+    -webkit-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     background: url('../../Imagem/Empresa_.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,7 +42,7 @@
 .buttonEmpresa {
     border-radius: 100px;
     background-color: #12264A;
-    color: white;
+    color:#EDEAE0;
     padding: 14px;
     outline: 0;
     margin-top: 10%;

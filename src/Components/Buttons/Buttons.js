@@ -6,15 +6,15 @@ export default class ButtonsHome extends React.Component {
         super(props);
         this.state = {
             backgroundColor: 'transparent',
-            color: 'blue',
-            border: '1.4px solid blue'
+            color: 'white',
+            border: '1.4px solid white'
         };
     }
     alterarEstado = () => {
-        this.setState({ isVisible: true, backgroundColor: 'yellow', color: 'blue', border : '1.4px solid yellow' });
+        this.setState({ isVisible: true, backgroundColor: '#EDEAE0', color: 'black', border : '1.4px solid white' });
     }
     estadoInicial = () => {
-        this.setState({ isVisible: false, backgroundColor: 'transparent', color: 'blue', border : '1.4px solid blue' });
+        this.setState({ isVisible: false, backgroundColor: 'transparent', color: 'white', border : '1.4px solid white' });
     }
     render() {
         return (

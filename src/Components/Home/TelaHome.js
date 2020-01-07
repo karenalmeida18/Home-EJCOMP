@@ -46,7 +46,7 @@ export default class TelaHome extends React.Component {
             Texto=' Conheça mais sobre a EJComp ' /></Link>
           <Link smooth to={'/#section3'}><ButtonsHome nome="MEJ" idTexto="texto3"
             Texto='Movimento Empresa Júnior, saiba mais. ' /></Link>
-          <Link to='/serviços'><ButtonsHome nome="SERVIÇOS" idTexto="texto4"
+          <Link smooth to={'/portfolio'}><ButtonsHome nome="PORTFOLIO" idTexto="texto4"
             Texto='Os principais serviços prestados pela EJComp ' /></Link>
           <Link to='/equipe'><ButtonsHome nome="EQUIPE" idTexto="texto5"
             Texto='Conheça quem são os integrantes da Empresa Júnior ' /></Link>
@@ -55,7 +55,7 @@ export default class TelaHome extends React.Component {
         </div>
         <div id="menu"> <MenuMobile /> </div> {/*Versao mobile do site */}
         <div id="grid-row3">
-          <div id="containerApp"><Link to='/serviços'>
+          <div id="containerApp"><Link smooth to={'/#section4'}>
             <button id="btn3" >
               {this.state.string}
             </button></Link>

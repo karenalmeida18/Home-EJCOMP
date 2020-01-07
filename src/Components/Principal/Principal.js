@@ -4,6 +4,7 @@ import Empresa from '../Empresa/Empresa'
 import Footer from '../Footer/Footer'
 import TelaMej from '../Mej/Mej'
 import Navbar from '../Navbar/Navbar'
+import Projetos from '../Cards/index'
 
 export default class Principal extends React.Component {
     constructor(props) {
@@ -15,9 +16,10 @@ export default class Principal extends React.Component {
         return (
             <div className='Principal'>
                 <Home id='section1' />
-                <Navbar backgroundColor='white' logo='logoNav' className='itemMenuMej' />
+                <Navbar  backgroundColor='white' logo='logoNav' className='itemMenuMej' />
                 <Empresa id='section2' />
                 <TelaMej id='section3' />
+                <Projetos id= 'section4'/>
                 <Footer />
 
             

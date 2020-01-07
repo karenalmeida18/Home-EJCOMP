@@ -6,7 +6,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: #1b1b1b;
   color: white;
   text-align: center;
   margin-top:5px;
@@ -15,7 +15,7 @@
 .Intext{
     display:flex;
     flex-direction: row;
-    color:white;
+    color:#EDEAE0;
     margin-bottom: 10px;
     text-align: center;
 
