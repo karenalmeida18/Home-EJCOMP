@@ -14,20 +14,25 @@
     align-items: center;
 }
 
-hr{
-    display: flex;
+.logo{
+  background: url('../../Imagem/logoazul.png');
+  width: 180px;
+  height: 42px;
+  background-size: 100% 100%;
+}
+
+.hr-style{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     border-bottom: 5px solid #12264A;
     border-radius: 7px 7px 7px 7px;
     width: 60%;  
 }
 .line{
-    text-align: center;
+    align-items: center;
     margin-bottom: 20px;
-}/*
-p{
-    font-size: 200%;
-    color: #12264A;
-}*/
+}
 
 .IconButton{
     margin-left: 20%;
@@ -46,7 +51,7 @@ p{
   }
 
   .itemMenu:hover{
-    color: blue;
+    color: #ffd700;
   }
   .itemMenu{
     margin-left: 40px;
