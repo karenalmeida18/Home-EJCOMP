@@ -92,7 +92,7 @@ const Portfolio = function () {
     <div id="menuEquipe"> <MenuMobile /> </div>
     <div className="Portfolio">
       <p style={{marginBottom: '10px', fontSize: '200%', color: '#12264A'}}>NOSSO PORTFÓLIO</p>
-            <div className="hr-style" style={{alignSelf: 'center'}}></div>
+            <div className="hr-style rollIn" style={{alignSelf: 'center'}}></div>
             <h3 style={{marginBottom: '10px', color: '#12264A'}}>Lorem </h3>
                 <Grid
                 container

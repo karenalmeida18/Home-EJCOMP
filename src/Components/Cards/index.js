@@ -4,38 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { Storage, Laptop, Smartphone } from '@material-ui/icons';
 import "./cards.css";
 
-const texts = [
-    {
-        text: 'test1',
-    },   
-    {
-        text: 'test2',
-    },
-    {
-        text: 'test3',
-    }, 
-]   
-export default class Card extends Component{
-    constructor(props){
-        super(props);
-        this.sites = this.sites.bind(this);
-    }
-    sites(){
-        var div=  document.getElementById('divSites');
-        div.innerHTML = "<p>Sites</p><br><h4>A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. Após esse levantamento, começaremos o desenvolvimento desde o design até a publicação do site.Se você deseja fazer um site, veio ao local certo.Confira alguns de nossos projetos</h4>";
-           
-    }
-    aplicativos(){
-        var div=  document.getElementById('divApps');
-        div.innerHTML = "<p>Aplicativos</p><br><h4>Borem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>";
-    }
-    sistemas(){
-        var div=  document.getElementById('divSystem');
-        div.innerHTML = "<p>Sistemas</p><br><h4>Corem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>";
-    }
-    onMouseEnter (e) {
-        this.setState ({text: ''})
-    }
+export default class Card extends Component{    
     render (){ 
     return (   
         <>   
@@ -46,19 +15,38 @@ export default class Card extends Component{
           <Grid container spacing={2}>
             <Grid item xs>
             <div className="cardsproj">
-                <IconButton onMouseEnter={this.sites} onMouseOut={''}>
+                <IconButton>
                     <Laptop style={{fontSize: '150px', color: '#12264A'}}/>
                 </IconButton>
             </div>
-            <div id="divSites"></div>
+            <div id="divSites" className="fadeRight">
+                <p style={{fontSize: '150%'}}>Sites</p>
+                <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
+                    profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
+                    das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
+                    Após esse levantamento, começaremos o desenvolvimento desde o design até a publicação do site.
+                    Se você deseja fazer um site, veio ao local certo. Confira alguns de nossos projetos
+                </h4>
+
+            </div>
             </Grid>
             <Grid item xs>
             <div className="cardsproj">
-                <IconButton onMouseEnter={this.aplicativos} onMouseLeave={''}>
+                <IconButton>
                     <Smartphone style={{fontSize: '150px',  color: '#12264A'}}/>
                 </IconButton>
             </div>
-            <div id = "divApps"></div>
+            <div id="divApps" className="fadeScale">
+                <p style={{fontSize: '150%'}}>Aplicativos</p>
+                <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
+                    profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
+                    das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
+                    Após esse levantamento, começaremos o desenvolvimento desde o design até a publicação do site.
+                    Se você deseja fazer um site, veio ao local certo. Confira alguns de nossos projetos
+                </h4>
+
+            </div>
+            <div id = "divApps" className="fadeScale"></div>
             </Grid>
             <Grid item xs>
             <div className="cardsproj">
@@ -67,7 +55,15 @@ export default class Card extends Component{
                 </IconButton> 
                 
             </div>
-            <div id="divSystem"></div>
+            <div id="divSystem" className="fadeLeft">
+            <p style={{fontSize: '150%'}}>Sistemas</p>
+                <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
+                    profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
+                    das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
+                    Após esse levantamento, começaremos o desenvolvimento desde o design até a publicação do site.
+                    Se você deseja fazer um site, veio ao local certo. Confira alguns de nossos projetos
+                </h4>
+            </div>
             </Grid>
           </Grid>
           </div>

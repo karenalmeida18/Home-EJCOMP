@@ -13,6 +13,16 @@
 .fadeScale {
     animation: fadeScale 1s ease-in both;
 }
+.rollIn {
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn ease-in both;
+ }
+
+@keyframes rollIn {
+    0% { opacity: 0; transform: translateX(-100%) rotate(-120deg); }
+    100% { opacity: 1; transform: translateX(0px) rotate(0deg); } 
+ } 
+
 @keyframes fadeInTop {
 	from {
 		opacity: 0;
@@ -23,6 +33,8 @@
 		transform: translate3d(0, 0, 0);
 	}
 }
+
+  
 @keyframes fadeInRight {
     from {
         opacity: 0;

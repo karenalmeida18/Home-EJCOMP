@@ -6,7 +6,7 @@ import './portfolio.css';
 export default function PortCard({image1, image2, text}){
     return (
       <>
-      <div className="container">
+      <div className="container fadeScale">
         <img src={image1} className="image"></img>
         <div className="container2">
           <div className="overlay">

@@ -17,7 +17,6 @@
     font-weight: bold;
     align-items: center;
 }
-
 .logo{
   background: url('../../Imagem/logoazul.png');
   width: 180px;
@@ -74,4 +73,12 @@
     .services{
       height: auto;
     }
+  }
+
+  #divSites {
+    margin-left: 10px;
+  }
+
+  #divSystem {
+    margin-right: 10px;
   }

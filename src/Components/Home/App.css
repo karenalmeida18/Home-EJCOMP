@@ -25,7 +25,7 @@
 }
 #containerLogo{
    margin-left: 50px;
-   background-image: url('../../Imagem/ejcomp.png');
+   background: url('../../Imagem/ejcomp.svg');
    background-size: 100% 100%;
    width: 15%;
    height: 15%;
