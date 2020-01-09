@@ -16,6 +16,7 @@
     justify-content: center;
     font-weight: bold;
     align-items: center;
+    font-family: "Roboto",Helvetica,Arial,Verdana,sans-serif;
 }
 .logo{
   background: url('../../Imagem/logoazul.png');

@@ -29,7 +29,7 @@ export default function Equipe() {
   return (
     <div className="Equipe">
       <Navbar color='white' logo='Logo' className='itemMenu' />
-      <div id="menuEquipe"> <MenuMobile /> </div>
+      <div id="menu"> <MenuMobile /> </div>
       <div className="TittleEquipe fadeBottom">
         <h5>NOSSA EQUIPE</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>
@@ -38,7 +38,7 @@ export default function Equipe() {
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        containerClass=""
+        containerClass="tstr"
         dotListClass="DotStyle"
         draggable
         focusOnSelect={false}

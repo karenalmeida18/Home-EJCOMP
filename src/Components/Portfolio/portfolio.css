@@ -32,6 +32,11 @@
     margin-left: 20px;
   }
 }
+@media screen and (max-width: 768px){
+  .Portfolio > p{
+    margin-top: 12%;
+  }
+}
 .logo{
   background: url('../../Imagem/logoazul.png');
   width: 180px;

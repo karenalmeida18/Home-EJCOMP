@@ -20,13 +20,13 @@ export default class Navbar extends React.Component {
             <div id="Navbar" style={{ color: this.props.color, backgroundColor: this.props.backgroundColor, display: this.props.display }}>
                 <div className='itemLogo'><li className={this.props.logo}></li></div>
                 <div className="itensNav">
-                    <NavLink activeClassName="selected" className={this.props.className} to={"/#section1"}><li>HOME</li></NavLink>
-                    <NavLink activeClassName="selected" className={this.props.className} to={"/#section2"}><li>EMPRESA</li></NavLink>
-                    <NavLink activeClassName="selected" className={this.props.className} to={"/#section3"}><li>MEJ</li></NavLink>
-                    <NavLink activeClassName='selected' className={this.props.className} to={"/#section4"}> <li>SERVIÇOS</li> </NavLink>
-                    <NavLink activeClassName='selected' className={this.props.className} to={"/portfolio"}> <li>PORTFOLIO</li> </NavLink>
-                    <NavLink activeClassName="selected" className={this.props.className} to={"/equipe"}><li>EQUIPE</li></NavLink>
-                    <NavLink activeClassName="selected" className={this.props.className} to={"/blog"}><li>BLOG</li></NavLink>
+                    <NavLink smooth activeClassName="selected" className={this.props.className} to={"/#section1"}><li>HOME</li></NavLink>
+                    <NavLink smooth activeClassName="selected" className={this.props.className} to={"/#section2"}><li>EMPRESA</li></NavLink>
+                    <NavLink smooth activeClassName="selected" className={this.props.className} to={"/#section3"}><li>MEJ</li></NavLink>
+                    <NavLink smooth activeClassName='selected' className={this.props.className} to={"/#section4"}> <li>SERVIÇOS</li> </NavLink>
+                    <NavLink smooth activeClassName='selected' className={this.props.className} to={"/portfolio"}> <li>PORTFOLIO</li> </NavLink>
+                    <NavLink smooth activeClassName="selected" className={this.props.className} to={"/equipe"}><li>EQUIPE</li></NavLink>
+                    <NavLink smooth activeClassName="selected" className={this.props.className} to={"/blog"}><li>BLOG</li></NavLink>
                 </div>
             </div>
         )

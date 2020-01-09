@@ -89,7 +89,7 @@ const Portfolio = function () {
   return(
     <div id='portfolio'>
     <Navbar backgroundColor='white' color='#12264A' logo='logo' className='itemMenu' />    
-    <div id="menuEquipe"> <MenuMobile /> </div>
+    <div id="menu"> <MenuMobile /> </div>
     <div className="Portfolio">
       <p style={{marginBottom: '10px', fontSize: '200%', color: '#12264A'}}>NOSSO PORTFÓLIO</p>
             <div className="hr-style rollIn" style={{alignSelf: 'center'}}></div>

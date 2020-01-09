@@ -45,14 +45,13 @@ export default class Barra extends React.Component {
                 {this.state.open ?
                     <ul id="menuItens">
                         <div id="containerBtnMenu">
-                            <hr size="1" />
-                            <Link smooth to={'/#section1'}><li >HOME</li></Link>
-                            <Link smooth to={'/#section2'}><li>EMPRESA</li></Link>
-                            <Link smooth to={'/#section3'}><li>MEJ</li></Link>
-                            <Link smooth to={'/serviços'}><li>SERVIÇOS</li></Link>
-                            <Link smooth to={'/portfolio'}><li>PORTFOLIO</li></Link>
-                            <Link smooth to={'/equipe'}><li>EQUIPE</li></Link>
-                            <li>BLOG</li>
+                            <Link smooth to={'/#section1'}><li onClick={this.mostrarMenu}> HOME</li></Link>
+                            <Link smooth to={'/#section2'}><li onClick={this.mostrarMenu}>EMPRESA</li></Link>
+                            <Link smooth to={'/#section3'}><li onClick={this.mostrarMenu}>MEJ</li></Link>
+                            <Link smooth to={'/#section4'}><li onClick={this.mostrarMenu}>SERVIÇOS</li></Link>
+                            <Link smooth to={'/portfolio'}><li onClick={this.mostrarMenu}>PORTFOLIO</li></Link>
+                            <Link smooth to={'/equipe'}><li onClick={this.mostrarMenu}>EQUIPE</li></Link>
+                            <Link smooth to={'blog'}><li onClick={this.mostrarMenu}>BLOG</li></Link>
                             <li onClick={this.showModal}>ORÇAMENTO
                             </li>
                             {this.state.isVisible ?
@@ -60,7 +59,6 @@ export default class Barra extends React.Component {
                                     :
                                     null
                                 }
-                            <hr size="1" />
                             <div id="icones">
                                 <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" >
                                     <FontAwesomeIcon icon={faFacebook} size='lg' color='black' className='midiaMobile' />
