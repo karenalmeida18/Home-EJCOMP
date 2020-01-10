@@ -12,16 +12,8 @@ export default class TelaMej extends React.Component {
       </div>
       <div className="row-2">
         <div id="TextMej">
-          <p >It is a long established fact that a reader will be distracted by the readable content of a page when
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution
-           of letters, as opposed to using 'Content here, content here', making it look like readable English.
-         Many desktop publishing packages and web page.</p>
+          <p >A EJComp participa desse movimento desde sua idealização em 2006. Ativamente, a empresa contribuiu modernizando com tecnologia, participando e organizando de eventos com o Núcleo Unesp, que acolheu a nossa EJ a partir de 2016 até 2018, quando os nossos membros participaram da criação do Núcleo que estaria em vigor no novo formato do MEJ Paulista: a fundação do Núcleo Bauru.
+Hoje a EJComp, junto a Brasil Júnior, Fejesp e Núcleo Bauru, continua trazendo para os alunos de ciência da computação da FCT-Unesp, a vivência empresarial e uma formação continuada em desenvolvimento web e mobile.</p>
         </div>
         <div id="LogoMej" />
       </div>
