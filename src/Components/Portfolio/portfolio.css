@@ -32,9 +32,16 @@
     margin-left: 20px;
   }
 }
+<<<<<<< HEAD
 
 .MuiGrid-spacing-xs-2{
   width: 100% !important;
+=======
+@media screen and (max-width: 768px){
+  .Portfolio > p{
+    margin-top: 12%;
+  }
+>>>>>>> b5df051a493e4afc58014fc1f29880d27d406a2b
 }
 .logo{
   background: url('../../Imagem/logoazul.png');

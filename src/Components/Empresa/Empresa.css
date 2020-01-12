@@ -1,8 +1,8 @@
 .empresa {
     width: 100%;
     height: 100vh;
-    color:#EDEAE0;
-    font-family: 'Roboto', sans-serif;
+    color:#fff;
+    font-family: "Roboto",Helvetica,Arial,Verdana,sans-serif;
     box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     -moz-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     -webkit-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
@@ -25,7 +25,7 @@
 .EmpresaRow1{
     display: grid;
     margin: auto;
-    grid-template-columns: auto auto;    
+    grid-template-columns: auto auto;  
 }
 .tituloEmpresa {
     font-size: 28px;
@@ -42,7 +42,7 @@
 .buttonEmpresa {
     border-radius: 100px;
     background-color: #12264A;
-    color:#EDEAE0;
+    color:#fff;
     padding: 14px;
     outline: 0;
     margin-top: 10%;

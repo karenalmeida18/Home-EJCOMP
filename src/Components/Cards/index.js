@@ -20,7 +20,7 @@ export default class Card extends Component{
                 </IconButton>
             </div>
             <div id="divSites" className="fadeRight">
-                <p style={{fontSize: '150%'}}>Sites</p>
+                <p style={{fontSize: '150%', marginBottom: '10px'}}>Sites</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
@@ -37,7 +37,7 @@ export default class Card extends Component{
                 </IconButton>
             </div>
             <div id="divApps" className="fadeScale">
-                <p style={{fontSize: '150%'}}>Aplicativos</p>
+                <p style={{fontSize: '150%',  marginBottom: '10px'}}>Aplicativos</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
@@ -56,7 +56,7 @@ export default class Card extends Component{
                 
             </div>
             <div id="divSystem" className="fadeLeft">
-            <p style={{fontSize: '150%'}}>Sistemas</p>
+            <p style={{fontSize: '150%',  marginBottom: '10px'}}>Sistemas</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 

@@ -9,6 +9,8 @@
     width:100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
+    z-index: 20000;
+
 }
 .Header{
     display: flex;
@@ -27,7 +29,7 @@
     margin: 0px;
 }
 .modalForms > input{
-    border: 1px solid blue;
+    border: 1px solid #12264A;
     padding: 10px;
     border-radius: 15px;
     outline: 0;
@@ -37,7 +39,7 @@
     font-family: 'Roboto';
 }
 .modalForms > button {
-    background-color: blue;
+    background-color: #12264A;
     border-radius: 20px;
     padding: 5px 30px 5px 30px;
     color: white;
@@ -47,7 +49,7 @@
     font-size: 20pt;
 }
 .Cancel:hover{
-    color: blue;
+    color: #12264A;
     transition: color .5s ease;
 
 }
@@ -59,7 +61,7 @@
     transition: background-color .5s ease;
 }
 .modalForms > textarea{
-    border: 1px solid blue;
+    border: 1px solid #12264A;
     padding: 10px;
     border-radius: 15px;
     outline: 0;

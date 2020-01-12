@@ -5,7 +5,168 @@ import "react-multi-carousel/lib/styles.css";
 import './Equipe.css'
 import Navbar from '../Navbar/Navbar'
 import MenuMobile from '../MenuMobile/MenuMobile'
-
+import membro1 from '../../Imagem/membro1.jpeg'
+import membro2 from '../../Imagem/membro2.jpeg'
+import membro3 from '../../Imagem/membro3.jpeg'
+import membro4 from '../../Imagem/membro4.jpeg'
+import membro5 from '../../Imagem/membro5.jpeg'
+import membro6 from '../../Imagem/membro6.jpeg'
+import membro7 from '../../Imagem/membro7.jpeg'
+import membro8 from '../../Imagem/membro8.jpeg'
+import membro9 from '../../Imagem/membro9.jpeg'
+import membro10 from '../../Imagem/membro10.jpeg'
+import membro11 from '../../Imagem/membro11.jpeg'
+import membro12 from '../../Imagem/m12.jpeg'
+import semFoto from '../../Imagem/perfilsemfoto.jpg'
+const imagensEquipeLinha1 = [
+  {
+    fotoMembro: membro1,
+    textNome: 'João Pedro',
+    textCargo: 'Diretor de Relações Externas'
+  },
+  {
+    fotoMembro: membro2,
+    textNome: 'Gabriel Santos',
+    textCargo: 'Membro de Projetos'
+  },
+  {
+    fotoMembro: membro3,
+    textNome: 'Karen Almeida',
+    textCargo: 'Diretor de Relações Externas'
+  },
+  {
+    fotoMembro: membro4,
+    textNome: 'Maria Eduarda',
+    textCargo: 'Membro de Relações Externas'
+  },
+  {
+    fotoMembro: membro5,
+    textNome: 'Guilherme Couto',
+    textCargo: 'Gerente de Projetos'
+  },
+  {
+    fotoMembro: semFoto,
+    textNome: 'Gabriel Rocha',
+    textCargo: 'Diretor de Finanças e Administração'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Gabriela Tamashiro',
+    textCargo: 'Membro de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Jõao Guilherme',
+    textCargo: 'Diretor Presidente'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Lóren',
+    textCargo: 'Membro de Recursos Humanos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Leonardo Lucas',
+    textCargo: 'Membro de Recursos Humanos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Carlos Alberto',
+    textCargo: 'Membro de Relações Externas'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Luiz Guilherme',
+    textCargo: 'Gerente de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Andrey',
+    textCargo: 'Membro de Relações Externas'
+  }, 
+]
+const imagensEquipeLinha2 = [
+  {
+    fotoMembro: membro6,
+    textNome: 'Maykon Douglas',
+    textCargo: 'Membro de Projetos'
+  },
+  {
+    fotoMembro: membro7,
+    textNome: 'Evandro Duarte',
+    textCargo: 'Membro de Projetos'
+  },
+  {
+    fotoMembro: membro8,
+    textNome: 'Breno Maia',
+    textCargo: 'Gerente de Projetos'
+  },
+  {
+    fotoMembro: membro9,
+    textNome: 'Ana Luisa',
+    textCargo: 'Diretora de Projetos'
+  },
+  {
+    fotoMembro: membro10,
+    textNome: 'Bruna Anselmo',
+    textCargo: 'Membro de Recursos Humanos'
+  },
+  {
+    fotoMembro: membro11,
+    textNome: 'Lucas Honorato',
+    textCargo: 'Membro de Projetos'
+  }, 
+  {
+    fotoMembro: membro12,
+    textNome: 'André Campos',
+    textCargo: 'Gerente de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Luiz Filipe',
+    textCargo: 'Gerente de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Erick Takao',
+    textCargo: 'Membro de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Vinicius Polachini',
+    textCargo: 'Membro de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Mauricio Rodrigues',
+    textCargo: 'Diretor de Recursos Humanos e Vice-Presidente'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Leonardo Higuti',
+    textCargo: 'Membro de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Lucas Leal',
+    textCargo: 'Gerente de Relações Externas'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Juan Cardoso',
+    textCargo: 'Membro de Projetos'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Gustavo Oliveira',
+    textCargo: 'Membro de Finanças e Administração'
+  }, 
+  {
+    fotoMembro: semFoto,
+    textNome: 'Weslley Campos',
+    textCargo: 'Membro de Relações Externas'
+  }, 
+]
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -29,7 +190,7 @@ export default function Equipe() {
   return (
     <div className="Equipe">
       <Navbar color='white' logo='Logo' className='itemMenu' />
-      <div id="menuEquipe"> <MenuMobile /> </div>
+      <div id="menu"> <MenuMobile /> </div>
       <div className="TittleEquipe fadeBottom">
         <h5>NOSSA EQUIPE</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>
@@ -38,7 +199,7 @@ export default function Equipe() {
         arrows
         autoPlaySpeed={3000}
         centerMode={false}
-        containerClass=""
+        containerClass="tstr"
         dotListClass="DotStyle"
         draggable
         focusOnSelect={false}
@@ -55,21 +216,15 @@ export default function Equipe() {
         swipeable
         className="fadeScale"
       >
-        <Membros titulo='João Pedro' funçao='Diretor de Relações Externas' classImg='FotoMembro m1' />
-        <Membros titulo='Gabriel Santos' funçao='Membro de Projetos' classImg='FotoMembro m2' />
-        <Membros titulo='Karen' funçao='Membro de Projetos' classImg='FotoMembro m3' />
-        <Membros titulo='Maria Eduarda' funçao='Membro de Relações Externas' classImg='FotoMembro m4' />
-        <Membros titulo='Guilherme Couto' funçao='Gerente de Projetos' classImg='FotoMembro m5' />
-        <Membros titulo='Gabriel Rocha' funçao='Diretor de Finanças e Administração' classImg='FotoMembro m6' />
-        <Membros titulo='Gabriela Tamashiro' funçao='Membro de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Jõao Guilherme' funçao='Presidente' classImg='FotoMembro m6' />
-        <Membros titulo='Lóren' funçao='Membro de Recursos Humanos' classImg='FotoMembro m6' />
-        <Membros titulo='Leonardo Lucas' funçao='Membro de Recursos Humanos' classImg='FotoMembro m6' />
-        <Membros titulo='Carlos Alberto' funçao='Membro de Relações Externas' classImg='FotoMembro m6' />
-        <Membros titulo='Luiz Guilherme' funçao='Gerente de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Andrey' funçao='Membro de Relações Externas' classImg='FotoMembro m6' /> 
-        <Membros titulo='Luiz Filipe' funçao='Gerente de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Andre' funçao='Membro de Recursos Humanos' classImg='FotoMembro m7' />
+            { imagensEquipeLinha1.map(tile => (
+                  <Membros
+                  fotoMembro={tile.fotoMembro}
+                  textNome={tile.textNome}
+                  textCargo={tile.textCargo}
+                  />
+                ))
+              }  
+      
        
       </Carousel>
       <Carousel additionalTransfrom={0}
@@ -92,20 +247,14 @@ export default function Equipe() {
         slidesToSlide={3}
         swipeable
         className="fadeScale">
-        <Membros titulo='Maykon' funçao='Membro de Projetos' classImg='FotoMembro m9' />
-        <Membros titulo='Evandro' funçao='Membro de Projetos' classImg='FotoMembro m10' />
-        <Membros titulo='Breno' funçao='Membro de Projetos' classImg='FotoMembro m11' />
-        <Membros titulo='Ana Luisa' funçao='Diretora de Projetos' classImg='FotoMembro m12' />
-        <Membros titulo='Bruna' funçao='Membro de Recurso Humanos' classImg='FotoMembro m13' />
-        <Membros titulo='Lucas' funçao='Membro de Projetos' classImg='FotoMembro m14' />
-        <Membros titulo='Erik' funçao='Membro de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Vinicius' funçao='Membro de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Mauricio' funçao='Diretor de Recursos Humanos e Vice-Presidente' classImg='FotoMembro m6' />
-        <Membros titulo='Leonardo Higuti' funçao='Membro de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Lucas Leal' funçao='Gerente de Relações Externas' classImg='FotoMembro m6' />
-        <Membros titulo='Juan Cardoso' funçao='Membro de Projetos' classImg='FotoMembro m6' />
-        <Membros titulo='Gustavo Oliveira' funçao='Membro de Finanças e Administração' classImg='FotoMembro m6' />
-        <Membros titulo='Weslley' funçao='Membro de Relações Externas' classImg='FotoMembro m6' />
+        { imagensEquipeLinha2.map(tile => (
+                  <Membros
+                  fotoMembro={tile.fotoMembro}
+                  textNome={tile.textNome}
+                  textCargo={tile.textCargo}
+                  />
+                ))
+              }  
 
       </Carousel>
 
