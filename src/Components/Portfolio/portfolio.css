@@ -32,6 +32,10 @@
     margin-left: 20px;
   }
 }
+
+.MuiGrid-spacing-xs-2{
+  width: 100% !important;
+}
 .logo{
   background: url('../../Imagem/logoazul.png');
   width: 180px;

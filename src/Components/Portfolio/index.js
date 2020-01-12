@@ -97,7 +97,6 @@ const Portfolio = function () {
                 <Grid
                 container
                 spacing = {2}
-                style= {{padding: "10px"}}
                 >
                 
                   { imagesPort.map(tile => (

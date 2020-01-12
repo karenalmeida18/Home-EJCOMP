@@ -63,7 +63,9 @@
     flex-direction: r;
     text-decoration:none;
   }
-
+  .MuiGrid-spacing-xs-2{
+    width: 100% !important;
+  }
   @media screen and (max-width: 1024px){
     .itemMenu{
       margin-left: 20px;
