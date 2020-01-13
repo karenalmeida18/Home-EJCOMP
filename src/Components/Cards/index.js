@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import { Storage, Laptop, Smartphone } from '@material-ui/icons';
 import "./cards.css";
@@ -17,9 +16,7 @@ export default class Card extends Component{
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
             <div className="cardsproj">
-                <IconButton>
                     <Laptop style={{fontSize: '150px', color: '#12264A'}}/>
-                </IconButton>
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeRight">
@@ -38,9 +35,7 @@ export default class Card extends Component{
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
             <div className="cardsproj">
-                <IconButton>
                     <Smartphone style={{fontSize: '150px',  color: '#12264A'}}/>
-                </IconButton>
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeScale">
@@ -63,10 +58,7 @@ export default class Card extends Component{
             <ScrollAnimation animateIn="fadeTop">
 
             <div className="cardsproj">
-                <IconButton onMouseEnter={this.sistemas} onMouseOut={''}>
                     <Storage style={{fontSize: '150px', color: '#12264A'}}/>
-                </IconButton> 
-                
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeLeft">
