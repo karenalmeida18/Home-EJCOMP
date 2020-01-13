@@ -9,6 +9,8 @@
     height: 100vh;
     width: 100%;
     background-size: 100% 100%;
+    overflow-x: hidden;
+
   }
   .row-1{
     display: grid;
@@ -25,7 +27,6 @@
       background-size: 100% 100%;
       margin: 20px;
       box-shadow:  0 4px 4px black;
-      animation-name: fadeScale;
       animation-duration: 1s;
       background-image: url('../../Imagem/logo_brasiljr.jpg');
   }
@@ -43,7 +44,6 @@
   }
   #TextMej{
     margin: 30px;
-    animation-name: moveLeft;
     animation-duration: 1s;
   }
   #LogoMej{
@@ -52,7 +52,6 @@
     height: 170px;
     margin: 20px;
     box-shadow:  0 4px 4px black;
-    animation-name: fadeScale;
     animation-duration: 1s;
     background-image: url('../../Imagem/mej.png');
     background-size: 100% 100%;
@@ -112,23 +111,4 @@
       height: auto;
     }
   }
-  @keyframes moveLeft{
-    from{
-            opacity: 0;
-            transform: translateX(-35%);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-  @keyframes moveRight{
-    from{
-            opacity: 0;
-            transform: translateY(-35%);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
+

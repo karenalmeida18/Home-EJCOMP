@@ -17,6 +17,7 @@
     font-weight: bold;
     align-items: center;
     font-family: "Roboto",Helvetica,Arial,Verdana,sans-serif;
+    overflow-x: hidden;
 }
 .logo{
   background: url('../../Imagem/logoazul.png');

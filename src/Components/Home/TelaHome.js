@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import Contato from '../Contato/Contato'
 import { HashLink as Link } from 'react-router-hash-link';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 export default class TelaHome extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +40,9 @@ export default class TelaHome extends React.Component {
   render() {
     return (
       <div className="App" id={this.props.id}>
-        <div id="containerLogo" className="fadeRight"></div>
+        <ScrollAnimation animateIn="fadeRight">
+          <div id="containerLogo" className="fadeRight"></div>
+        </ScrollAnimation>
         <div id="containerButtons">
           <ButtonsHome nome="HOME" idTexto="texto"
             Texto=' Página inicial' />

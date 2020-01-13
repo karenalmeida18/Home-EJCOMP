@@ -3,6 +3,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import { Storage, Laptop, Smartphone } from '@material-ui/icons';
 import "./cards.css";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class Card extends Component{    
     render (){ 
@@ -14,12 +15,15 @@ export default class Card extends Component{
             </div>
           <Grid container spacing={2}>
             <Grid item xs>
+            <ScrollAnimation animateIn="fadeTop">
             <div className="cardsproj">
                 <IconButton>
                     <Laptop style={{fontSize: '150px', color: '#12264A'}}/>
                 </IconButton>
             </div>
-            <div id="divSites" className="fadeRight">
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeRight">
+            <div id="divSites">
                 <p style={{fontSize: '150%', marginBottom: '10px'}}>Sites</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
@@ -29,13 +33,17 @@ export default class Card extends Component{
                 </h4>
 
             </div>
+            </ScrollAnimation>
             </Grid>
             <Grid item xs>
+            <ScrollAnimation animateIn="fadeTop">
             <div className="cardsproj">
                 <IconButton>
                     <Smartphone style={{fontSize: '150px',  color: '#12264A'}}/>
                 </IconButton>
             </div>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeScale">
             <div id="divApps" className="fadeScale">
                 <p style={{fontSize: '150%',  marginBottom: '10px'}}>Aplicativos</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
@@ -46,16 +54,23 @@ export default class Card extends Component{
                 </h4>
 
             </div>
-            <div id = "divApps" className="fadeScale"></div>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeScale">
+            <div id = "divApps"></div>
+            </ScrollAnimation>
             </Grid>
             <Grid item xs>
+            <ScrollAnimation animateIn="fadeTop">
+
             <div className="cardsproj">
                 <IconButton onMouseEnter={this.sistemas} onMouseOut={''}>
                     <Storage style={{fontSize: '150px', color: '#12264A'}}/>
                 </IconButton> 
                 
             </div>
-            <div id="divSystem" className="fadeLeft">
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeLeft">
+            <div id="divSystem" >
             <p style={{fontSize: '150%',  marginBottom: '10px'}}>Sistemas</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
@@ -64,6 +79,7 @@ export default class Card extends Component{
                     Se você deseja fazer um site, veio ao local certo. Confira alguns de nossos projetos
                 </h4>
             </div>
+            </ScrollAnimation>
             </Grid>
           </Grid>
           </div>
