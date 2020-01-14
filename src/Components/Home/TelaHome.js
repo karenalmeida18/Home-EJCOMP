@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css'
 import ButtonsHome from '../Buttons/Buttons'
-import MenuMobile from '../MenuMobile/MenuMobile'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import Contato from '../Contato/Contato'
@@ -40,9 +39,7 @@ export default class TelaHome extends React.Component {
   render() {
     return (
       <div className="App" id={this.props.id}>
-        <ScrollAnimation animateIn="fadeRight">
           <div id="containerLogo" className="fadeRight"></div>
-        </ScrollAnimation>
         <div id="containerButtons">
           <ButtonsHome nome="HOME" idTexto="texto"
             Texto=' Página inicial' />
@@ -57,7 +54,6 @@ export default class TelaHome extends React.Component {
           <Link to='/blog'><ButtonsHome nome="BLOG" idTexto="texto6"
             Texto='Conteúdos, informações e notícias ' /></Link>
         </div>
-        <div id="menu"> <MenuMobile /> </div> {/*Versao mobile do site */}
         <div id="grid-row3">
           <div id="containerApp"><Link smooth to={'/#section4'}>
             <button id="btn3" >

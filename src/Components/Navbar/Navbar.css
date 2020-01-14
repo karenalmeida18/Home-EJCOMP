@@ -18,8 +18,7 @@
     display: flex;
     flex-direction: row;
     text-decoration:none;
-
-
+    justify-content: space-evenly;
 }
 a:link{
     text-decoration:none;
@@ -38,5 +37,10 @@ a { color: inherit; }
 @media screen and (max-width: 768px){
     #Navbar{
       display: none;
+    }
+  }
+@media screen and (min-width: 2000px){
+    .itensNav{
+    margin-left: 190px;
     }
   }

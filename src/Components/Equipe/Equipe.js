@@ -192,8 +192,8 @@ export default function Equipe() {
       <Navbar color='white' logo='Logo' className='itemMenu' />
       <div id="menu"> <MenuMobile /> </div>
       <div className="TittleEquipe fadeBottom">
-        <h5>NOSSA EQUIPE</h5>
-        <p>Lorem Ipsum is simply dummy text of the printing and rinting simply dummy</p>
+        <p>NOSSA EQUIPE</p>
+        <div className="hrEquipe"></div>
       </div>
       <Carousel additionalTransfrom={0}
         arrows

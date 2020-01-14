@@ -78,9 +78,7 @@
     transition: text-shadow .5s ease;
 }
 #menu{
-  display: block;
-  position: fixed;
-  width: 100vw;
+  position: sticky;
   padding: 8px;
   box-shadow: 0px 1px 17px rgba(2, 2, 2, 0.5);
   top: 0%;
