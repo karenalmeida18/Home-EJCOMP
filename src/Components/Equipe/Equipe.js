@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './Equipe.css'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import membro1 from '../../Imagem/membro1.jpeg'
 import membro2 from '../../Imagem/membro2.jpeg'
@@ -257,6 +258,7 @@ export default function Equipe() {
               }  
 
       </Carousel>
+      
 
     </div>
   );

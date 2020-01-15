@@ -4,6 +4,7 @@ import './portfolio.css';
 import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile'
 import PortCard from './PortCard';
+import Footer from '../Footer/Footer'
 import capjr from '../../Imagem/port/cap1.jpg'
 import dvora from '../../Imagem/port/dvora2.png'
 import farmatudo from '../../Imagem/port/farmatudo2.jpg'
@@ -113,9 +114,10 @@ const Portfolio = function () {
                     </Grid>
                     ))
                   }                
-        </Grid>
+        </Grid><Footer />
       </div>
     </div>
+    
   );
 }
 
