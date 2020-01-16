@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import Contato from '../Contato/Contato'
 import { HashLink as Link } from 'react-router-hash-link';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class TelaHome extends React.Component {
   constructor(props) {

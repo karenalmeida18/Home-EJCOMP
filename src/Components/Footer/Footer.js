@@ -8,24 +8,24 @@ import { faPhoneAlt,faMapMarkedAlt,faEnvelopeOpenText } from '@fortawesome/free-
 export default class Footer extends React.Component{ 
     render (){
         return(
-            <div className='footer'>
+            <div className='footer' style={{backgroundColor: this.props.backgroundColor, color: this.props.textColor}}>
                <div id='InfoFooter'>
-              <div className='Intext'> <FontAwesomeIcon icon={faPhoneAlt} size='1x' color='white'  className="IconesMidiaFooter" />  <p className='textfooter'> (18) 3229-5466 </p></div> 
-             <div className='Intext'> <FontAwesomeIcon icon={faMapMarkedAlt} size='1x' color='white'  className="IconesMidiaFooter" />
+              <div className='Intext'> <FontAwesomeIcon icon={faPhoneAlt} size='1x' style={{color: this.props.color}}  className="IconesMidiaFooter" />  <p className='textfooter'> (18) 3229-5466 </p></div> 
+             <div className='Intext'> <FontAwesomeIcon icon={faMapMarkedAlt} size='1x' style={{color: this.props.color}}  className="IconesMidiaFooter" />
               <p className='textfooter'>R. Roberto Simonsen, 305 - Pres. Prudente -SP</p></div>
-                <div className='Intext'><FontAwesomeIcon icon={faEnvelopeOpenText} size='1x' color='white' borderRadius='30px' className="IconesMidiaFooter" /> <p className='textfooter'>computacaojr@gmail.com</p></div>
+                <div className='Intext'><FontAwesomeIcon icon={faEnvelopeOpenText} size='1x' style={{color: this.props.color}} borderRadius='30px' className="IconesMidiaFooter" /> <p className='textfooter'>computacaojr@gmail.com</p></div>
 
             </div>
             <div className='Coluna2'>
               <div id="IconesFooter">
             <a href="https://www.facebook.com/EJComp.UNESP/?epa=SEARCH_BOX" target="_blank" rel="noopener noreferrer" >
-              <FontAwesomeIcon icon={faFacebook} size='2x' color='white' className="IconesMidia" />
+              <FontAwesomeIcon icon={faFacebook} size='2x' style={{color: this.props.color}} className="IconesMidia" />
             </a>
             <a href="https://www.instagram.com/ejcompunesp/" target="_blank" rel="noopener noreferrer" >
-              <FontAwesomeIcon icon={faInstagram} size='2x' color='white' className="IconesMidia" />
+              <FontAwesomeIcon icon={faInstagram} size='2x' style={{color: this.props.color}} className="IconesMidia" />
             </a>
             <a href="https://pt.linkedin.com/company/ejcomp" target="_blank" rel="noopener noreferrer" >
-              <FontAwesomeIcon icon={faLinkedin} size='2x' color='white' className="IconesMidia" />
+              <FontAwesomeIcon icon={faLinkedin} size='2x' style={{color: this.props.color}} className="IconesMidia" />
               
             </a>
           </div>

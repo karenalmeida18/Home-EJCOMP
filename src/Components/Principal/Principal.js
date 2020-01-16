@@ -22,7 +22,7 @@ export default class Principal extends React.Component {
                 <Empresa id='section2' />
                 <TelaMej id='section3' />
                 <Projetos id= 'section4'/>
-                <Footer />
+                <Footer color= 'white' backgroundColor='#1b1b1b' textColor= 'white' />
 
             
             </div>

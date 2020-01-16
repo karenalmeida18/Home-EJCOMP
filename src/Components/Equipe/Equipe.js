@@ -189,8 +189,9 @@ const responsive = {
 };
 export default function Equipe() {
   return (
+    <div>
     <div className="Equipe">
-      <Navbar color='white' logo='Logo' className='itemMenu' />
+      <Navbar color='white' logo='Logo' className='itemMenu' backgroundColor='#12264A'/>
       <div id="menu"> <MenuMobile /> </div>
       <div className="TittleEquipe fadeBottom">
         <p>NOSSA EQUIPE</p>
@@ -258,7 +259,9 @@ export default function Equipe() {
               }  
 
       </Carousel>
-      
+
+    </div>
+    <Footer color= '#12264A' backgroundColor='#fafafa' textColor= '#12264A' />
 
     </div>
   );

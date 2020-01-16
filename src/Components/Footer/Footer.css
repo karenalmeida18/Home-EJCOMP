@@ -6,8 +6,8 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #1b1b1b;
-  color: white;
+  background-color: #fafafa;
+  color: #12264A;
   text-align: center;
   margin-top:5px;
   font-family: 'Roboto', sans-serif;
@@ -15,7 +15,6 @@
 .Intext{
     display:flex;
     flex-direction: row;
-    color:#EDEAE0;
     margin-bottom: 10px;
     text-align: center;
 

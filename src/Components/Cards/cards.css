@@ -55,9 +55,6 @@
     background-color:#f8f8ff;
   }
 
-  .itemMenu:hover{
-    color: #ffd700;
-  }
   .itemMenu{
     margin-left: 40px;
     display: flex;
@@ -75,7 +72,7 @@
   }
   @media screen and (max-width: 768px){
     .services{
-      height: auto;
+      height: 100%;
     }
   }
 
