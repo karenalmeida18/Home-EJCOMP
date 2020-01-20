@@ -32,57 +32,57 @@ const imagesPort = [
    {
      image1: pedagogia,
      image2: pedagogiapng,
-     text: "texto"
+     text: "Site e Sitema criados para o Congresso Pedagogia Histórico-Crítica 2018."
    },
    {
      image1: welcomej,
      image2: welcomejpng,
-     text: "texto"
+     text: "Site criado para o VI WelcoMEJ, evento para as empresas júniores da Unesp, sediado na cidade de Bauru-SP."
    },
    {
      image1: humanus,
      image2: humanuspng,
-     text: "texto"
+     text: "Site institucional da Empresa Júnior de Psicologia da UNESP de Assis."
    },
     {
       image1: carnailha,
       image2: carnailhapng,
-      text: "texto"
+      text: "Um dos maiores carnavais universitários do país, informações sobre o evento e ingressos."
     },
    {
      image1: capjr,
      image2: capjrpng,
-     text: "texto"
+     text: "Site institucional da Empresa Júnior de Ciências Agrárias e Veterinarias da UNESP de Jaboticabal."
    },
    {
     image1: dvora,
     image2: dvorapng,
-    text: "texto"
+    text: "Sistema de gerenciamento de Empresas Juniores, feito e usado com carinho pela EJComp."
    },
    {
     image1: farmatudo,
     image2: farmatudopng,
-    text: "texto"
+    text: "App que reune as farmácias da cidade e que fazem delivery de medicamentos."
    },
    {
     image1: fixunesp,
     image2: fixunesppng,
-    text: "texto"
+    text: "App que tem como finalidade ajudar na resolução de problemas internos nos campus da UNESP."
    },
    {
     image1: vilaverde,
     image2: vilaverdepng,
-    text: "texto"
+    text: "Informações sobre o hotel e suas atividades, mapa, reserva e muito mais em um aplicativo."
    },
    {
     image1: mapafejesp,
     image2: mapafejesppng,
-    text: "texto"
+    text: "Sistema de gerenciamento de empresas júniores para Fejesp (o nome da imagem é mapaFejesp)."
    },
    {
     image1: mapapromex,
     image2: promexpng,
-    text: "texto"
+    text: "Sistema de gerenciamento de contatos da Promex Decor (o nome da imagem é mapaPromex)."
    },
 
 ]
