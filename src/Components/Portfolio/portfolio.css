@@ -44,7 +44,6 @@
 #portfolio {
     text-align: center;
     justify-content: center;
-    font-weight: bold;
     align-items: center;
 }
 
@@ -63,7 +62,7 @@
     object-fit: cover;
   }
   .image2 {
-    margin-left: 20px;
+    margin-left: 25%;
     margin-top: 50px;
     display: flex;
     width: 47%;
@@ -99,15 +98,15 @@
     opacity: 0.9;
   }
   .text {
-    top: 5%;
-    left: 55%;
+    top: 80%;
+    left: 47.5%;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: left;
+    text-align: center;
   }
   .Portfolio {
     margin-left: 15px;
