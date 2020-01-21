@@ -33,7 +33,7 @@ const imagensEquipeLinha1 = [
   {
     fotoMembro: membro3,
     textNome: 'Karen Almeida',
-    textCargo: 'Diretor de Relações Externas'
+    textCargo: 'Membro de Projetos'
   },
   {
     fotoMembro: membro4,
