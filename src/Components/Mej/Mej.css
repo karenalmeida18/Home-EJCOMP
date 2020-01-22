@@ -15,8 +15,8 @@
   .row-1{
     display: grid;
     grid-template-columns: 0.1fr 1fr;
-    color: #fff;
-    border-bottom: 15px solid white;
+    color: #fafafa;
+    border-bottom: 15px solid #fafafa;
     font-family: "Roboto",Helvetica,Arial,Verdana,sans-serif;
     align-items: center;
   }
@@ -38,7 +38,7 @@
   .row-2{
     display: grid;
     grid-template-columns: 1fr 0.1fr;
-    color: #fff;
+    color: #fafafa;
     font-family: "Roboto",Helvetica,Arial,Verdana,sans-serif;
     align-items: center;
   }
@@ -70,7 +70,7 @@
     top: 0%;
     text-align: end;
     z-index: 100000;
-    background-color:#EDEAE0;
+    background-color:#fafafa;
   }
   .itemMenuMej:hover{
     border-bottom: 1px solid black;

@@ -89,7 +89,7 @@ const imagesPort = [
 const Portfolio = function () {
   return(
     <div id='portfolio'>
-    <Navbar backgroundColor='white' color='#12264A' logo='logo' className='itemMenuMej' />    
+    <Navbar backgroundColor='white' color='#12264A' logo='logoNav' className='itemMenuMej' />    
     <div id="menu"> <MenuMobile /> </div>
     <div className="Portfolio">
       <p style={{marginBottom: '10px', fontSize: '200%', color: '#12264A'}}>NOSSO PORTFÓLIO</p>

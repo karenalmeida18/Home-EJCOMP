@@ -10,12 +10,16 @@ export default class Modal extends React.Component {
                 <form className="modalForms">
                     <div className="Header">
                         <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={this.props.click} />
-                        <h2>Contato</h2>
+                        <p>Contato</p>
                     </div>
-                    <input type="text" name="name" placeholder="Nome*" required />
-                    <input type="email" name="email" placeholder="E-mail*" required />
-                    <input type="tel" name="tel" placeholder="Telefone" />
-                    <textarea type="text" name="text" placeholder="Mensagem*" required />
+                    <div className='contentForms'>
+                        <div className='formsColumn1'>
+                            <input type="text" name="name" placeholder="Nome*" required />
+                            <input type="email" name="email" placeholder="E-mail*" required />
+                            <input type="tel" name="tel" placeholder="Telefone" />
+                        </div>
+                        <textarea type="text" name="text" placeholder="Mensagem*" required />
+                    </div>
                     <button onClick={this.props.click} className="envio" type="submit">Enviar</button>
                 </form>
             </div>

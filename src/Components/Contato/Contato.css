@@ -13,36 +13,47 @@
 
 }
 .Header{
+    font-size: 20pt;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
 }
 .modalForms{
-    flex-direction: column;
-    padding: 20px;
+    padding: 15px;
     border-radius: 25px;
-    background-color: rgba(255, 255, 255, 0.911);
+    background-color: #fafafa;
     box-shadow:  0 4px 4px black;
     animation-name: fadeScale;
     animation-duration: 1.1s;
     font-family: 'Roboto', sans-serif;
     color: black;
     margin: 0px;
+    width: 60%;  
+    height: auto;
 }
-.modalForms > input{
-    border: 1px solid #12264A;
+.contentForms{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    width: 90%;
+    background-color:  transparent;
+    border: none;
+    border-bottom: 1px solid gray;
     padding: 10px;
-    border-radius: 15px;
     outline: 0;
     display: block;
     margin: 25px;   
-    width: 250px;
     font-family: 'Roboto';
 }
 .modalForms > button {
     background-color: #12264A;
     border-radius: 20px;
-    padding: 5px 30px 5px 30px;
-    color: white;
+    padding: 5px 60px 5px 60px;
+    color: #fafafa;
     outline: 0;
 }
 .Cancel{
@@ -54,31 +65,24 @@
 
 }
 .envio{
-    box-shadow:  0 3px 3px black;
+    margin-top: 5%;
+    box-shadow:  0 6px 3px black;
 }
 .envio:hover{
     background-color: black;
     transition: background-color .5s ease;
 }
-.modalForms > textarea{
-    border: 1px solid #12264A;
-    padding: 10px;
-    border-radius: 15px;
-    outline: 0;
-    display: block;
-    margin: 25px;   
-    width: 250px;
-    height: 120px;
-    max-width: 250px;
-}
-@media screen and (max-width: 320px){
-    .modalForms{
-        padding: 15px;
-    }
-    .modalForms > textarea {
-        margin: 12px;
-    }
-    .modalForms >  input {
-        margin: 12px;
-    }
+
+@media screen and (max-width:425px){
+   .contentForms{
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr 1fr;
+   }
+  
+   .modalForms{
+       height: 100vh;
+       width: 100%;
+       border-radius: 0;
+   }
+
 }

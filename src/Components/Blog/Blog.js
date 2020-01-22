@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div className='Blog'>
-                <Navbar backgroudColor='black' color='white' logo='logoAzul' className='itemMenu'></Navbar>
+                <Navbar backgroudColor='black' color='white' logo='Logo' className='itemMenu'></Navbar>
                 <div id="menu"> <MenuMobile /> </div>
                 <div className='ContainerBlog'>
                     <FontAwesomeIcon icon={faChalkboardTeacher} size='20x' color='white' borderRadius='30px' className='IconBlog'></FontAwesomeIcon>
