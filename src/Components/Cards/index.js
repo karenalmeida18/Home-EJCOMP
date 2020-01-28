@@ -12,16 +12,21 @@ export default class Card extends Component{
             <p style={{marginBottom: '10px', fontSize: '200%', color: '#12264A'}}>O QUE FAZEMOS?</p>
             <div className="hr-style" style={{alignSelf: 'center'}}>
             </div>
-          <Grid container spacing={2}>
+        </div>
+          <Grid 
+          container 
+          direction="column"
+          justify="left"
+          spacing={2}>
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
             <div className="cardsproj">
-                    <Laptop style={{fontSize: '150px', color: '#12264A'}}/>
+                    <Laptop style={{fontSize: '50px', color: '#12264A'}}/>
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeRight">
             <div id="divSites">
-                <p style={{fontSize: '150%', marginBottom: '10px'}}>Sites</p>
+                <p style={{fontSize: '150%', marginBottom: '10px', fontWeight: 'bold'}}>Sites</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
@@ -32,15 +37,18 @@ export default class Card extends Component{
             </div>
             </ScrollAnimation>
             </Grid>
+            <ScrollAnimation animateIn="fadeLeft">
+                <hr className="hr-text"/>
+            </ScrollAnimation>
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
-            <div className="cardsproj">
-                    <Smartphone style={{fontSize: '150px',  color: '#12264A'}}/>
+            <div className="cardsproj" id="cardsprojApps">
+                    <Smartphone style={{fontSize: '50px',  color: '#12264A'}}/>
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeScale">
             <div id="divApps" className="fadeScale">
-                <p style={{fontSize: '150%',  marginBottom: '10px'}}>Aplicativos</p>
+                <p style={{fontSize: '150%',  marginBottom: '10px', fontWeight: 'bold'}}>Aplicativos</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
@@ -51,19 +59,21 @@ export default class Card extends Component{
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeScale">
-            <div id = "divApps"></div>
             </ScrollAnimation>
             </Grid>
+            <ScrollAnimation animateIn="fadeLeft">
+                <hr className="hr-text"/>
+            </ScrollAnimation>
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
 
             <div className="cardsproj">
-                    <Storage style={{fontSize: '150px', color: '#12264A'}}/>
+                    <Storage style={{fontSize: '50px', color: '#12264A'}}/>
             </div>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeLeft">
             <div id="divSystem" >
-            <p style={{fontSize: '150%',  marginBottom: '10px'}}>Sistemas</p>
+            <p style={{fontSize: '150%',  marginBottom: '10px', fontWeight: 'bold'}}>Sistemas</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
@@ -74,7 +84,6 @@ export default class Card extends Component{
             </ScrollAnimation>
             </Grid>
           </Grid>
-          </div>
         </>
     );
 }

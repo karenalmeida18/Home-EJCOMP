@@ -1,21 +1,20 @@
 .cardsproj {
-    margin-top: 25%;
+    margin: 3%;
     border-radius: 25px;
     border: 4px solid #12264A;
     max-width: 400px;
-    width: 300px;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    align-items: center;
     justify-content: center;
     display: inline-flex;
+    float: left;
   }
 .services {
     margin-top: 10%;
     width: 100%;
-    height: 100vh;
     text-align: center;
-    justify-content: center;
     font-weight: bold;
-    align-items: center;
     font-family: "Roboto",Helvetica,Arial,Verdana,sans-serif;
     overflow-x: hidden;
 }
@@ -77,9 +76,50 @@
   }
 
   #divSites {
-    margin-left: 10px;
+    margin-top: 4%;
+    margin-right: 3%;
+    margin-left: 3%;
   }
 
   #divSystem {
-    margin-right: 10px;
+    margin-top: 4%;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  #divApps {
+    margin-right: 3%;
+    margin-top: 4%;
+    margin-left: 3%;
+  }
+
+  #cardsprojApps{
+    float: right;
+  }
+
+  .hr-text{
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 5px solid #12264A;
+    opacity: .8;
+    border-radius: 10px 10px 10px 10px;
+    width: 105%; 
+  }
+
+  @media screen and (max-width: 768px){
+    .cardsproj{
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+    }
+    #cardsprojApps{
+      float: none;
+    }
+    #divSites{
+      text-align: center;
+    }
+    #divSystem{
+      text-align: center;
+    }
   }
