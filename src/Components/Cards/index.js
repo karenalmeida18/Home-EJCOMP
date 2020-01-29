@@ -46,10 +46,10 @@ export default class Card extends Component{
                     <Smartphone style={{fontSize: '50px',  color: '#12264A'}}/>
             </div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeScale">
-            <div id="divApps" className="fadeScale">
+            <ScrollAnimation animateIn="fadeRight">
+            <div id="divApps" className="fadeRight">
                 <p style={{fontSize: '150%',  marginBottom: '10px', fontWeight: 'bold'}}>Aplicativos</p>
-                <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
+                <h4 style={{fontWeight: 'none'}} align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
                     profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
                     Após esse levantamento, começaremos o desenvolvimento desde o design até a publicação do site.
