@@ -20,7 +20,8 @@ export default class Empresa extends React.Component {
             <div className="empresa" id={this.props.id}>
                 <div className="EmpresaRow1">
                     <ScrollAnimation animateIn="fadeScale">
-                        <div id="logo_ej"> </div>
+                        <div id="logo_ej_inner"> </div>
+                        <div id="logo_ej_outer"> </div>
                     </ScrollAnimation>
                     <div>
                         <ScrollAnimation animateIn="fadeTop">

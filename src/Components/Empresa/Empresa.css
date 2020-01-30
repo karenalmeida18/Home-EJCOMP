@@ -14,14 +14,22 @@
     overflow-x: hidden;
 
 }
-#logo_ej {
-    background: url('../../Imagem/EJBRANCO.png');
+#logo_ej_outer {
+    background: url('../../Imagem/EJBRANCO_outer.png');
     background-size: 100% 100%;
     width: 250px;
     height: 250px;
     margin-left: 6%;
     animation: gira 9s linear infinite;
-
+}
+#logo_ej_inner {
+    position: absolute;
+    background: url('../../Imagem/EJBRANCO_centro.png');
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    margin-left: calc(6% + 75px);
+    margin-top: 75px;
 }
 .EmpresaRow1{
     display: grid;
