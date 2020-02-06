@@ -36,10 +36,10 @@ export default class Card extends Component{
 
             </div>
             </ScrollAnimation>
-            </Grid>
-            <ScrollAnimation animateIn="fadeLeft">
-                <hr className="hr-text"/>
+            <ScrollAnimation animateIn="fadeRight">
+                <hr className="hr-text1"/>
             </ScrollAnimation>
+            </Grid>
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
             <div className="cardsproj" id="cardsprojApps">
@@ -58,12 +58,10 @@ export default class Card extends Component{
 
             </div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeScale">
+            <ScrollAnimation animateIn="fadeLeft">
+                <hr className="hr-text2"/>
             </ScrollAnimation>
             </Grid>
-            <ScrollAnimation animateIn="fadeLeft">
-                <hr className="hr-text"/>
-            </ScrollAnimation>
             <Grid item xs>
             <ScrollAnimation animateIn="fadeTop">
 

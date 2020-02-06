@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Blog.css";
+import Aside from './Aside';
 import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,10 +12,7 @@ export default class Footer extends React.Component {
             <div className='Blog'>
                 <Navbar backgroudColor='black' color='white' logo='Logo' className='itemMenu'></Navbar>
                 <div id="menu"> <MenuMobile /> </div>
-                <div className='ContainerBlog'>
-                    <FontAwesomeIcon icon={faChalkboardTeacher} size='20x' color='white' borderRadius='30px' className='IconBlog'></FontAwesomeIcon>
-                    <h1 className='TextBlog' > BLOG EM CONSTRUÇÃO</h1>
-                </div>
+                <Aside/>
             </div>
         )
     }

@@ -42,6 +42,7 @@
 }
 
 #portfolio {
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -90,7 +91,7 @@
     -webkit-box-shadow: 7px 10px 9px -2px rgba(0,0,0,0.46);
     -moz-box-shadow: 7px 10px 9px -2px rgba(0,0,0,0.46);
     box-shadow: 7px 10px 9px -2px rgba(0,0,0,0.46);
-    transform: scale(1.04);
+    
   }
   .container:hover .overlay {
     display: inline;
@@ -98,6 +99,7 @@
     opacity: 0.9;
   }
   .text {
+    background-color: black;
     top: 80%;
     left: 47.5%;
     color: white;
@@ -110,5 +112,5 @@
   }
   .Portfolio {
     margin-left: 15px;
-
+    font-family: 'Roboto', sans-serif;
   }
