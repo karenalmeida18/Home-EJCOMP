@@ -4,8 +4,8 @@ import Aside from './Aside';
 import PostCard from './PostCard';
 import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile';
-
-export default class Footer extends React.Component {
+import Footer from '../Footer/Footer';
+export default class Blog extends React.Component {
     render() {
         return (
             <div className='Blog'>
@@ -15,6 +15,7 @@ export default class Footer extends React.Component {
                 <PostCard/>
                 <Aside/>
                 </div>
+                <Footer style={{borderTop: 'solid 4px #fafafa'}} color= 'white' backgroundColor='#1b1b1b' textColor= 'white' />
             </div>
         )
     }

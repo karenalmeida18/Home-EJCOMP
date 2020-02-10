@@ -40,6 +40,42 @@ export default class Footer extends React.Component {
 
                     ))
                 }
+                {
+                    cardPost.map(post=>(
+                        <Card
+                        imagem={post.imagem}
+                        titulo={post.titulo}
+                        data={post.data}
+                        descricao={post.descricao}
+                        link={post.link}
+                        />
+
+                    ))
+                }
+                {
+                    cardPost.map(post=>(
+                        <Card
+                        imagem={post.imagem}
+                        titulo={post.titulo}
+                        data={post.data}
+                        descricao={post.descricao}
+                        link={post.link}
+                        />
+
+                    ))
+                }
+                {
+                    cardPost.map(post=>(
+                        <Card
+                        imagem={post.imagem}
+                        titulo={post.titulo}
+                        data={post.data}
+                        descricao={post.descricao}
+                        link={post.link}
+                        />
+
+                    ))
+                }
             </div>
         )
     }

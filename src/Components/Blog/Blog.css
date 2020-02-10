@@ -7,16 +7,22 @@
 }
 .containerBlog{
     margin-top: 5%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+}
+.footer {
+    border-top: solid 4px #fafafa;
 }
 .Aside{
-    float: right;
-    width: 40%;
-    height: 80vh;
-    background-color: 1b1b1b;
+    right: 0;
+    height: 50vh;
+    background-color: transparent;
     border-left: 4px solid #fffafa;
     border-radius: 2px 2px 2px 2px;
     color: #fafafa;
+    position: fixed;
+    width: 30%;
 }
 .titleB{
     word-wrap: break-word;
@@ -50,7 +56,9 @@
     background-color: gray;
     display: flex;
     flex-direction: row;
-    padding: 25px 25px 0
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 .containerPost >h2 {
     margin-bottom: 2%;
@@ -68,18 +76,18 @@
 }
 .containerCardPost{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 .descricaoPost{
     padding: 0 0 10px;
 }
 .btnPost{
     font-size: 10pt;
-    padding:  6px;
     margin-bottom: 10px;
+    padding: 0 0 10px;
 }
-
 @media screen and (max-width: 768px){
     .Aside{
         width: 50%;
