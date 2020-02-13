@@ -24,7 +24,7 @@ export default class Card extends Component{
                     <Laptop style={{fontSize: '50px', color: '#12264A'}}/>
             </div>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeRight">
+            <ScrollAnimation animateIn="fadeLeft">
             <div id="divSites">
                 <p style={{fontSize: '150%', marginBottom: '10px', fontWeight: 'bold'}}>Sites</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
