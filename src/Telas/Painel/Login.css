@@ -1,0 +1,45 @@
+.containerLogin{
+    background-color: #12264A;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Login{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+}
+.logoLogin{
+    width: 100%;
+    height: 10%;
+}
+.Login > input{
+    margin-top: 12%;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.Buttons{
+    margin-top: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.Buttons > button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 25px 6px 25px;
+    border-radius: 2px;
+}
+@media screen and (max-width: 430px){
+  .Login{
+      width: 90%;
+  }
+}
