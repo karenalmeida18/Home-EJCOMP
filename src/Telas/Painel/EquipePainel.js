@@ -4,6 +4,9 @@ import Usuario from './Usuario'
 export default class EquipePainel extends React.Component {
     render() {
         return (
+            <div>
+            <Usuario/>
+
             <div className='EquipePainel' >
                 <div className='headerEquipe'><p>Membro</p></div>
                 <div className='containerEquipePainel'>
@@ -27,6 +30,7 @@ export default class EquipePainel extends React.Component {
                     </div>
                     </div>
                 </div>
+            </div>
             </div>
         )
     }

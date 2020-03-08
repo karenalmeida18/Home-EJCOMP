@@ -41,8 +41,9 @@ export default class Usuario extends React.Component {
                             <div className='opcoes'>
                             <input type="radio" name='opcao' value='op1' onClick={this.showEquipe}/> <label>Equipe</label>
                             <FontAwesomeIcon icon={faAngleRight}  color='gray'  style={{marginLeft: '5px'}} />
-                             <div style={{display:this.state.displayEquipe}} className='showOpcao'> <input type="radio" name='opcao' value='op4' />
-                              <label>Membro</label>
+                             <div style={{display:this.state.displayEquipe}} className='showOpcao'> 
+                          <input type="radio" name='opcao' value='op4' />
+                          <Link to={'/equipePainel'}><label>Membro</label></Link>
                               <FontAwesomeIcon icon={faAngleRight}  color='gray'  style={{marginLeft: '5px '}} />
                               </div>
                             </div> 
