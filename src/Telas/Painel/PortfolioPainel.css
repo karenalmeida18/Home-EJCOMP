@@ -1,0 +1,30 @@
+.PortfolioPainel{
+    width: 70%;
+    margin-left: 30%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.PortfolioPost1{
+    width: 20%;
+    height: 20%;
+    border: 1px solid black;
+}
+
+.PortfolioPost2{
+    width: 20%;
+    height: 20%;
+    border: 1px solid black;
+}
+
+.buttonAddImg{
+    width: 40px;
+    height:15px;
+    background-color: gray;
+}
+
+.buttonDelImg{
+    width: 40px;
+    height:15px;
+    background-color: gray;
+}
+
