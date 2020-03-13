@@ -5,52 +5,48 @@ import { HashLink as Link } from 'react-router-hash-link';
 import axios from 'axios';
 
 export default class Login extends React.Component {
-    constructor (props){
+    constructor(props) {
         super(props);
         this.state = {
-            nome: '',
-            senha: '',
+            email: '',
+            password: '',
         }
     }
-    handleSubmit = (event) => {
-        
-        event.preventDefault();
-        const{nome, senha} = this.state;
-        if(!nome || !senha){
-         alert("Preencha todos os campos!")
-        }else {
-            alert('Mensagem enviada com sucesso!')
-            axios.post('https://api-ejcomp-site.herokuapp.com/auth/register') 
-            .then(function(response){
-                console.log(response);
-            })
-            .catch(function(error){
-                console.log(error);
-                console.log(nome);
-                console.log(senha);
-            });
-        
-        }
-       
-    }
-    handleChangeNome = (e) =>{
-        this.setState ({email: e.target.value})
-        this.setState ({nome: e.target.value})
-    }
-    handleChangeSenha = (e) =>{
-        this.setState ({senha: e.target.value})
+    handleChangeEmail = event => {
+        this.setState({ email: event.target.value });
     }
 
-    
+    handleChangePassword = event => {
+        this.setState({ password: event.target.value });
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const { email, password } = this.state;
+        if (!email || !password) {
+            alert('Preencha todos os campos para continuar.')
+        } else {
+            axios.post(`https://api-ejcomp-site.herokuapp.com/auth/register`, { email, password })
+                .then(function (response) {
+                    console.log(response);
+                    alert('Usuário cadastrado com sucesso.')
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    alert('Usuário já existente.')
+                });
+        }
+
+    }
     render() {
         return (
             <div className='containerLogin'>
                 <div className='Login'>
                     <img src={logo} className='logoLogin' alt='logo' />
-                    <input type="Usuario" name="usuario" placeholder="Usuário" id= 'usuario' value={this.state.nome} 
-                    onChange={this.handleChangeNome} required />
-                    <input type="password" name="senha" placeholder="Senha" id ='senha'value={this.state.senha}
-                     onChange={this.handleChangeSenha} required />
+                    <input type="name" name="email" placeholder="email" value={this.state.email}
+                        onChange={this.handleChangeEmail} required />
+                    <input type="password" name="password" placeholder="password"
+                        onChange={this.handleChangePassword} required value={this.state.senha} />
                     <div className='Buttons'>
                         <button className='Acessar' type='submit'><Link smooth to={'/painel'}>Acessar</Link></button>
                         <button onClick={this.handleSubmit} className='Cadastrar' type='submit'>Cadastrar</button>
