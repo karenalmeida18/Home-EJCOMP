@@ -1,15 +1,11 @@
-import React, {Component} from 'react';
-import Usuario from './Usuario';
+import React from 'react';
 import './BlogPainel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 export default class BlogPainel extends React.Component {
     render() {
         return (
-            <div>
-            <Usuario/>
-
-            <div className='blogPainel' >
+            <div className='blogPainel' style={{display: this.props.displayBg}}>
                 <div className='headerBlog'>
                     <h3>Blog</h3>
                     <h5>Postagens</h5>
@@ -37,7 +33,7 @@ export default class BlogPainel extends React.Component {
                     </div>
                 </div>
             </div>
-            </div>
+            
         )
     }
 }

@@ -1,14 +1,10 @@
 import React ,{Component} from 'react';
-import Usuario from './Usuario';
 import './PortfolioPainel.css';
 
 export default class PortfolioPainel extends Component {
     render () {
         return (
-
-            <div>
-                <Usuario/>
-                <div className='portPage'>
+                <div className='portPage' style={{display: this.props.displayPort}}>
                     <div className='headerPort'><p>Portfolio</p></div>
                     <div className='containerPort'>
                         <div>
@@ -40,7 +36,6 @@ export default class PortfolioPainel extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }

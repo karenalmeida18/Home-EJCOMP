@@ -1,13 +1,9 @@
 import React from 'react'
 import './EquipePainel.css'
-import Usuario from './Usuario'
 export default class EquipePainel extends React.Component {
     render() {
         return (
-            <div>
-            <Usuario/>
-
-            <div className='EquipePainel' >
+            <div className='EquipePainel' style={{display: this.props.displayEq}} >
                 <div className='headerEquipe'><p>Membro</p></div>
                 <div className='containerEquipePainel'>
                     <div className='sectionMembroImagem'>
@@ -30,7 +26,6 @@ export default class EquipePainel extends React.Component {
                     </div>
                     </div>
                 </div>
-            </div>
             </div>
         )
     }

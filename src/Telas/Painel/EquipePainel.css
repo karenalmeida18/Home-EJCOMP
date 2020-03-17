@@ -1,7 +1,7 @@
 .EquipePainel{
     font-family: 'Roboto', sans-serif;
     width: 70%;
-    display: table;
+    display: none;
     margin-left:30% ;
 
 }

@@ -6,7 +6,7 @@
  flex-direction: row;
  z-index: 50;
  left: 0%;
- position: absolute;
+ position: fixed;
  top:0;
  float: left;
 }
@@ -33,10 +33,14 @@
 }
 .iconUser{
     margin-bottom: 10px;
-    font-size: 20pt;
+    font-size: 30pt;
 }
 .showOpcao {
     margin-left: 2%;
     margin-top: 2%;
     font-size: 11pt;
+}
+.logOut{
+    padding: 2px 12px 2px 12px;
+    color: black;
 }

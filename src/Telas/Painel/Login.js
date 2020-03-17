@@ -2,6 +2,8 @@ import React from 'react'
 import './Login.css'
 import logo from '../../Imagem/logo.svg'
 import axios from 'axios';
+import { Redirect } from "react-router-dom";
+
 
 export default class Login extends React.Component {
     constructor(props) {
@@ -9,7 +11,9 @@ export default class Login extends React.Component {
         this.state = {
             email: '',
             password: '',
-            border: '1px solid white'
+            border: '1px solid white',
+            redirectToReferrer: false,
+            msg:''
         }
     }
     handleChangeEmail = event => {
@@ -24,18 +28,17 @@ export default class Login extends React.Component {
         event.preventDefault();
         const { email, password } = this.state;
         if (!email || !password) {
-            alert('Preencha todos os campos para continuar.')
+                this.setState({msg: 'Preencha todos os campos para continuar.'})
         }
         else {
             try {
                 const response = await axios.post('https://api-ejcomp-site.herokuapp.com/auth/authenticate', { email, password });
-                this.setState({border: '1px solid green'})
+                this.setState({border: '1px solid green', redirectToReferrer: true})
                 console.log(response);
             }
             catch (error) {
-                this.setState({border: '1px solid red'})
+                this.setState({border: '1px solid red', msg: 'Usuário inexistente.'})
                 console.error(error);
-                alert('Usuário inexistente');
             }
         }
     }
@@ -61,10 +64,15 @@ export default class Login extends React.Component {
 
     }
     render() {
+        const { redirectToReferrer} = this.state;      
+          if (redirectToReferrer === true) {
+            return <Redirect to={'/painel'} />
+        }
         return (
             <div className='containerLogin'>
                 <div className='Login'>
                     <img src={logo} className='logoLogin' alt='logo' />
+                         <div style={{color: 'red', fontSize: '15pt', textAlign: 'center'}}>{this.state.msg}</div>
                     <input type="name" name="email" placeholder="email" style={{ border: this.state.border }} value={this.state.email}
                         onChange={this.handleChangeEmail} required />
                     <input type="password" name="password" style={{ border: this.state.border }} placeholder="password"
