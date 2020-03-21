@@ -4,11 +4,9 @@ import teste from  '../../Imagem/membro1.jpeg'
 
 const cardPost = [
     {
-        imagem: teste,
-        titulo: 'Desenvolvimento com React Native', 
-        data: '06/02/2020',
-        descricao: ' is simply dummy text of the printing and typesetting indusindun the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in th ',
-        link: 'https://www.facebook.com'
+        image: teste,
+        title: 'Desenvolvimento com React Native', 
+        description: ' is simply dummy text of the printing and typesetting indusindun the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in th ',
     },
 ]
 
@@ -19,59 +17,9 @@ export default class Footer extends React.Component {
                 {
                     cardPost.map(post=>(
                         <Card
-                        imagem={post.imagem}
-                        titulo={post.titulo}
-                        data={post.data}
-                        descricao={post.descricao}
-                        link={post.link}
-                        />
-
-                    ))
-                }
-                {
-                    cardPost.map(post=>(
-                        <Card
-                        imagem={post.imagem}
-                        titulo={post.titulo}
-                        data={post.data}
-                        descricao={post.descricao}
-                        link={post.link}
-                        />
-
-                    ))
-                }
-                {
-                    cardPost.map(post=>(
-                        <Card
-                        imagem={post.imagem}
-                        titulo={post.titulo}
-                        data={post.data}
-                        descricao={post.descricao}
-                        link={post.link}
-                        />
-
-                    ))
-                }
-                {
-                    cardPost.map(post=>(
-                        <Card
-                        imagem={post.imagem}
-                        titulo={post.titulo}
-                        data={post.data}
-                        descricao={post.descricao}
-                        link={post.link}
-                        />
-
-                    ))
-                }
-                {
-                    cardPost.map(post=>(
-                        <Card
-                        imagem={post.imagem}
-                        titulo={post.titulo}
-                        data={post.data}
-                        descricao={post.descricao}
-                        link={post.link}
+                        image={post.image}
+                        title={post.title}
+                        description={post.description}
                         />
 
                     ))

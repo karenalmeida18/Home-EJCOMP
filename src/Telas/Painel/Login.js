@@ -1,9 +1,8 @@
 import React from 'react'
 import './Login.css'
 import logo from '../../Imagem/logo.svg'
-import axios from 'axios';
-import { Redirect } from "react-router-dom";
-
+import api from '../../Services/api'
+import { login } from "../../Services/auth";
 
 export default class Login extends React.Component {
     constructor(props) {
@@ -12,7 +11,6 @@ export default class Login extends React.Component {
             email: '',
             password: '',
             border: '1px solid white',
-            redirectToReferrer: false,
             msg:''
         }
     }
@@ -32,9 +30,11 @@ export default class Login extends React.Component {
         }
         else {
             try {
-                const response = await axios.post('https://api-ejcomp-site.herokuapp.com/auth/authenticate', { email, password });
-                this.setState({border: '1px solid green', redirectToReferrer: true})
+               const response =  await api.post("/auth/authenticate", { email, password });
+                this.setState({border: '1px solid green'})
                 console.log(response);
+                login(response.data.token);
+                this.props.history.push("/painel");
             }
             catch (error) {
                 this.setState({border: '1px solid red', msg: 'Usuário inexistente.'})
@@ -51,7 +51,7 @@ export default class Login extends React.Component {
             alert('Preencha todos os campos para continuar.')
         }
         else {
-            axios.post(`https://api-ejcomp-site.herokuapp.com/auth/register`, { email, password })
+            api.post(`/auth/register`, { email, password })
                 .then(function (response) {
                     console.log(response);
                     alert('Usuário cadastrado com sucesso.')
@@ -64,10 +64,6 @@ export default class Login extends React.Component {
 
     }
     render() {
-        const { redirectToReferrer} = this.state;      
-          if (redirectToReferrer === true) {
-            return <Redirect to={'/painel'} />
-        }
         return (
             <div className='containerLogin'>
                 <div className='Login'>
