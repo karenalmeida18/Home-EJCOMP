@@ -32,7 +32,7 @@ export default class Usuario extends React.Component {
         this.setState({displayEquipe: 'block', displayBlog: 'none', displayPort: 'none'})
     }
     showPostagens = ()=>{
-        this.setState({displayBlog: 'block', displayEquipe: 'none', displayPort: 'none'})
+        this.setState({displayBlog: 'table', displayEquipe: 'none', displayPort: 'none'})
     }
     showPortfolio = ()=>{
         this.setState({displayPort: 'block', displayEquipe: 'none', displayBlog: 'none'})
@@ -40,10 +40,11 @@ export default class Usuario extends React.Component {
     render() {
         return (
             <div>
+           
+            <div className='Usuario' id='painel'>
             <EquipePainel displayEq={this.state.displayEquipe}/>
             <BlogPostagens displayBg={this.state.displayBlog}/>
             <PortfolioPainel displayPort={this.state.displayPort}/>
-            <div className='Usuario' id='painel'>
                 <div className='asideUser'>
                     <div className='headerUser'>
                         <div className='infoUser'>

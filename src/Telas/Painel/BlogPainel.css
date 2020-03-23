@@ -9,6 +9,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.imagePreview{
+    width: 300px;
+    height: 200px;
+}
 .headerBlog{
     -webkit-box-shadow: 0px 2px 5px 0px gray;
     -moz-box-shadow: 0px 2px 5px 0px gray;

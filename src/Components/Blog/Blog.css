@@ -26,6 +26,15 @@
 }
 .titleB{
     word-wrap: break-word;
+    
+}
+.textPost{
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    text-align: center;
+    margin-top: 10%;
+
 }
 .Postagens{
     margin-top: 5%;

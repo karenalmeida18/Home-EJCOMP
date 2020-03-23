@@ -4,11 +4,6 @@
  font-family: 'Roboto', sans-serif;
  display: flex;
  flex-direction: row;
- z-index: 50;
- left: 0%;
- position: fixed;
- top:0;
- float: left;
 }
 .asideUser{
     width: 30%;
@@ -16,6 +11,9 @@
     -webkit-box-shadow: 0px 3px 5px 0px black;
     -moz-box-shadow: 0px 3px 5px 0px black;
     box-shadow: 0px 3px 5px 0px black;
+    position: fixed;
+    top:0;
+    left: 0%;
 }
 .headerUser{
     border-bottom: 1px solid rgba(128, 128, 128, 0.582);

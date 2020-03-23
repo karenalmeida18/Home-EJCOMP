@@ -7,7 +7,7 @@ export default function Card ({imagem, titulo, data,descricao, link}){
     return (
       <>
       <div className="cardPost">
-        <img src={imagem} className="imagemPost"/>
+        <img src={imagem} className="imagemPost" alt='imagePost'/>
         <div className="containerPost">
             <h2>{titulo}</h2>
              <p className='dataPost'>{data}</p>
