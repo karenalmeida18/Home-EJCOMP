@@ -27,6 +27,7 @@ import fixunesppng from '../../Imagem/port/fixunesppng.png'
 import vilaverdepng from '../../Imagem/port/vilaverdepng.png'
 import promexpng from '../../Imagem/port/promexpng.png'
 import mapafejesppng from '../../Imagem/port/mapafejesppng.png'
+import api from '../../Services/api'
 
 const imagesPort = [
    {
