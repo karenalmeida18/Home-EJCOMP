@@ -3,15 +3,15 @@ import "./Blog.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight} from '@fortawesome/free-solid-svg-icons'
 
-export default function Card ({image, title, data,description, link,alt}){
+export default function Card ({imagem, titulo, data,descricao, link}){
     return (
       <>
       <div className="cardPost">
-        <img src={image} className="imagemPost" alt={alt}/>
+        <img src={imagem} className="imagemPost" alt='imagePost'/>
         <div className="containerPost">
-            <h2>{title}</h2>
+            <h2>{titulo}</h2>
              <p className='dataPost'>{data}</p>
-             <p className='descricaoPost'>{description}</p>
+             <p className='descricaoPost'>{descricao}</p>
              <a className='btnPost' href={link}>Veja mais
              <FontAwesomeIcon icon={faAngleDoubleRight}  color='black' size='xs' style={{marginLeft: '2px'}} />
              </a>
