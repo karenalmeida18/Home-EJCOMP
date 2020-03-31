@@ -130,7 +130,7 @@ export default class EditPostagens extends React.Component {
                             <div key={post.id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
                                 <h4>{post.title}</h4>
                                  <h4 style={{display: 'none'}}>{post.description}</h4>
-                                <img className='imagePostagem' src={post.image}></img>
+                                <img className='imagePostagem' src={post.image.path}></img>
 
                             </div>
                         )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
