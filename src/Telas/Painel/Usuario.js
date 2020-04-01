@@ -6,6 +6,9 @@ import EquipePainel from './EquipePainel'
 import BlogPostagens from './BlogPostagens'
 import PortfolioPainel from './PortfolioPainel'
 import { HashLink as Link } from 'react-router-hash-link';
+import EditPostagens from './EditPostagens'
+import DeleteUser from './DeleteUser'
+import CreateUser from './CreateUser'
 
 export default class Usuario extends React.Component {
     constructor(props) {
@@ -17,6 +20,10 @@ export default class Usuario extends React.Component {
             displayEquipe: 'none',
             displayBlog: 'none',
             displayPort: 'none',
+            displayEditBlog: 'none',
+            displayOpUser:  'none',
+            displayCreateUser: 'none',
+            displayDeleteUser: 'none',
         }
     }
     showInput = () => {
@@ -28,23 +35,36 @@ export default class Usuario extends React.Component {
     showOpBlog = () => {
         this.setState({ displayOpBlog: 'block' })
     }
+    showOpUser = () => {
+        this.setState({ displayOpUser: 'block' })
+    }
     showEquipe = () => {
-        this.setState({displayEquipe: 'block', displayBlog: 'none', displayPort: 'none'})
+        this.setState({displayEquipe: 'block', displayBlog: 'none', displayPort: 'none',displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none' })
+
     }
     showPostagens = ()=>{
-        this.setState({displayBlog: 'table', displayEquipe: 'none', displayPort: 'none'})
+        this.setState({displayBlog: 'table', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none'})
+
     }
     showPortfolio = ()=>{
-        this.setState({displayPort: 'block', displayEquipe: 'none', displayBlog: 'none'})
+        this.setState({displayPort: 'block', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none'})
+
+    }
+    createUsers = ()=>{
+        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'table', displayDeleteUser:'none'})
+    }
+    deleteUsers = ()=>{
+        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'block'})
     }
     render() {
         return (
-            <div>
-           
             <div className='Usuario' id='painel'>
             <EquipePainel displayEq={this.state.displayEquipe}/>
             <BlogPostagens displayBg={this.state.displayBlog}/>
             <PortfolioPainel displayPort={this.state.displayPort}/>
+            <EditPostagens displayEditBlog={this.state.displayEditBlog}/>
+            <DeleteUser displayDeleteUser={this.state.displayDeleteUser}/>
+            <CreateUser displayCreateUser={this.state.displayCreateUser}/>
                 <div className='asideUser'>
                     <div className='headerUser'>
                         <div className='infoUser'>
@@ -78,14 +98,31 @@ export default class Usuario extends React.Component {
                                  <input type="radio" name='opcao' value='op5' onClick={this.showPostagens}/>
                                 <label>Postagens</label>
                                 <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
-
                             </div>
-                        </div>
+                            <div style={{ display: this.state.displayOpBlog }} className='showOpcao'>
+                                 <input type="radio" name='opcao' value='op5' onClick={this.showEditPostagens}/>
+                                <label>Editar Postagens</label>
+                                <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                            </div>
+                            <div className='opcoes'>
+                                <input type="radio" name='opcao' value='op3' onClick={this.showOpUser} /> <label>Usuários</label>
+                                <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                            </div>
+                            <div style={{ display: this.state.displayOpUser }} className='showOpcao'>
+                                 <input type="radio" name='opcao' value='op5' onClick={this.createUsers}/>
+                                 <label>Cadastrar</label>
+                                <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                            </div>
+                            <div style={{ display: this.state.displayOpUser }} className='showOpcao'>
+                                 <input type="radio" name='opcao' value='op5' onClick={this.deleteUsers}/>
+                                 <label>Excluir</label>
+                                <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                            </div>
+                            </div>
                         :
                         null
                     }
                 </div>
-                    </div>
             </div>
         );
     }
