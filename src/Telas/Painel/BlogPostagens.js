@@ -36,12 +36,13 @@ export default class BlogPainel extends React.Component {
         
     createPost = async event => {
         event.preventDefault();
-        let data = new FormData();
-        data.append("title",this.state.title);
-        data.append("description",this.state.description);
-        data.append("image",this.state.image);
+       
+        let form = new FormData();
+        form.append("title",this.state.title);
+        form.append("description",this.state.description);
+        form.append("image",this.state.image)
         try{
-            await api.post("/projects",data, {headers:{'Content-Type': 'multipart/form-data'}} )
+            await api.post("/projects",form, {headers:{'Content-Type': 'multipart/form-data'}} )
             .then(response=>{
                 console.log(response.data)
                 this.setState({title:'',description:'',image:null, src: ''});
@@ -66,21 +67,17 @@ export default class BlogPainel extends React.Component {
                     <div className='sectionBlogImagem'>
                         <p style={{marginBottom: '15px'}}>Imagem</p>
                         <div className='fotoPost'>
-                             <input type='file' onChange={this.handleChangeImage} placeholder='escolher imagem'/>
                              <img className='imagePreview' src={this.state.src} alt='imagePost'/>
                         </div>
-                        <button className='containerButtons'>Adicionar Imagem</button>
-                        <button className='containerButtons'>Excluir Imagem</button>
+                        <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='containerButtons'/>
                     </div>
                     <div>
                     <div className='sectionBlogText'>
                         <p>Título da Postagem</p>
-                        <input type='excluir' placeholder='Excluir' />
                         <input type='adicionar ' placeholder='Adicionar' value={this.state.title} onChange={this.handleChangeTitulo}/>
                     </div>
                     <div className='sectionBlogText'>
                         <p>Descrição da Postagem</p>
-                        <input type='excluir' placeholder='Excluir' />
                         <input type='adicionar' placeholder='Adicionar' value={this.state.description} onChange={this.handleChangeDescription} />
                         <button type='submit' onClick={this.createPost} className='concluir'>concluir</button>
                     </div>
