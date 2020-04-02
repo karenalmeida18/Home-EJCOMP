@@ -17,7 +17,7 @@ export default class EditPostagens extends React.Component {
             title: '',
             image: null,
             description: ''
-          
+
         }
     }
     async componentDidMount() {
@@ -35,26 +35,27 @@ export default class EditPostagens extends React.Component {
         }
         console.log(this.state.posts)
     }
+
     async editarPost() {
         const form = new FormData();
         form.append("title", this.state.title);
         form.append("description", this.state.description);
         form.append("image", this.state.image);
-        try{
+        try {
             await api.put(`/projects/${this.state.id}`, form, { headers: { 'content-type': 'multipart/form-data' } })
-            .then(response=>{
-                console.log(response.data)
-                alert('publicação editada com sucesso.');
-                window.location.reload();
-            })
-            
-        }catch(error){
+                .then(response => {
+                    console.log(response.data)
+                    alert('publicação editada com sucesso.');
+                    window.location.reload();
+                })
+
+        } catch (error) {
             console.log(error);
             alert('erro ao editar publicação.')
         }
 
     }
-        
+
     showArtigo(post) {
         this.setState({ isVisible: true, title: post.title, description: post.description, image: post.image, id: post._id })
         console.log(post)
@@ -68,32 +69,40 @@ export default class EditPostagens extends React.Component {
     }
     onSaveTitle = val => {
         console.log('Edited Value -> ', val)
-        if(val !== null && val!==undefined){
-        this.setState({title: val})
+        if (val !== null && val !== undefined) {
+            this.setState({ title: val })
         }
         console.log(val)
-      }
+    }
     onSaveDescription = val => {
         console.log('Edited Value -> ', val)
-        if(val !== null && val!==undefined)
-        this.setState({description: val})
+        if (val !== null && val !== undefined)
+            this.setState({ description: val })
         console.log(val)
-      }
-      handleChangeImage= e => {
+    }
+    handleChangeImage = e => {
         e.preventDefault();
 
         let reader = new FileReader();
         let image = e.target.files[0];
-    
+
         reader.onloadend = () => {
-          this.setState({
-            image: image,
-            src: reader.result
-          });
+            this.setState({
+                image: image,
+                src: reader.result
+            });
         }
         reader.readAsDataURL(image)
     }
-        
+    renderSrc = (str) => {
+        let n = 7;
+        str = str.substring(n);
+        console.log('https://api-ejcomp-site.herokuapp.com'+str);
+        this.setState({image: 'https://api-ejcomp-site.herokuapp.com'+str})
+        return'https://api-ejcomp-site.herokuapp.com'+str
+
+    }
+
     render() {
         const { posts } = this.state;
         return (
@@ -101,25 +110,25 @@ export default class EditPostagens extends React.Component {
                 {this.state.isVisible ?
                     <div className='postCompleto'>
                         <div className='modalPostagem'>
-                        <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={()=>{this.setState({isVisible:false})}} />
+                            <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={() => { this.setState({ isVisible: false }) }} />
                             <EdiText
                                 type="text"
                                 value={this.state.title}
                                 onSave={this.onSaveTitle}
                             />
                             <div className='fotoPost'>
-                               <img src={this.state.image} ></img> 
-                             <img className='imagePreview' src={this.state.src} alt='imagePost'/>
-                        </div>
-                        <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='containerButtons'/>
+                                <img src={this.state.image} ></img>
+                                <img className='imagePreview' src={this.state.src} alt='imagePost' />
+                            </div>
+                            <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='containerButtons' />
                             <EdiText
                                 type="text"
                                 value={this.state.description}
                                 onSave={this.onSaveDescription}
                             />
                             <div className='buttonsEdit'>
-                            <button onClick={() => this.excluirPost()}>excluir artigo</button>
-                            <button onClick={() => this.editarPost()}> editar artigo</button>
+                                <button onClick={() => this.excluirPost()}>excluir artigo</button>
+                                <button onClick={() => this.editarPost()}> editar artigo</button>
                             </div>
                         </div>
                     </div> : null}
@@ -129,9 +138,9 @@ export default class EditPostagens extends React.Component {
                         posts.map(post => (
                             <div key={post.id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
                                 <h4>{post.title}</h4>
-                                 <h4 style={{display: 'none'}}>{post.description}</h4>
-                                <img className='imagePostagem' src={post.image}></img>
-
+                                {/*<h4>{post.description}</h4>*/}
+                                <img src={()=> this.renderSrc(post.image.path)} />
+                                
                             </div>
                         )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
                     }

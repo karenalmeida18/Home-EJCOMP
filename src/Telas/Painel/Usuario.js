@@ -5,10 +5,11 @@ import { faBars, faUserCircle, faAngleRight } from '@fortawesome/free-solid-svg-
 import EquipePainel from './EquipePainel'
 import BlogPostagens from './BlogPostagens'
 import PortfolioPainel from './PortfolioPainel'
-import { HashLink as Link } from 'react-router-hash-link';
 import EditPostagens from './EditPostagens'
 import DeleteUser from './DeleteUser'
 import CreateUser from './CreateUser'
+import { logout } from "../../Services/auth";
+
 
 export default class Usuario extends React.Component {
     constructor(props) {
@@ -46,6 +47,10 @@ export default class Usuario extends React.Component {
         this.setState({displayBlog: 'table', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none'})
 
     }
+    showEditPostagens = ()=>{
+        this.setState({displayBlog: 'none', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'block', displayCreateUser: 'none', displayDeleteUser:'none'})
+
+    }
     showPortfolio = ()=>{
         this.setState({displayPort: 'block', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none'})
 
@@ -55,6 +60,10 @@ export default class Usuario extends React.Component {
     }
     deleteUsers = ()=>{
         this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'block'})
+    }
+    logoutPainel = () =>{
+        logout()
+        this.props.history.push("/");
     }
     render() {
         return (
@@ -70,7 +79,7 @@ export default class Usuario extends React.Component {
                         <div className='infoUser'>
                             <FontAwesomeIcon icon={faUserCircle} color='gray' size='lg' className='iconUser' />
                             <p>{this.props.nameUser}</p>
-                           <Link to={'/'}><button className='logOut'>sair</button></Link>
+                              <button onClick={() => this.logoutPainel()} className='logOut'>sair</button>
                         </div>
                         <FontAwesomeIcon icon={faBars} color='gray' onClick={this.showInput} />
 

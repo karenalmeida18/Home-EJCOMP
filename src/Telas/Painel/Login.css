@@ -38,8 +38,9 @@
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    padding: 6px 25px 6px 25px;
+    padding: 6px 0px 6px 0px;
     border-radius: 2px;
+    width: 30%;
 }
 @media screen and (max-width: 430px){
   .Login{
