@@ -31,16 +31,16 @@ export default class EditPostagens extends React.Component {
         this.setState({ isVisible: false })
         if (window.confirm("tem certeza que deseja ecluir?")) {
             await api.delete(`/projects/${this.state.id}`)
-            window.location.reload();
         }
         console.log(this.state.posts)
     }
 
     async editarPost() {
         const form = new FormData();
+        console.log(this.state.image)
         form.append("title", this.state.title);
         form.append("description", this.state.description);
-        form.append("image", this.state.image);
+        if(this.state.image)form.append("image", this.state.image);
         try {
             await api.put(`/projects/${this.state.id}`, form, { headers: { 'content-type': 'multipart/form-data' } })
                 .then(response => {
@@ -57,7 +57,7 @@ export default class EditPostagens extends React.Component {
     }
 
     showArtigo(post) {
-        this.setState({ isVisible: true, title: post.title, description: post.description, image: post.image, id: post._id })
+        this.setState({ isVisible: true, title: post.title, description: post.description, image: 'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename, id: post._id })
         console.log(post)
         console.log(post.title)
         console.log(post.image)
@@ -66,6 +66,8 @@ export default class EditPostagens extends React.Component {
     }
     hideArtigo() {
         this.setState({ isVisible: false })
+        console.log(this.state.image)
+        console.log(this.state.title)
     }
     onSaveTitle = val => {
         console.log('Edited Value -> ', val)
@@ -94,15 +96,6 @@ export default class EditPostagens extends React.Component {
         }
         reader.readAsDataURL(image)
     }
-    renderSrc = (str) => {
-        let n = 7;
-        str = str.substring(n);
-        console.log('https://api-ejcomp-site.herokuapp.com'+str);
-        this.setState({image: 'https://api-ejcomp-site.herokuapp.com'+str})
-        return'https://api-ejcomp-site.herokuapp.com'+str
-
-    }
-
     render() {
         const { posts } = this.state;
         return (
@@ -110,15 +103,14 @@ export default class EditPostagens extends React.Component {
                 {this.state.isVisible ?
                     <div className='postCompleto'>
                         <div className='modalPostagem'>
-                            <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={() => { this.setState({ isVisible: false }) }} />
+                            <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={() => { this.hideArtigo() }} />
                             <EdiText
                                 type="text"
                                 value={this.state.title}
                                 onSave={this.onSaveTitle}
                             />
                             <div className='fotoPost'>
-                                <img src={this.state.image} ></img>
-                                <img className='imagePreview' src={this.state.src} alt='imagePost' />
+                                <img className='imagePostagem' src={this.state.image}  value={this.state.image}></img>
                             </div>
                             <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='containerButtons' />
                             <EdiText
@@ -136,10 +128,10 @@ export default class EditPostagens extends React.Component {
                 <div className='containerEditPostagens'>
                     {posts.length > 0 ?
                         posts.map(post => (
-                            <div key={post.id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
+                            <div key={post._id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
                                 <h4>{post.title}</h4>
                                 {/*<h4>{post.description}</h4>*/}
-                                <img src={()=> this.renderSrc(post.image.path)} />
+                                <img className='imagePostagem' src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} />
                                 
                             </div>
                         )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
