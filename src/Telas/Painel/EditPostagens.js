@@ -131,7 +131,7 @@ export default class EditPostagens extends React.Component {
                             <div key={post._id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
                                 <h4>{post.title}</h4>
                                 {/*<h4>{post.description}</h4>*/}
-                                <img className='imagePostagem' src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} />
+                                <img className='imagePostagem' src={'https://api-ejcomp-site.herokuapp.com/projects/'+ post.image.filename} />
                                 
                             </div>
                         )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
