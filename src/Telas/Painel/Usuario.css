@@ -7,7 +7,7 @@
 }
 .asideUser{
     width: 30%;
-    height: 100vh;
+    height: 100%;
     -webkit-box-shadow: 0px 3px 5px 0px black;
     -moz-box-shadow: 0px 3px 5px 0px black;
     box-shadow: 0px 3px 5px 0px black;
@@ -41,4 +41,9 @@
 .logOut{
     padding: 2px 12px 2px 12px;
     color: black;
+}
+@media screen and  (max-width: 500px ){
+    .Usuario{
+        width: 100vh;
+    }
 }

@@ -1,46 +1,73 @@
 .Blog{
-    background-color: #1b1b1b;
     width: 100%;
-    height: 100vh;  
+    height: 100%;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
 }
 .containerBlog{
     margin-top: 5%;
     display: grid;
+    height: 100%;
     grid-template-columns: 70% 30%;
-
 }
-.footer {
-    border-top: solid 4px #fafafa;
+.containerPostCompleto{
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    word-wrap: break-word;
+    padding-left: 10%;
+    padding-right: 10%;
+   
+}
+.conteudoPostagem {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.conteudoPostagem > .imagePreview{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.btnVoltar{
+    justify-content: end;
+    align-items: flex-end;
+    padding:  4px 30px 4px 30px;
+    font-size: 12pt;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 2px;
+    border: 1px solid #12264A;
+    color: #12264A;
+    background-color: white;
+}
+.headerTituloPost{
+  border-bottom: 1px solid #12264A;
+}
+.titlePostC{
+  font-size: 25pt;
+  color: rgba(0, 0, 0, 0.849);
 }
 .Aside{
     right: 0;
-    height: 50vh;
+    height: 100%;
     background-color: transparent;
-    border-left: 4px solid #fffafa;
+    border-left: 4px solid #12264A;
     border-radius: 2px 2px 2px 2px;
-    color: #fafafa;
-    position: fixed;
-    width: 30%;
+    text-align: center;
 }
 .titleB{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     word-wrap: break-word;
-    
+    margin-bottom: 5%;
 }
 .textPost{
     justify-content: center;
     align-items: center;
-    color: #fafafa;
     text-align: center;
     margin-top: 10%;
-
-}
-.Postagens{
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
 }
 .Título{
     margin-top: 2%;
@@ -49,17 +76,25 @@
     font-size: 20px;
     display: inline-block;
 }
-.hr1-aside{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 4px solid #fffafa;
-    border-radius: 4px 4px 4px 4px;
+.btnPagina{
+    border: 1px solid #12264A;
+    color: #12264A;
+    padding: 3px 10px 3px 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
 }
-.buttonsPagination > button{
-    margin-left: 2%;
+.numeroPagina{
+    border: 1px solid #12264A;
+    padding: 1px 10px 1px 10px;
+    color: #12264A;
+    font-size: 13pt;
+}
+.btnIcon{
+    margin-left: 10%;
+}
+.btnIcon2{
+    margin-right: 10%;
 }
 .buttonsPagination{
     text-align: center;
@@ -67,15 +102,13 @@
 }
 .cardPost {
     margin-bottom: 2%;
-    height: 40%;
-    width: 80%;
-    background-color: gray;
+    width: 90%;
     flex-direction: row;
     word-wrap: break-word;
-    max-height: 15ch;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: pre-wrap
+    display: flex;
+    flex-direction: row;
+    padding: 5% 2% 5% 2%;
+    background-color: rgba(128, 128, 128, 0.123);
 }
 .containerPost >h2 {
     margin-bottom: 2%;
@@ -83,30 +116,55 @@
 .dataPost{
     font-size: 10pt;
     padding: 0 0 10px;
+    color: gray;
 }
 .imagemPost{
-    width: 20%;
-    height: 70%;
+    width: 25%;
+    height: auto;
 }
 .containerPost{
     margin-left: 2%;
 }
 .containerCardPost{
     display: flex;
-   justify-content: center;
    flex-direction: column;
    align-items: center;
+   height: 100vh;
+
 }
 .descricaoPost{
     padding: 0 0 10px;
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 11pt;
 }
 .btnPost{
     font-size: 10pt;
-    margin-bottom: 10px;
-    padding: 0 0 10px;
+   margin-top: 5%;
+}
+.titleB::before {
+    content: "•"; color: black;
+    display: inline-block; width: 1em;
+    margin-left: -1em
+}
+.titleB:hover{
+   cursor: pointer;
+}
+.buttonsPagination{
+  display: flex;
+  flex-direction: row;
+}
+.containerTitulosB{
+    border-bottom: 1px solid #12264A;
 }
 @media screen and (max-width: 768px){
     .Aside{
-        width: 50%;
+        display: none;
+    }
+    .containerBlog{
+        display: flex;
+        flex-direction: column;
+    }
+    .titlePostC{
+        font-size: 15pt;
     }
 }

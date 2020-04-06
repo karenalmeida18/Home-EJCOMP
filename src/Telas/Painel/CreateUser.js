@@ -45,16 +45,14 @@ export default class CreateUser extends React.Component {
                     alert('Usuário já existente.')
                 });
         }
-
     }
-
     render() {
         return (
             <div className='containerCreateUser' style={{ display: this.props.displayCreateUser }} >
                 <div className='headerBlog'>
                     <h3>Usuários</h3>
                     <h5>Criar Usuário</h5>
-                    <FontAwesomeIcon icon={faAngleRight} style={{ marginLeft: '10%' }} color='gray' id="setaBlog" />
+                    <FontAwesomeIcon icon={faAngleRight} style={{ marginLeft: '5%' }} color='gray' id="setaBlog" />
                 </div>
                 <div className='containerUsers'>
                     <p>Cadastrar novo administrador</p>

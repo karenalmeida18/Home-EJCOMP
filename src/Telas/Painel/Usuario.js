@@ -44,7 +44,7 @@ export default class Usuario extends React.Component {
 
     }
     showPostagens = ()=>{
-        this.setState({displayBlog: 'table', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none'})
+        this.setState({displayBlog: 'block', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none'})
 
     }
     showEditPostagens = ()=>{
@@ -56,7 +56,7 @@ export default class Usuario extends React.Component {
 
     }
     createUsers = ()=>{
-        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'table', displayDeleteUser:'none'})
+        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'block', displayDeleteUser:'none'})
     }
     deleteUsers = ()=>{
         this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'block'})

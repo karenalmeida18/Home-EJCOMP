@@ -53,3 +53,11 @@ table> tr :hover {background-color: #ddd;}
     background-color: rgb(27, 168, 27);
     font-size: 12pt;
 }
+@media screen and  (max-width: 500px ){
+    .containerUsers > input {
+      width: 90%;
+    }
+    .containerUsers > p{
+        font-size: 10pt;
+    }
+}
