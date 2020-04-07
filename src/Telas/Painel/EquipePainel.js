@@ -6,7 +6,7 @@ export default class EquipePainel extends React.Component {
         super(props);
         this.state = {
             name: "",
-            ocuppation: "",
+            occupation: "",
             avatar: null,
             src: ""
         }
@@ -15,7 +15,7 @@ export default class EquipePainel extends React.Component {
         this.setState({name: event.target.value });
     }
     handleChangeOcuppation = event => {
-        this.setState({ ocuppation: event.target.value });
+        this.setState({ occupation: event.target.value });
     }
     handleChangeAvatar = e => {
         e.preventDefault();
@@ -37,14 +37,15 @@ export default class EquipePainel extends React.Component {
 
         let form = new FormData();
         form.append("name", this.state.name);
-        form.append("ocuppation", this.state.ocuppation);
+        form.append("occupation", this.state.occupation);
         form.append("avatar", this.state.avatar);
         try {
             await api.post("/members", form, {headers:{'Content-Type': 'multipart/form-data'}})
             .then(response=>{
                 console.log(response.data);
-                this.setState({name:'',ocuppation:'',image:null,src: ''});
+                this.setState({name:'',occupation:'',avatar:null,src: ''});
                 alert('Membro criado com sucesso');
+                window.location.reload()
             })
         }
         catch(error) {
@@ -71,7 +72,7 @@ export default class EquipePainel extends React.Component {
                     </div>
                     <div className='sectionMembroText'>
                         <p>Cargo</p>
-                        <input type='adicionar' placeholder='Adicionar' value={this.state.ocuppation} onChange={this.handleChangeOcuppation} />
+                        <input type='adicionar' placeholder='Adicionar' value={this.state.occupation} onChange={this.handleChangeOcuppation} />
                         <button type='submit' onClick={this.createMembro} className='concluir'>Concluir</button>
                     </div>
                     </div>

@@ -15,7 +15,7 @@ export default class EditMembro extends React.Component {
             name: '',
             avatar: null,
             avatar2: null,
-            ocuppation: '',
+            occupation: '',
             changeSrc: false
         }
     }
@@ -38,7 +38,7 @@ export default class EditMembro extends React.Component {
     async editarMembro() {
         const form = new FormData();
         form.append("name", this.state.name);
-        form.append("ocuppation", this.state.ocuppation);
+        form.append("occupation", this.state.occupation);
         if (this.state.avatar) form.append("avatar", this.state.avatar);
         try {
             await api.put(`/members/${this.state.id}`, form, { headers: { 'content-type': 'multipart/form-data' } })
@@ -57,9 +57,9 @@ export default class EditMembro extends React.Component {
 
     showMembro(member) {
         this.setState({ isVisible: true, name: member.name, 
-            ocuppation: member.ocuppation,avatar2: member.avatar, id: member._id })
+            occupation: member.occupation,avatar2: member.avatar, id: member._id })
             console.log(this.state.name)
-            console.log(this.state.ocuppation)
+            console.log(this.state.occupation)
             console.log(this.state.avatar)
             console.log(this.state.avatar2)
     }
@@ -74,10 +74,10 @@ export default class EditMembro extends React.Component {
         }
         console.log(val)
     }
-    onSaveOcuppation = val => {
+    onSaveOccupation = val => {
         console.log('Edited Value -> ', val)
         if (val !== null && val !== undefined)
-            this.setState({ ocuppation: val })
+            this.setState({ occupation: val })
         console.log(val)
     }
     handleChangeImage = e => {
@@ -100,7 +100,6 @@ export default class EditMembro extends React.Component {
         const { members } = this.state;
         return (
             <div className='EditMembros' style={{ display: this.props.displayEditMembro }}>
-                
                 {this.state.isVisible ?
                     <div className='membroCompleto'>
                         <div className='modalMembro'>
@@ -110,25 +109,16 @@ export default class EditMembro extends React.Component {
                                 value={this.state.name}
                                 onSave={this.onSaveName}
                             />
-                            <div className='fotoMembro'>
+                            <div className='fotoMembroEdit'>
                                 {this.state.avatar2 ?
                                     <img className='imageMembro' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/members/' + this.state.avatar2.filename} ></img>
                                     : <p>Sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='btnImage' />
                             <EdiText 
-                                 type='textarea'
-                                 inputProps={{
-                                   className: 'textarea',
-                                   placeholder: 'Type your content here',
-                                   style: {
-                                     outline: 'none',
-                                     minWidth: 'auto',
-                                   },
-                                   rows: 10
-                                 }}
-                                value={this.state.ocuppation}
-                                onSave={this.onSaveOcuppation}
+                                 type='text'
+                                value={this.state.occupation}
+                                onSave={this.onSaveOccupation}
                             />
                             <div className='buttonsEdit'>
                                 <button onClick={() => this.excluirMembro()}>Excluir membro</button>
@@ -137,9 +127,9 @@ export default class EditMembro extends React.Component {
                         </div>
                     </div> : null}
                     <div className='headerBlog'>
-                    <h3>Blog</h3>
+                    <h3>Equipe</h3>
                     <h5>Editar Membro</h5>
-                    <FontAwesomeIcon icon={faAngleRight}  color='gray' id="setaBlog" />
+                    <FontAwesomeIcon style={{marginLeft: '20px'}} icon={faAngleRight}  color='gray' id="setaBlog" />
                 </div>
                 <h3 style={{ marginTop: '5%' , textAlign: 'center'}}>Selecione qual arquivo deseja alterar</h3>
                 <div className='containerEditMembros'>
