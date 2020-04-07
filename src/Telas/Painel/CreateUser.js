@@ -25,7 +25,7 @@ export default class CreateUser extends React.Component {
         this.setState({ passwordConfirm: event.target.value });
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
         this.setState({ border: '1px solid white' })
         const { email, password, passwordConfirm } = this.state;
@@ -34,16 +34,19 @@ export default class CreateUser extends React.Component {
         }
         else if(password !== passwordConfirm) {alert('Digite a mesma senha nos dois campos.')}
         else {
-            api.post(`/auth/register`, { email, password })
-                .then(function (response) {
+            try{
+                await api.post(`/auth/register`, { email, password } )
+                .then(response=>{
                     console.log(response);
                     alert('Usuário cadastrado com sucesso.')
                     this.setState({ email: '', password: '', passwordConfirm: '' })
+                    window.location.reload();
                 })
-                .catch(function (error) {
-                    console.log(error);
-                    alert('Usuário já existente.')
-                });
+                
+            }catch(error){
+                console.log(error);
+                alert('Usuário já existente.')
+            }
         }
     }
     render() {

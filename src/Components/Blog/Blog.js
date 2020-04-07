@@ -5,7 +5,7 @@ import MenuMobile from '../MenuMobile/MenuMobile';
 import Footer from '../Footer/Footer';
 import api from '../../Services/api'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDoubleRight, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleRight, faArrowRight, faArrowLeft, faSpinner } from '@fortawesome/free-solid-svg-icons'
 export default class Blog extends React.Component {
     constructor(props) {
         super(props);
@@ -18,6 +18,8 @@ export default class Blog extends React.Component {
             isVisible: false,
             ultimaPostagem: '',
             penultimaPostagem: '',
+            displayButtons: 'none',
+            loading: true
         }
     }
     postCompleto = (post) => {
@@ -31,12 +33,16 @@ export default class Blog extends React.Component {
         const response = await api.get(`/projects/`)
         const indice = response.data.projects.length - 1
         console.log(response.data.projects.length);
+        if(response.data.projects.length > 0 ){
         this.setState({
             posts: response.data.projects,
             ultimaPostagem: response.data.projects[indice],
-            penultimaPostagem: response.data.projects[indice - 1]
-        })
+            penultimaPostagem: response.data.projects[indice - 1],
+            displayButtons: 'flex',
+            loading: false
+        }) 
         this.listItens(this.state.posts.reverse(), pagina, 2)
+    }else {this.setState({loading: true})}
     }
     listItens = (items, pageAtual, limite) => {
         let result = [];
@@ -84,7 +90,8 @@ export default class Blog extends React.Component {
                             </div> : null
                         }
                         <div className='containerCardPost' style={{ display: this.state.displayPostagens }} >
-                            {posts.length > 0 ?
+                            {this.state.loading? <FontAwesomeIcon icon={faSpinner}/> : 
+                            posts.length > 0 ?
                                 posts.map(post => (
                                     <div className="cardPost">
                                         <img src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} className="imagemPost"/>
@@ -99,7 +106,7 @@ export default class Blog extends React.Component {
                                     </div>
                                 )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
                             }
-                            <div className='buttonsPagination'>
+                            <div style={{display: this.state.displayButtons}} className='buttonsPagination'>
                                 {this.state.pagina > 1 ?
                                     <button className='btnPagina' onClick={() => this.listPosts(this.state.pagina - 1)}>
                                      <FontAwesomeIcon className='btnIcon2' color='#12264A' icon={faArrowLeft} /> Anterior
@@ -109,15 +116,15 @@ export default class Blog extends React.Component {
                                     <button className='btnPagina' onClick={() => this.listPosts(this.state.pagina + 1)}>Próximo
                                      <FontAwesomeIcon className='btnIcon' color='#12264A' icon={faArrowRight} />
                                     </button> : null}
-                            </div>
+                            </div> 
                         </div>
-                        <div className='Aside'>
+                        <div  className='Aside'>
                             <div className='Postagens'>
                                 <h3>ÚLTIMAS POSTAGENS</h3>
                                 <div className='containerTitulosB'>
-                                    <p className='titleB' onClick={() => this.postCompleto(this.state.ultimaPostagem)}>
+                                    <p style={{display: this.state.displayButtons}} className='titleB' onClick={() => this.postCompleto(this.state.ultimaPostagem)}>
                                         {this.state.ultimaPostagem.title} </p>
-                                    <p className='titleB' onClick={() => this.postCompleto(this.state.penultimaPostagem)}>
+                                    <p style={{display: this.state.displayButtons}}className='titleB' onClick={() => this.postCompleto(this.state.penultimaPostagem)}>
                                         {this.state.penultimaPostagem.title} </p>
                                 </div>
                             </div>

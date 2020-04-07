@@ -62,12 +62,17 @@
     margin-right: 5%;
     word-wrap: break-word;
     margin-bottom: 5%;
+
 }
 .textPost{
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 10%;
+    color: #12264A;
+    border: 1px solid #12264A;
+    padding: 15%;
+    font-size: 20pt;
 }
 .Título{
     margin-top: 2%;
@@ -155,6 +160,11 @@
 }
 .containerTitulosB{
     border-bottom: 1px solid #12264A;
+    border-top: 1px solid #12264A;
+    margin-top: 5%;
+}
+.Postagens{
+ padding: 10px;
 }
 @media screen and (max-width: 768px){
     .Aside{

@@ -110,7 +110,7 @@ export default class EditPostagens extends React.Component {
                                 value={this.state.title}
                                 onSave={this.onSaveTitle}
                             />
-                            <div className='fotoPost'>
+                            <div className='fotoPostEdit'>
                                 {this.state.image2 ?
                                     <img className='imagePostagem' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/projects/' + this.state.image2.filename} ></img>
                                     : <p>sem foto</p>}

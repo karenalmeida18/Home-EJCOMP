@@ -47,6 +47,7 @@ export default class BlogPainel extends React.Component {
                 console.log(response.data)
                 this.setState({title:'',description:'',image:null, src: ''});
                 alert('publicação criado com sucesso.');
+                window.location.reload();
             })
             
         }catch(error){
@@ -78,7 +79,7 @@ export default class BlogPainel extends React.Component {
                     </div>
                     <div className='sectionBlogText'>
                         <p>Descrição da Postagem</p>
-                        <input type='adicionar' placeholder='Adicionar' value={this.state.description} onChange={this.handleChangeDescription} />
+                        <textarea rows='10' type='adicionar' placeholder='Adicionar' value={this.state.description} onChange={this.handleChangeDescription} />
                         <button type='submit' onClick={this.createPost} className='concluir'>concluir</button>
                     </div>
                     </div>
