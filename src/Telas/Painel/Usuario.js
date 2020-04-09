@@ -5,6 +5,7 @@ import { faBars, faUserCircle, faAngleRight } from '@fortawesome/free-solid-svg-
 import EquipePainel from './EquipePainel'
 import BlogPostagens from './BlogPostagens'
 import PortfolioPainel from './PortfolioPainel'
+import EditPortfolio from './EditPortfolio'
 import EditPostagens from './EditPostagens'
 import DeleteUser from './DeleteUser'
 import CreateUser from './CreateUser'
@@ -26,7 +27,9 @@ export default class Usuario extends React.Component {
             displayOpUser:  'none',
             displayCreateUser: 'none',
             displayDeleteUser: 'none',
-            displayEditMember: 'none'
+            displayEditMember: 'none',
+            displayEditPort: 'none',
+            displayOpPort: 'none'
         }
     }
     showInput = () => {
@@ -41,31 +44,36 @@ export default class Usuario extends React.Component {
     showOpUser = () => {
         this.setState({ displayOpUser: 'block' })
     }
+    showOpPort = () => {
+        this.setState({displayOpPort: 'block'})
+    }
     showEquipe = () => {
-        this.setState({displayEquipe: 'block', displayBlog: 'none', displayPort: 'none',displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none'})
+        this.setState({displayEquipe: 'block', displayBlog: 'none', displayPort: 'none',displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none', displayEditPort:'none'})
 
     }
     showPostagens = ()=>{
-        this.setState({displayBlog: 'block', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none'})
+        this.setState({displayBlog: 'block', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none', displayEditPort:'none'})
 
     }
     showEditPostagens = ()=>{
-        this.setState({displayBlog: 'none', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'block', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none'})
+        this.setState({displayBlog: 'none', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'block', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none', displayEditPort:'none'})
 
     }
     showEditMembro = ()=>{
-        this.setState({displayBlog: 'none', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'block'})
+        this.setState({displayBlog: 'none', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'block', displayEditPort:'none'})
 
+    }
+    showEditPortfolio = ()=>{
+        this.setState({displayBlog: 'none', displayEquipe: 'none', displayPort: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditPort:'block', displayEditMember: 'none'})
     }
     showPortfolio = ()=>{
-        this.setState({displayPort: 'block', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditMember: 'none'})
-
+        this.setState({displayPort: 'block', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'none', displayEditPort:'none', displayEditMember: 'none'})
     }
     createUsers = ()=>{
-        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'block', displayDeleteUser:'none', displayEditMember: 'none'})
+        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'block', displayDeleteUser:'none', displayEditMember: 'none', displayEditPort:'none'})
     }
     deleteUsers = ()=>{
-        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'block', displayEditMember: 'none'})
+        this.setState({displayPort: 'none', displayEquipe: 'none', displayBlog: 'none', displayEditBlog: 'none', displayCreateUser: 'none', displayDeleteUser:'block', displayEditMember: 'none', displayEditPort:'none'})
     }
     logoutPainel = () =>{
         logout()
@@ -81,6 +89,7 @@ export default class Usuario extends React.Component {
             <EditMembro displayEditMembro={this.state.displayEditMember}/>
             <DeleteUser displayDeleteUser={this.state.displayDeleteUser}/>
             <CreateUser displayCreateUser={this.state.displayCreateUser}/>
+            <EditPortfolio displayEditPort={this.state.displayEditPort}/>
                 <div className='asideUser'>
                     <div className='headerUser'>
                         <div className='infoUser'>
@@ -108,8 +117,16 @@ export default class Usuario extends React.Component {
                                 <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
                             </div>
                             <div className='opcoes'>
-                                <input type="radio" name='opcao' value='op2' onClick={this.showPortfolio}/> <label>Portfolio</label>
+                                <input type="radio" name='opcao' valu='op6' onClick={this.showOpPort}/> <label>Portfolio</label>
                                 <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                                <div style={{display: this.state.displayOpPort}} className='showOpcao'>
+                                    <input type="radio" name='opcao' value='op2' onClick={this.showPortfolio}/> <label>Criar Portfolio</label>
+                                    <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                                </div>
+                            <div style={{display: this.state.displayOpPort}} className='showOpcao'>
+                                <input type="radio" name='opcao' value='op2' onClick={this.showEditPortfolio}/> <label>Editar Portfolio</label>
+                                <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
+                            </div>
                             </div>
                             <div className='opcoes'>
                                 <input type="radio" name='opcao' value='op3' onClick={this.showOpBlog} /> <label>Blog</label>

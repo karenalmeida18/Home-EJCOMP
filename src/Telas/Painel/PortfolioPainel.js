@@ -78,33 +78,27 @@ export default class PortfolioPainel extends Component {
                     <div className='containerPort'>
                         <div>
                             <div className='sectionPortImg'>
-                                <p>Imagem</p>  
+                                <p>Imagem Primária</p>  
                                 <div className='fotoPort1'>
-                                    <input type='file' onChange={this.handleChangeImage1} placeholder='escolher imagem'/>
                                     <img className='imagePreview' src={this.state.src1} alt='imagePost'/>
-                                </div>                                
-                                <button className='containerButtons'>Adicionar Imagem</button>
-                                <button className='containerButtons'>Excluir Imagem</button>
+                                </div>    
+                                <input type='file' onChange={this.handleChangeImage1} className='inputButton' placeholder='escolher imagem'/>                       
                             </div>
                             <div className='sectionPortImg'>
-                                <p>Imagem</p>  
+                                <p>Imagem Dispositivos</p>  
                                 <div className='fotoPort2'>
-                                    <input type='file' onChange={this.handleChangeImage2} placeholder='escolher imagem'/>
                                     <img className='imagePreview' src={this.state.src2} alt='imagePost'/>
                                 </div>
-                                <button className='containerButtons'>Adicionar Imagem</button>
-                                <button className='containerButtons'>Excluir Imagem</button>
+                                <input type='file' onChange={this.handleChangeImage2} className='inputButton' placeholder='escolher imagem'/>
                             </div>
                         </div>
                         <div className='textsPort'>
                             <div className='sectionPortTextNome'>
                                 <p>Nome</p>
-                                <input type='excluir' placeholder='Excluir' />
                                 <input type='adicionar ' placeholder='Adicionar' value={this.state.name} onChange={this.handleChangeName}/>
                             </div>
                             <div className='sectionPortTextDesc'>
                                 <p>Descrição</p>
-                                <input type='excluir' placeholder='Excluir' />
                                 <input type='adicionar1' placeholder='Adicionar' value={this.state.description} onChange={this.handleChangeDescription}/>
                                 <button type='submit' onClick={this.createPost} className='concluir'>concluir</button>
                             </div>
