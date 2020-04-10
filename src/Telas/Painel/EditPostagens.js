@@ -1,9 +1,10 @@
 import React from 'react';
 import './EditPostagens.css'
 import api from '../../Services/api'
-import EdiText from 'react-editext'
-import { faTimes , faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import CKEditor from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export default class EditPostagens extends React.Component {
     constructor(props) {
         super(props);
@@ -32,7 +33,6 @@ export default class EditPostagens extends React.Component {
             await api.delete(`/projects/${this.state.id}`)
             window.location.reload();
         }
-        console.log(this.state.posts)
     }
 
     async editarPost() {
@@ -56,29 +56,14 @@ export default class EditPostagens extends React.Component {
     }
 
     showArtigo(post) {
-        this.setState({ isVisible: true, title: post.title, 
-            description: post.description, image2: post.image, id: post._id })
-            console.log(this.state.title)
-            console.log(this.state.description)
-            console.log(this.state.image)
-            console.log(this.state.image2)
+        this.setState({
+            isVisible: true, title: post.title,
+            description: post.description, image2: post.image, id: post._id
+        })
     }
     hideArtigo() {
         this.setState({ isVisible: false, src: null })
         console.log(this.state.title)
-    }
-    onSaveTitle = val => {
-        console.log('Edited Value -> ', val)
-        if (val !== null && val !== undefined) {
-            this.setState({ title: val })
-        }
-        console.log(val)
-    }
-    onSaveDescription = val => {
-        console.log('Edited Value -> ', val)
-        if (val !== null && val !== undefined)
-            this.setState({ description: val })
-        console.log(val)
     }
     handleChangeImage = e => {
         e.preventDefault();
@@ -100,35 +85,36 @@ export default class EditPostagens extends React.Component {
         const { posts } = this.state;
         return (
             <div className='EditPostagens' style={{ display: this.props.displayEditBlog }}>
-                
+
                 {this.state.isVisible ?
+                    /*modal para editar ou excluir postagem*/
                     <div className='postCompleto'>
                         <div className='modalPostagem'>
                             <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={() => { this.hideArtigo() }} />
-                            <EdiText
-                                type="text"
-                                value={this.state.title}
-                                onSave={this.onSaveTitle}
-                            />
+                            <input type='text' value={this.state.title} onChange={e => this.setState({ title: e.target.value })} />
                             <div className='fotoPostEdit'>
                                 {this.state.image2 ?
-                                    <img className='imagePostagem' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/projects/' + this.state.image2.filename} ></img>
+                                    <img className='imagePostagem' alt='fotoblog' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/projects/' + this.state.image2.filename} ></img>
                                     : <p>sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='btnImage' />
-                            <EdiText 
-                                 type='textarea'
-                                 inputProps={{
-                                   className: 'textarea',
-                                   placeholder: 'Type your content here',
-                                   style: {
-                                     outline: 'none',
-                                     minWidth: 'auto',
-                                   },
-                                   rows: 10
-                                 }}
-                                value={this.state.description}
-                                onSave={this.onSaveDescription}
+                            <CKEditor
+                                editor={ClassicEditor}
+                                data={this.state.description}
+                                onInit={editor => {
+                                    // You can store the "editor" and use when it is needed.
+                                    console.log('Editor is ready to use!', editor);
+                                }}
+                                onChange={(event, editor) => {
+                                    const data = editor.getData();
+                                    this.setState({ description: data })
+                                }}
+                                onBlur={(event, editor) => {
+                                    console.log('Blur.', editor);
+                                }}
+                                onFocus={(event, editor) => {
+                                    console.log('Focus.', editor);
+                                }}
                             />
                             <div className='buttonsEdit'>
                                 <button onClick={() => this.excluirPost()}>excluir artigo</button>
@@ -136,20 +122,19 @@ export default class EditPostagens extends React.Component {
                             </div>
                         </div>
                     </div> : null}
-                    <div className='headerBlog'>
+                <div className='headerBlog'>
                     <h3>Blog</h3>
                     <h5>Editar Postagens</h5>
-                    <FontAwesomeIcon icon={faAngleRight}  color='gray' id="setaBlog" />
+                    <FontAwesomeIcon icon={faAngleRight} color='gray' id="setaBlog" />
                 </div>
-                <h3 style={{ marginTop: '5%' , textAlign: 'center'}}>Selecione qual arquivo deseja alterar</h3>
+                <h3 style={{ marginTop: '5%', textAlign: 'center' }}>Selecione qual arquivo deseja alterar</h3>
                 <div className='containerEditPostagens'>
                     {posts.length > 0 ?
                         posts.map(post => (
                             <div key={post._id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
-                                <h4>{post.title}</h4>
-                                {/*<h4>{post.description}</h4>*/}
+                                <h4 className='tituloEdit'>{post.title}</h4>
                                 {post.image !== null ?
-                                    < img className='imagePostagem' src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} />
+                                    < img className='imagePostagem' alt='fotoblog1' src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} />
                                     : <p>post sem foto</p>
                                 }
                             </div>

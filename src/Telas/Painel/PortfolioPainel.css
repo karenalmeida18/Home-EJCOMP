@@ -96,3 +96,31 @@ input[type=adicionar1] {
      background-color: rgb(27, 168, 27);
      margin-top: 10%;
  }
+ @media screen and  (max-width: 768px ){
+    .containerPort{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and  (max-width:  768px ){
+    .EquipePainel{
+        width: 100%;
+        align-items: center;
+    }
+    .sectionPortTextNome{
+        margin: 0;
+    }
+    .sectionPortTextDesc {
+        margin: 0;
+    }
+    .sectionPortImg{
+        margin: 0;
+    }
+    .fotoPort1{
+        width: 100%;
+    }
+    .fotoPor2{
+        width: 100%;
+    }
+}

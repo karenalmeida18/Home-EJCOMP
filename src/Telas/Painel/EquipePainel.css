@@ -54,3 +54,22 @@
     background-color: rgb(27, 168, 27);
     margin-top: 10%;
 }
+@media screen and  (max-width: 768px ){
+    .containerEquipePainel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and  (max-width:  768px ){
+    .EquipePainel{
+        width: 100%;
+        align-items: center;
+    }
+    .sectionMembroText{
+        margin: 0;
+    }
+    .fotoAdmMembro{
+        width: 100%;
+    }
+}

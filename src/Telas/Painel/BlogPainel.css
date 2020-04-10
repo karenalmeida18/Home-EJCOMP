@@ -75,6 +75,7 @@
     background-color: rgb(27, 168, 27);
     margin-top: 10%;
 }
+
 @media screen and  (max-width: 768px ){
     .containerBlogPainel{
         display: flex;

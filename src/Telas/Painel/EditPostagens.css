@@ -82,6 +82,11 @@
     height: 90%;
     overflow-y: auto;
 }
+.tituloEdit{
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
 @media screen and  (max-width:  768px ){
     .btnImage{
         width: 100%;

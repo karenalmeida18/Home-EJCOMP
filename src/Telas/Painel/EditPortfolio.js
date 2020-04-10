@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import api from '../../Services/api';
 import { faTimes, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import EdiText from 'react-editext'
 import './EditPortfolio.css';
 
 export default class EditPortfolio extends Component {
@@ -100,30 +99,9 @@ export default class EditPortfolio extends Component {
         }
         reader.readAsDataURL(image2)
     }
-t
-    onSaveName = val => {
-        console.log('Edited Value -> ', val)
-        if (val !== null && val !== undefined) {
-            this.setState({ name: val })
-        }
-        console.log(val)
-    }
-    onSaveDescription = val => {
-        console.log('Edited Value -> ', val)
-        if (val !== null && val !== undefined)
-            this.setState({ description: val })
-        console.log(val)
-    }
-
     showPortfolio(port) {
         this.setState({ isVisible: true, id: port._id, name: port.name, description: port.description, changeImg1: port.photos[0], changeImg2: port.photos[1]})
         console.log(port)
-        console.log(port.name)
-        console.log(port.image1)
-        console.log(port.image2)
-        console.log(this.state.image1)
-        console.log(this.state.image2)
-        console.log(this.state.name)
     }
     render() {
         const {ports} = this.state;
@@ -133,11 +111,7 @@ t
                     <div className='portCompleto'>
                         <div className='modalPort'>
                             <FontAwesomeIcon icon={faTimes} align className="Cancel" onClick={() => { this.hidePort() }} />
-                            <EdiText
-                                type="text"
-                                value={this.state.name}
-                                onSave={this.onSaveName}
-                            />
+                            <input type='text' value={this.state.name} onChange={e=>this.setState({name: e.target.value})} />
                             <div className='fotoPort'>
                             {this.state.changeImg1 ?
                                 <img className='imagePort' src={this.state.changeSrc1 ? this.state.src: 'https://api-ejcomp-site.herokuapp.com/portfolio/' + this.state.changeImg1.filename}></img>
@@ -150,11 +124,7 @@ t
                                     : <p>sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage1} placeholder='Adicionar Imagem' className='containerButtons' />
-                            <EdiText
-                                type="text"
-                                value={this.state.description}
-                                onSave={this.onSaveDescription}
-                            />
+                            <input type='text' value={this.state.description} onChange={e=>this.setState({description: e.target.value})} />
                             <div className='buttonsEdit'>
                                 <button onClick={() => this.editarPort()}>Editar portfolio</button>
                             </div>

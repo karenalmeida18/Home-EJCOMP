@@ -1,7 +1,6 @@
 import React from 'react';
 import './EditMembro.css'
 import api from '../../Services/api'
-import EdiText from 'react-editext'
 import { faTimes , faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default class EditMembro extends React.Component {
@@ -58,27 +57,10 @@ export default class EditMembro extends React.Component {
     showMembro(member) {
         this.setState({ isVisible: true, name: member.name, 
             occupation: member.occupation,avatar2: member.avatar, id: member._id })
-            console.log(this.state.name)
-            console.log(this.state.occupation)
-            console.log(this.state.avatar)
-            console.log(this.state.avatar2)
     }
     hideMembro() {
         this.setState({ isVisible: false, src: null })
         console.log(this.state.name)
-    }
-    onSaveName = val => {
-        console.log('Edited Value -> ', val)
-        if (val !== null && val !== undefined) {
-            this.setState({ name: val })
-        }
-        console.log(val)
-    }
-    onSaveOccupation = val => {
-        console.log('Edited Value -> ', val)
-        if (val !== null && val !== undefined)
-            this.setState({ occupation: val })
-        console.log(val)
     }
     handleChangeImage = e => {
         e.preventDefault();
@@ -104,22 +86,14 @@ export default class EditMembro extends React.Component {
                     <div className='membroCompleto'>
                         <div className='modalMembro'>
                             <FontAwesomeIcon icon={faTimes} color="black" className="Cancel" onClick={() => { this.hideMembro() }} />
-                            <EdiText
-                                type="text"
-                                value={this.state.name}
-                                onSave={this.onSaveName}
-                            />
+                             <input type='text' value={this.state.name} onChange={e=>this.setState({name: e.target.value})} />
                             <div className='fotoMembroEdit'>
                                 {this.state.avatar2 ?
-                                    <img className='imageMembro' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/members/' + this.state.avatar2.filename} ></img>
+                                    <img alt='fotomembro' className='imageMembro' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/members/' + this.state.avatar2.filename} ></img>
                                     : <p>Sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='btnImage' />
-                            <EdiText 
-                                 type='text'
-                                value={this.state.occupation}
-                                onSave={this.onSaveOccupation}
-                            />
+                            <input type='text' value={this.state.occupation} onChange={e=>this.setState({occupation: e.target.value})} />
                             <div className='buttonsEdit'>
                                 <button onClick={() => this.excluirMembro()}>Excluir membro</button>
                                 <button onClick={() => this.editarMembro()}> Editar membro</button>
@@ -136,9 +110,9 @@ export default class EditMembro extends React.Component {
                     {members.length > 0 ?
                         members.map(member => (
                             <div key={member._id} className='cardMembros' onClick={() => this.showMembro(member)}>
-                                <h4>{member.name}</h4>
+                                <h4 className='tituloEdit'>{member.name}</h4>
                                 {member.avatar !== null ?
-                                    < img className='imageMembro' src={'https://api-ejcomp-site.herokuapp.com/members/' + member.avatar.filename} />
+                                    < img alt='fotoMembro' className='imageMembro' src={'https://api-ejcomp-site.herokuapp.com/members/' + member.avatar.filename} />
                                     : <p>Membro sem foto</p>
                                 }
                             </div>

@@ -22,27 +22,19 @@ export default class Blog extends React.Component {
             loading: true
         }
     }
-    postCompleto = (post) => {
-        this.setState({
-             displayPostagens: 'none', isVisible: true,
-            title: post.title, image: post.image, description: post.description,
-            data: post.createdAt
-        })
-    }
     listPosts = async (pagina) => {
-        const response = await api.get(`/projects/`)
-        const indice = response.data.projects.length - 1
-        console.log(response.data.projects.length);
-        if(response.data.projects.length > 0 ){
-        this.setState({
-            posts: response.data.projects,
-            ultimaPostagem: response.data.projects[indice],
-            penultimaPostagem: response.data.projects[indice - 1],
-            displayButtons: 'flex',
-            loading: false
-        }) 
-        this.listItens(this.state.posts.reverse(), pagina, 2)
-    }else {this.setState({loading: true})}
+        const response = await api.get(`/projects/`);
+        const indice = response.data.projects.length - 1;       
+        if (response.data.projects.length > 0) {
+            this.setState({
+                posts: response.data.projects,
+                ultimaPostagem: response.data.projects[indice],
+                penultimaPostagem: response.data.projects[indice - 1],
+                displayButtons: 'flex',
+                loading: false
+            })
+            this.listItens(this.state.posts.reverse(), pagina, 2)
+        } else { this.setState({ loading: true }) }
     }
     listItens = (items, pageAtual, limite) => {
         let result = [];
@@ -64,6 +56,13 @@ export default class Blog extends React.Component {
         if (string.length > 230) return string.substr(0, 230) + '...'
         else return string
     }
+    postCompleto = (post) => {
+        this.setState({
+            displayPostagens: 'none', isVisible: true,
+            title: post.title, image: post.image, description: post.description,
+            data: post.createdAt
+        })
+    }
     componentDidMount() {
         this.listPosts(1)
     }
@@ -71,60 +70,60 @@ export default class Blog extends React.Component {
         const { posts } = this.state;
         return (
             <div>
-                <Navbar backgroundColor='white' color='#12264A' logo='logoNav' className='itemMenuMej' />    
+                <Navbar backgroundColor='white' color='#12264A' logo='logoNav' className='itemMenuMej' />
                 <div className='Blog'>
                     <div id="menu"> <MenuMobile /> </div>
                     <div className='containerBlog'>
                         {this.state.isVisible ?
                             <div className='containerPostCompleto'>
                                 <div className='headerTituloPost'>
-                                <p className='titlePostC'>{this.state.title}</p>
-                                <p style={{color: '#12264A'}}>Publicado em {this.state.data.substr(0, 10)}</p>
+                                    <p className='titlePostC'>{this.state.title}</p>
+                                    <p style={{ color: '#12264A' }}>Publicado em {this.state.data.substr(0, 10)}</p>
                                 </div>
                                 <div className='conteudoPostagem'>
-                                <h2 style={{marginTop: '5%', fontSize: '20pt'}}>{this.state.title}</h2>
-                                <img className='imagePreview'  src={'https://api-ejcomp-site.herokuapp.com/projects/' + this.state.image.filename} />
+                                    <h2 style={{ marginTop: '5%', fontSize: '20pt' }}>{this.state.title}</h2>
+                                    <img className='imagePreview' alt='imagemBlog' src={'https://api-ejcomp-site.herokuapp.com/projects/' + this.state.image.filename} />
                                 </div>
-                                <p>{this.state.description}</p>
+                                <div dangerouslySetInnerHTML={{ __html: this.state.description}}/> 
                                 <button onClick={() => { this.setState({ isVisible: false, displayPostagens: 'flex' }) }} className='btnVoltar'>voltar</button>
                             </div> : null
                         }
                         <div className='containerCardPost' style={{ display: this.state.displayPostagens }} >
-                            {this.state.loading? <FontAwesomeIcon icon={faSpinner}/> : 
-                            posts.length > 0 ?
-                                posts.map(post => (
-                                    <div className="cardPost">
-                                        <img src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} className="imagemPost"/>
-                                        <div className="containerPost">
-                                            <h3 className='titlePosts'>{post.title}</h3>
-                                            <p className='dataPost'>{post.createdAt.substr(0, 10)}</p>
-                                            <p className='descricaoPost'>{this.limitText(post.description)}</p>
-                                            <p onClick={() => this.postCompleto(post)} className='btnPost'>Veja mais
+                            {this.state.loading ? <FontAwesomeIcon icon={faSpinner} /> :
+                                posts.length > 0 ?
+                                    posts.map(post => (
+                                        <div className="cardPost">
+                                            <img src={'https://api-ejcomp-site.herokuapp.com/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" />
+                                            <div className="containerPost">
+                                                <h3 className='titlePosts'>{post.title}</h3>
+                                                <p className='dataPost'>{post.createdAt.substr(0, 10)}</p>
+                                                <div className='descricaoPost'dangerouslySetInnerHTML={{__html:this.limitText(post.description)}}/>
+                                                <p onClick={() => this.postCompleto(post)} className='btnPost'>Veja mais
                                          <FontAwesomeIcon icon={faAngleDoubleRight} color='black' size='xs' style={{ marginLeft: '2px' }} />
-                                            </p>
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
+                                    )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
                             }
-                            <div style={{display: this.state.displayButtons}} className='buttonsPagination'>
+                            <div style={{ display: this.state.displayButtons }} className='buttonsPagination'>
                                 {this.state.pagina > 1 ?
                                     <button className='btnPagina' onClick={() => this.listPosts(this.state.pagina - 1)}>
-                                     <FontAwesomeIcon className='btnIcon2' color='#12264A' icon={faArrowLeft} /> Anterior
+                                        <FontAwesomeIcon className='btnIcon2' color='#12264A' icon={faArrowLeft} /> Anterior
                                     </button> : null}
                                 <p className='numeroPagina'>{this.state.pagina}</p>
                                 {!this.state.limitePagine ?
                                     <button className='btnPagina' onClick={() => this.listPosts(this.state.pagina + 1)}>Próximo
                                      <FontAwesomeIcon className='btnIcon' color='#12264A' icon={faArrowRight} />
                                     </button> : null}
-                            </div> 
+                            </div>
                         </div>
-                        <div  className='Aside'>
+                        <div className='Aside'>
                             <div className='Postagens'>
                                 <h3>ÚLTIMAS POSTAGENS</h3>
                                 <div className='containerTitulosB'>
-                                    <p style={{display: this.state.displayButtons}} className='titleB' onClick={() => this.postCompleto(this.state.ultimaPostagem)}>
+                                    <p style={{ display: this.state.displayButtons }} className='titleB' onClick={() => this.postCompleto(this.state.ultimaPostagem)}>
                                         {this.state.ultimaPostagem.title} </p>
-                                    <p style={{display: this.state.displayButtons}}className='titleB' onClick={() => this.postCompleto(this.state.penultimaPostagem)}>
+                                    <p style={{ display: this.state.displayButtons }} className='titleB' onClick={() => this.postCompleto(this.state.penultimaPostagem)}>
                                         {this.state.penultimaPostagem.title} </p>
                                 </div>
                             </div>

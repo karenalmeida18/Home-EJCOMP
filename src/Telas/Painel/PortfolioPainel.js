@@ -63,6 +63,7 @@ export default class PortfolioPainel extends Component {
                 console.log(response.data)
                 this.setState({name:'',description:'',image1:null, image2:null});
                 alert('portfolio criado com sucesso.');
+                window.location.reload();
             })
             
         }catch(error){
