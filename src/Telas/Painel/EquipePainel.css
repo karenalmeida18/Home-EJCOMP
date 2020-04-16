@@ -54,6 +54,12 @@
     background-color: rgb(27, 168, 27);
     margin-top: 10%;
 }
+.textPostEdit{
+    padding: 30px;
+    border: 1px solid gray;
+    height: 50%;
+    margin-top: 15%;
+}
 @media screen and  (max-width: 768px ){
     .containerEquipePainel{
         display: flex;

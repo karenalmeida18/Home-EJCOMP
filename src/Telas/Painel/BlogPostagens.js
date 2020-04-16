@@ -3,6 +3,10 @@ import './BlogPainel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import api from '../../Services/api'
+import CKEditor from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
+
 export default class BlogPainel extends React.Component {
     constructor(props) {
         super(props);
@@ -40,7 +44,7 @@ export default class BlogPainel extends React.Component {
         let form = new FormData();
         form.append("title",this.state.title);
         form.append("description",this.state.description);
-        form.append("image",this.state.image)
+        if(this.state.image)form.append("image",this.state.image)
         try{
             await api.post("/projects",form, {headers:{'Content-Type': 'multipart/form-data'}} )
             .then(response=>{
@@ -79,7 +83,24 @@ export default class BlogPainel extends React.Component {
                     </div>
                     <div className='sectionBlogText'>
                         <p>Descrição da Postagem</p>
-                        <textarea rows='10' type='adicionar' placeholder='Adicionar' value={this.state.description} onChange={this.handleChangeDescription} />
+                        <CKEditor
+                                editor={ClassicEditor}
+                                data={this.state.description}
+                                onInit={editor => {
+                                    // You can store the "editor" and use when it is needed.
+                                    console.log('Editor is ready to use!', editor);
+                                }}
+                                onChange={(event, editor) => {
+                                    const data = editor.getData();
+                                    this.setState({ description: data })
+                                }}
+                                onBlur={(event, editor) => {
+                                    console.log('Blur.', editor);
+                                }}
+                                onFocus={(event, editor) => {
+                                    console.log('Focus.', editor);
+                                }}
+                            />
                         <button type='submit' onClick={this.createPost} className='concluir'>concluir</button>
                     </div>
                     </div>

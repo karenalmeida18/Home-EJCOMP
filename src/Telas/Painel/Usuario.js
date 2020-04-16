@@ -107,7 +107,7 @@ export default class Usuario extends React.Component {
                                 <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
                                 <div style={{ display: this.state.displayOpEquipe }} className='showOpcao'>
                                     <input type="radio" name='opcao' value='op4' onClick={this.showEquipe} />
-                                     <label>Membro</label>
+                                     <label>Criar Membro</label>
                                     <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px ' }} />
                                 </div>
                             </div>
@@ -134,7 +134,7 @@ export default class Usuario extends React.Component {
                             </div>
                             <div style={{ display: this.state.displayOpBlog }} className='showOpcao'>
                                  <input type="radio" name='opcao' value='op5' onClick={this.showPostagens}/>
-                                <label>Postagens</label>
+                                <label>Criar Postagens</label>
                                 <FontAwesomeIcon icon={faAngleRight} color='gray' style={{ marginLeft: '5px' }} />
                             </div>
                             <div style={{ display: this.state.displayOpBlog }} className='showOpcao'>

@@ -89,7 +89,7 @@ export default class EditMembro extends React.Component {
                              <input type='text' value={this.state.name} onChange={e=>this.setState({name: e.target.value})} />
                             <div className='fotoMembroEdit'>
                                 {this.state.avatar2 ?
-                                    <img alt='fotomembro' className='imageMembro' src={this.state.changeSrc ? this.state.src : 'https://api-ejcomp-site.herokuapp.com/members/' + this.state.avatar2.filename} ></img>
+                                    <img alt='fotomembro' className='imageMembro' src={this.state.changeSrc ? this.state.src : 'http://191.252.113.79:5875/members/' + this.state.avatar2.filename} ></img>
                                     : <p>Sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='btnImage' />
@@ -112,7 +112,7 @@ export default class EditMembro extends React.Component {
                             <div key={member._id} className='cardMembros' onClick={() => this.showMembro(member)}>
                                 <h4 className='tituloEdit'>{member.name}</h4>
                                 {member.avatar !== null ?
-                                    < img alt='fotoMembro' className='imageMembro' src={'https://api-ejcomp-site.herokuapp.com/members/' + member.avatar.filename} />
+                                    < img alt='fotoMembro' className='imageMembro' src={'http://191.252.113.79:5875/members/' + member.avatar.filename} />
                                     : <p>Membro sem foto</p>
                                 }
                             </div>
