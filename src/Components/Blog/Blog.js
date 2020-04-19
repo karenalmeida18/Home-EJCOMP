@@ -18,7 +18,7 @@ export default class Blog extends React.Component {
             isVisible: false,
             ultimaPostagem: '',
             penultimaPostagem: '',
-            displayButtons: 'flex',
+            displayButtons: 'none',
             displayButton1: 'none',
             displayButton2: 'none',
             loading: true
