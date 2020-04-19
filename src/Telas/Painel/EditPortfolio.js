@@ -21,7 +21,7 @@ export default class EditPortfolio extends Component {
             srcImg1: null,
             srcImg2: null,
             changeSrc1: false,
-            changeSrc2: false
+            changeSrc2: false,
         }
     }
     async componentDidMount() {
@@ -44,8 +44,9 @@ export default class EditPortfolio extends Component {
         const form = new FormData();
         form.append("name", this.state.name);
         form.append("description", this.state.description);
-        if (this.state.image1) form.append("photos", this.state.image1);
-        if (this.state.image2) form.append("photos", this.state.image2);
+        if (this.state.image1) form.append("photos_1", this.state.image1);
+        if (this.state.image2) form.append("photos_2", this.state.image2);
+                        
         try {
             console.log(this.state.name);
             await api.put(`/portfolio/${this.state.id}`, form, { headers: { 'content-type': 'multipart/form-data' } })
@@ -76,7 +77,7 @@ export default class EditPortfolio extends Component {
           this.setState({
             image1: image1,
             changeImg1: image1,
-            src: reader.result,
+            srcImg1: reader.result,
             changeSrc1: true
           });
         }
@@ -93,14 +94,14 @@ export default class EditPortfolio extends Component {
           this.setState({
             image2: image2,
             changeImg2: image2,
-            src: reader.result,
+            srcImg2: reader.result,
             changeSrc2: true
           });
         }
         reader.readAsDataURL(image2)
     }
     showPortfolio(port) {
-        this.setState({ isVisible: true, id: port._id, name: port.name, description: port.description, changeImg1: port.photos[0], changeImg2: port.photos[1]})
+        this.setState({ isVisible: true, id: port._id, name: port.name, description: port.description, changeImg1: port.photos_1[0], changeImg2: port.photos_2[0]})
         console.log(port)
     }
     render() {
@@ -114,16 +115,16 @@ export default class EditPortfolio extends Component {
                             <input type='text' value={this.state.name} onChange={e=>this.setState({name: e.target.value})} />
                             <div className='fotoPort'>
                             {this.state.changeImg1 ?
-                                <img className='imagePort' src={this.state.changeSrc1 ? this.state.src: 'http://191.252.113.79:5875/portfolio/' + this.state.changeImg1.filename}></img>
+                                <img className='imagePort' src={this.state.changeSrc1 ? this.state.srcImg1: 'http://191.252.113.79:5875/portfolio/' + this.state.changeImg1.filename}></img>
                                     : <p>sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage1} placeholder='Adicionar Imagem' className='containerButtons' />
                             <div className='fotoPort'>
                             {this.state.changeImg2 ?
-                                <img className='imagePort' src={this.state.changeSrc2 ? this.state.src: 'http://191.252.113.79:5875/portfolio/' + this.state.changeImg2.filename}></img>
+                                <img className='imagePort' src={this.state.changeSrc2 ? this.state.srcImg2: 'http://191.252.113.79:5875/portfolio/' + this.state.changeImg2.filename}></img>
                                     : <p>sem foto</p>}
                             </div>
-                            <input type='file' onChange={this.handleChangeImage1} placeholder='Adicionar Imagem' className='containerButtons' />
+                            <input type='file' onChange={this.handleChangeImage2} placeholder='Adicionar Imagem' className='containerButtons' />
                             <input type='text' value={this.state.description} onChange={e=>this.setState({description: e.target.value})} />
                             <div className='buttonsEdit'>
                                 <button onClick={() => this.editarPort()}>Editar portfolio</button>

@@ -55,8 +55,8 @@ export default class PortfolioPainel extends Component {
         let data = new FormData();
         data.append("name",this.state.name);
         data.append("description",this.state.description);
-        data.append("photos", this.state.image1);
-        data.append("photos", this.state.image2);
+        data.append("photos_1", this.state.image1);
+        data.append("photos_2", this.state.image2);
         try{
             await api.post("/portfolio",data, {headers:{'Content-Type': 'multipart/form-data'}} )
             .then(response=>{

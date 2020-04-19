@@ -11,7 +11,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
         isAuthenticated() ? (
           <Component {...props} />
         ) : (
-          <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+          <Redirect to={{ pathname: "/painel", state: { from: props.location } }} />
         )
       }
     />
@@ -21,9 +21,9 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-            <Route exact path="/" component={Login} />
+            <Route exact path="/admin" component={Login} />
             <PrivateRoute exact path="/painel" component={Usuario} />
-            <Route path="*" component={() => <h1>Page not found</h1>} />
+            <Route path="*" component={() => <h1>Page not founde</h1>} />
             </Switch>
         </BrowserRouter>
     )
