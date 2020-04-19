@@ -77,7 +77,7 @@ export default class Usuario extends React.Component {
     }
     logoutPainel = () =>{
         logout()
-        this.props.history.push("/");
+        this.props.history.push("/admin");
     }
     render() {
         return (
