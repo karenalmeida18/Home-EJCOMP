@@ -1,46 +1,191 @@
 .Blog{
-    background-color: #1b1b1b;
-    width: 100vw;
-    height: 100vh;  
-    text-align: center;
-    color: white;
+    width: 100%;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
-    flex-direction: column;
-
+}
+.containerBlog{
+    margin-top: 5%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 70% 30%;
+    overflow-x: hidden;
+}
+.containerPostCompleto{
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    word-wrap: break-word;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
    
 }
-.TextBlog{
-    animation-name: moveLeft;
-    animation-duration: 1s;
+.conteudoPostagem {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.ContainerBlog{
-   margin:auto;
-   position:absolute;
-   top:50%;
-   transform: translate(-50%,-50%);
-   left: 50%;
-      
+.conteudoPostagem > .imagePreview{
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
+.btnVoltar{
+    justify-content: end;
+    align-items: flex-end;
+    padding:  4px 30px 4px 30px;
+    font-size: 12pt;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 2px;
+    border: 1px solid #12264A;
+    color: #12264A;
+    background-color: white;
+}
+.headerTituloPost{
+  border-bottom: 1px solid #12264A;
+}
+.titlePostC{
+  font-size: 25pt;
+  color: rgba(0, 0, 0, 0.849);
+}
+.Aside{
+    right: 0;
+    height: 100%;
+    background-color: transparent;
+    border-left: 4px solid #12264A;
+    border-radius: 2px 2px 2px 2px;
+    text-align: center;
+}
+.titleB{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    word-wrap: break-word;
+    margin-bottom: 5%;
 
-.IconBlog{
-    margin-bottom: 50px;
-    font-size: 100px;
-    animation-name: moveLeft;
-    animation-duration: 1s;
 }
+.textPost{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    color: #12264A;
+    border: 1px solid #12264A;
+    padding: 15%;
+    font-size: 20pt;
+}
+.Título{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 300px;
+    font-size: 20px;
+    display: inline-block;
+}
+.btnPagina{
+    border: 1px solid #12264A;
+    color: #12264A;
+    padding: 3px 10px 3px 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.numeroPagina{
+    border: 1px solid #12264A;
+    padding: 1px 10px 1px 10px;
+    color: #12264A;
+    font-size: 13pt;
+}
+.btnIcon{
+    margin-left: 10%;
+}
+.btnIcon2{
+    margin-right: 10%;
+}
+.buttonsPagination{
+    text-align: center;
+    flex-direction: row;
+}
+.cardPost {
+    margin-bottom: 2%;
+    width: 90%;
+    flex-direction: row;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: row;
+    padding: 5% 2% 5% 2%;
+    background-color: rgba(128, 128, 128, 0.123);
+}
+.containerPost >h2 {
+    margin-bottom: 2%;
+}
+.dataPost{
+    font-size: 10pt;
+    padding: 0 0 10px;
+    color: gray;
+}
+.imagemPost{
+    width: 20%;
+    height:auto;
+}
+.containerPost{
+    margin-left: 2%;
+}
+.containerCardPost{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
 
-@keyframes rodaroda {
-    from {
-        transform:rotate(0deg);
+}
+.descricaoPost{
+    padding: 0 0 10px;
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 11pt;
+}
+.btnPost{
+    font-size: 10pt;
+   margin-top: 5%;
+}
+.titleB::before {
+    content: "•"; color: black;
+    display: inline-block; width: 1em;
+    margin-left: -1em
+}
+.titleB:hover{
+   cursor: pointer;
+}
+.buttonsPagination{
+  display: flex;
+  flex-direction: row;
+}
+.containerTitulosB{
+    border-bottom: 1px solid #12264A;
+    border-top: 1px solid #12264A;
+    margin-top: 5%;
+}
+.Postagens{
+ padding: 10px;
+}
+@media screen and (max-width: 768px){
+    .Aside{
+        display: none;
     }
-    to {
-        transform:rotate(360deg);
+    .containerBlog{
+        display: flex;
+        flex-direction: column;
     }
-}
+    .titlePostC{
+        font-size: 15pt;
+    }
+    .cardPost{
+        flex-direction: column;
+    }
+    .imagemPost{
+        margin-bottom: 5%;
+        width: 100%;
+        height: 50%;
+    }
 
-.IconBlog:hover{
-    color: rgb(0, 119, 255);
-    animation-name: rodaroda;
-    animation-duration: 0.5s;
-   animation-timing-function: linear;
 }

@@ -64,6 +64,7 @@
   .MuiGrid-spacing-xs-2{
     overflow-x: hidden;
     width: 100% !important;
+    overflow-x: hidden;
   }
   @media screen and (max-width: 1024px){
     .itemMenu{
@@ -88,6 +89,7 @@
     margin-top: 4%;
     margin-right: 3%;
     margin-left: 3%;
+    overflow-x: hidden;
   }
 
   #divApps {
@@ -101,14 +103,22 @@
     float: right;
   }
 
-  .hr-text{
-    margin-left: auto;
-    margin-right: auto;
+  .hr-text1{
+    box-sizing: border-box;
     border-bottom: 5px solid #12264A;
     opacity: .95;
     border-radius: 1px 1px 1px 1px;
-    margin-right: -7px;
     width: 100%; 
+    overflow-x: hidden;
+  }
+  .hr-text2{
+    box-sizing: border-box;
+    border-bottom: 5px solid #12264A;
+    opacity: .95;
+    border-radius: 1px 1px 1px 1px;
+    width: 100%; 
+    animation-name: moveRight;
+    overflow-x: hidden;
   }
 
   @media screen and (max-width: 768px){

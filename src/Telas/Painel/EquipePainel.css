@@ -1,0 +1,81 @@
+.EquipePainel{
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    display: none;
+    margin-left:30% ;
+
+}
+.containerEquipePainel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.headerEquipe{
+    -webkit-box-shadow: 0px 2px 5px 0px gray;
+    -moz-box-shadow: 0px 2px 5px 0px gray;
+    box-shadow: 0px 2px 5px 0px gray;
+    padding: 20px;
+}
+.fotoAdmMembro{
+    border: 1px solid gray;
+    width: 300px;
+    height: 200px;
+}
+.containerButtons{
+    padding: 10px;
+    border: 1px solid gray;
+    background-color:  rgba(245, 245, 245, 0.568);
+    margin-top: 2px;
+}
+.sectionMembroImagem{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px ;
+    margin: 10%;
+}
+.sectionMembroText > input{
+    border: 1px solid gray;
+    width: 300px ;
+    padding: 10px;
+    margin-top: 2px;
+}
+.sectionMembroText{
+    width: 300px;
+    text-align: center;
+    margin: 10%;
+    
+}
+.concluir{
+   justify-content: flex-end;
+   align-items: flex-end;
+    border-radius: 3px;
+    font-size: 12pt;
+    padding: 7px 40px 7px 40px;
+    background-color: rgb(27, 168, 27);
+    margin-top: 10%;
+}
+.textPostEdit{
+    padding: 30px;
+    border: 1px solid gray;
+    height: 50%;
+    margin-top: 15%;
+}
+@media screen and  (max-width: 768px ){
+    .containerEquipePainel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and  (max-width:  768px ){
+    .EquipePainel{
+        width: 100%;
+        align-items: center;
+    }
+    .sectionMembroText{
+        margin: 0;
+    }
+    .fotoAdmMembro{
+        width: 100%;
+    }
+}

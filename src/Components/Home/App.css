@@ -17,6 +17,10 @@
     box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     -moz-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     -webkit-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: grid;
 
 }
 #grid-row3{
@@ -115,7 +119,7 @@
         display: none;
     }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) {
     #menu{
         display: none;
     }

@@ -1,0 +1,97 @@
+.blogPainel{
+    font-family: 'Roboto', sans-serif;
+    width: 70%;
+    margin-left:30% ;
+    height: 100vh;  
+}
+.containerBlogPainel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 100%;
+}
+.imagePreview{
+    width: 300px;
+    height: 200px;
+}
+.headerBlog{
+    -webkit-box-shadow: 0px 2px 5px 0px gray;
+    -moz-box-shadow: 0px 2px 5px 0px gray;
+    box-shadow: 0px 2px 5px 0px gray;
+    width: 100%;
+    height: 70px;
+}
+.headerBlog > h3 {
+    font-weight: normal;
+    margin: 15px;
+    position: absolute;
+}
+.headerBlog > h5 {
+    position: relative;
+    top: 55%;
+    margin-left: 40px;
+    font-weight: normal;
+}
+#setaBlog {
+    position: relative;
+    left: 60px;
+    top: 4px;
+}
+.fotoPost{
+    border: 1px solid gray;
+    width: 300px;
+    height: 200px;
+}
+.containerButtons{
+    padding: 10px;
+    border: 1px solid gray;
+    background-color:  rgba(245, 245, 245, 0.568);
+    margin-top: 2px;
+}
+.sectionBlogImagem{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px ;
+    margin: 10%;
+}
+.sectionBlogText > input{
+    border: 1px solid gray;
+    width: 300px ;
+    padding: 10px;
+    margin-top: 2px;
+}
+.sectionBlogText{
+    width: 300px;
+    text-align: center;
+    margin: 10%;
+    
+}
+.concluir{
+   justify-content: flex-end;
+   align-items: flex-end;
+    border-radius: 3px;
+    font-size: 12pt;
+    padding: 7px 40px 7px 40px;
+    background-color: rgb(27, 168, 27);
+    margin-top: 10%;
+}
+
+@media screen and  (max-width: 768px ){
+    .containerBlogPainel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and  (max-width:  768px ){
+    .blogPainel{
+        width: 100%;
+        align-items: center;
+    }
+    .sectionBlogText{
+        margin: 0;
+    }
+    .fotoPost{
+        width: 100%;
+    }
+}
