@@ -3,9 +3,8 @@ import './Login.css'
 import logo from '../../Imagem/logo.svg'
 import api from '../../Services/api'
 import { login } from "../../Services/auth";
-
-
-export default class Login extends React.Component {
+import {  withRouter } from "react-router-dom";
+  class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -147,3 +146,4 @@ export default class Login extends React.Component {
         )
     }
 }
+export default withRouter(Login);

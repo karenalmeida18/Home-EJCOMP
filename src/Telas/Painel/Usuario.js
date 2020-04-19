@@ -10,10 +10,9 @@ import EditPostagens from './EditPostagens'
 import DeleteUser from './DeleteUser'
 import CreateUser from './CreateUser'
 import EditMembro from './EditMembro'
-import { logout } from "../../Services/auth";
-
-
-export default class Usuario extends React.Component {
+import { logout } from "../../Services/auth"
+import {  withRouter } from "react-router-dom";
+class Usuario extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -165,3 +164,4 @@ export default class Usuario extends React.Component {
         );
     }
 }
+export default withRouter(Usuario);
