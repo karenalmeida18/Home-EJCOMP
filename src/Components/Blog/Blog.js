@@ -3,7 +3,7 @@ import "./Blog.css";
 import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile';
 import Footer from '../Footer/Footer';
-import api from '../../Services/api'
+import { api, baseURL }  from '../../Services/api'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight, faArrowRight, faArrowLeft, faSpinner } from '@fortawesome/free-solid-svg-icons'
 export default class Blog extends React.Component {
@@ -93,7 +93,7 @@ export default class Blog extends React.Component {
                                 </div>
                                 <div className='conteudoPostagem'>
                                     <h2 style={{ marginTop: '5%', fontSize: '20pt' }}>{this.state.title}</h2>
-                                    <img className='imagePreview' alt='imagemBlog' src={'http://191.252.113.79:5875/projects/' + this.state.image.filename} />
+                                    <img className='imagePreview' alt='imagemBlog' src={baseURL + '/projects/' + this.state.image.filename} />
                                 </div>
                                 <div dangerouslySetInnerHTML={{ __html: this.state.description}}/> 
                                 <button onClick={() => { this.setState({ isVisible: false, displayPostagens: 'flex' }) }} className='btnVoltar'>voltar</button>
@@ -104,7 +104,7 @@ export default class Blog extends React.Component {
                                 posts.length > 0 ?
                                     posts.map(post => (
                                         <div className="cardPost">
-                                            <img src={'http://191.252.113.79:5875/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" />
+                                            <img src={baseURL + '/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" />
                                             <div className="containerPost">
                                                 <h3 className='titlePosts'>{post.title}</h3>
                                                 <p className='dataPost'>{post.createdAt.substr(0, 10)}</p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './EditPostagens.css'
-import api from '../../Services/api'
+import { api, baseURL }  from '../../Services/api'
 import { faTimes, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CKEditor from '@ckeditor/ckeditor5-react';
@@ -94,7 +94,7 @@ export default class EditPostagens extends React.Component {
                             <input type='text' value={this.state.title} onChange={e => this.setState({ title: e.target.value })} />
                             <div className='fotoPostEdit'>
                                 {this.state.image2 ?
-                                    <img className='imagePostagem' alt='fotoblog' src={this.state.changeSrc ? this.state.src : 'http://191.252.113.79:5875/projects/' + this.state.image2.filename} ></img>
+                                    <img className='imagePostagem' alt='fotoblog' src={this.state.changeSrc ? this.state.src : baseURL + '/projects/' + this.state.image2.filename} ></img>
                                     : <p>sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage} placeholder='Adicionar Imagem' className='btnImage' />
@@ -134,7 +134,7 @@ export default class EditPostagens extends React.Component {
                             <div key={post._id} className='cardPostagens' onClick={() => this.showArtigo(post)}>
                                 <h4 className='tituloEdit'>{post.title}</h4>
                                 {post.image !== null ?
-                                    < img className='imagePostagem' alt='fotoblog1' src={'http://191.252.113.79:5875/projects/' + post.image.filename} />
+                                    < img className='imagePostagem' alt='fotoblog1' src={baseURL + '/projects/' + post.image.filename} />
                                     : <p>post sem foto</p>
                                 }
                             </div>

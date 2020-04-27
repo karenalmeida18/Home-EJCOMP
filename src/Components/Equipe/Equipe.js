@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import './Equipe.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
-import api from '../../Services/api'
+import { api, baseURL }  from '../../Services/api'
 import MenuMobile from '../MenuMobile/MenuMobile' 
 
 const responsive = {
@@ -84,7 +84,7 @@ export default class Equipe extends React.Component {
           >
             {this.state.members1.map(membro => (
               <Membros
-                fotoMembro={'http://191.252.113.79:5875/members/' + membro.avatar.filename}
+                fotoMembro={baseURL + '/members/' + membro.avatar.filename}
                 textNome={membro.name}
                 textCargo={membro.occupation}
               />
@@ -115,7 +115,7 @@ export default class Equipe extends React.Component {
             className="fadeScale">
             {this.state.members2.map(membro => (
               <Membros
-                fotoMembro={'http://191.252.113.79:5875/members/' + membro.avatar.filename}
+                fotoMembro={baseURL + '/members/' + membro.avatar.filename}
                 textNome={membro.name}
                 textCargo={membro.occupation}
               />

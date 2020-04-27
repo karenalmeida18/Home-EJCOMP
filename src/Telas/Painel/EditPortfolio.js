@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import api from '../../Services/api';
+import React, {Component} from 'react'
+import { api, baseURL }  from '../../Services/api'
 import { faTimes, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './EditPortfolio.css';
@@ -115,13 +115,13 @@ export default class EditPortfolio extends Component {
                             <input type='text' value={this.state.name} onChange={e=>this.setState({name: e.target.value})} />
                             <div className='fotoPort'>
                             {this.state.changeImg1 ?
-                                <img className='imagePort' src={this.state.changeSrc1 ? this.state.srcImg1: 'http://191.252.113.79:5875/portfolio/' + this.state.changeImg1.filename}></img>
+                                <img className='imagePort' src={this.state.changeSrc1 ? this.state.srcImg1: baseURL + '/portfolio/' + this.state.changeImg1.filename}></img>
                                     : <p>sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage1} placeholder='Adicionar Imagem' className='containerButtons' />
                             <div className='fotoPort'>
                             {this.state.changeImg2 ?
-                                <img className='imagePort' src={this.state.changeSrc2 ? this.state.srcImg2: 'http://191.252.113.79:5875/portfolio/' + this.state.changeImg2.filename}></img>
+                                <img className='imagePort' src={this.state.changeSrc2 ? this.state.srcImg2: baseURL + '/portfolio/' + this.state.changeImg2.filename}></img>
                                     : <p>sem foto</p>}
                             </div>
                             <input type='file' onChange={this.handleChangeImage2} placeholder='Adicionar Imagem' className='containerButtons' />

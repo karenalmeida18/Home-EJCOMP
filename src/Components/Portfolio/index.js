@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile'
 import PortCard from './PortCard';
 import Footer from '../Footer/Footer'
-import api from '../../Services/api'
+import { api, baseURL }  from '../../Services/api'
 export default class Portfolio extends React.Component {
   constructor(props) {
     super(props);
@@ -41,8 +41,8 @@ export default class Portfolio extends React.Component {
               >
 
                 <PortCard
-                  image1={'http://191.252.113.79:5875/portfolio/' + tile.photos_1[0].filename}
-                  image2={'http://191.252.113.79:5875/portfolio/' + tile.photos_2[0].filename}
+                  image1={baseURL + '/portfolio/' + tile.photos_1[0].filename}
+                  image2={baseURL + '/portfolio/' + tile.photos_2[0].filename}
                   text={tile.description}
                 />
               </Grid>

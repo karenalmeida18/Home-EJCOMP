@@ -13,4 +13,6 @@ api.interceptors.request.use(async config => {
   return config;
 });
 
+const baseURL = process.env.API_URL;
+export default baseURL;
 export default api;
