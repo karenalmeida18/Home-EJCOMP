@@ -5,7 +5,7 @@ import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile'
 import PortCard from './PortCard';
 import Footer from '../Footer/Footer'
-import { api, baseURL }  from '../../Services/api'
+import {api,baseURL} from '../../Services/api'
 export default class Portfolio extends React.Component {
   constructor(props) {
     super(props);

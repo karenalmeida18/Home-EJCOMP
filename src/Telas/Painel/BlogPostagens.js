@@ -2,7 +2,7 @@ import React from 'react';
 import './BlogPainel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
-import api from '../../Services/api'
+import {api} from '../../Services/api'
 import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 

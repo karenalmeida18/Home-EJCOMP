@@ -8,6 +8,7 @@
     border-radius: 30px;
     transition-duration: 0.3s;  
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 #texto{
   background-color : transparent;

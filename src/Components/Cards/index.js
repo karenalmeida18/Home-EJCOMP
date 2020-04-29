@@ -28,7 +28,7 @@ export default class Card extends Component{
             <div id="divSites">
                 <p style={{fontSize: '150%', marginBottom: '10px', fontWeight: 'bold'}}>Sites</p>
                 <h4 align="justify">A EJComp utiliza das ferramentas mais atualizadas do mercado para a criação de sites 
-                    profissionais e administráveis, ou seja, totalmente dinâmico!Faremos o leavantamento 
+                    profissionais e administráveis, ou seja, totalmente dinâmico! Faremos o levantamento 
                     das suas necessidades através de perguntas no Briefing, para entendermos melhor sua expectativa. 
                     Após esse levantamento, começaremos o desenvolvimento desde o design até a publicação do site.
                     Se você deseja fazer um site, veio ao local certo. Confira alguns de nossos projetos
@@ -50,8 +50,8 @@ export default class Card extends Component{
             <div id="divApps" className="fadeRight">
                 <p style={{fontSize: '150%',  marginBottom: '10px', fontWeight: 'bold'}}>Aplicativos</p>
                 <h4 style={{fontWeight: 'none'}} align="justify">Recorrer a um aplicativo pode, muitas vezes, torna-se a melhor maneira de resolver problemas do cotidiano.
-                 Apesar de muito útil, no mercado, fazer um app as vezes pode ser muito caro, mas na EJComp, com preços bem mais acessíveis, podemos tornar sua ideia, uma realidade.
-                 Tem uma ideia de aplicativo? A EJCOMP pode te ajudar a unir o melhor dos dois mundos!
+                 Apesar de muito útil, no mercado, fazer um app às vezes pode ser muito caro, mas na EJComp, com preços bem mais acessíveis, podemos tornar sua ideia, uma realidade.
+                 Tem uma ideia de aplicativo? A EJComp pode te ajudar a unir o melhor dos dois mundos!
                 </h4>
 
             </div>

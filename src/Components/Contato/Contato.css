@@ -58,6 +58,7 @@ textarea{
 }
 .Cancel{
     font-size: 20pt;
+    cursor: pointer;
 }
 .Cancel:hover{
     color: #12264A;
@@ -67,6 +68,7 @@ textarea{
 .envio{
     margin-top: 5%;
     box-shadow:  0 6px 3px black;
+    cursor: pointer;
 }
 .envio:hover{
     background-color: black;

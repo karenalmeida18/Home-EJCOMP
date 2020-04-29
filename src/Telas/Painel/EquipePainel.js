@@ -1,6 +1,6 @@
 import React from 'react'
 import './EquipePainel.css'
-import api from '../../Services/api'
+import {api} from '../../Services/api'
 export default class EquipePainel extends React.Component {
     constructor(props) {
         super(props);

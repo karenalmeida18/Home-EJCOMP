@@ -5,7 +5,7 @@ import "react-multi-carousel/lib/styles.css";
 import './Equipe.css'
 import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
-import { api, baseURL }  from '../../Services/api'
+import {api, baseURL }  from '../../Services/api'
 import MenuMobile from '../MenuMobile/MenuMobile' 
 
 const responsive = {

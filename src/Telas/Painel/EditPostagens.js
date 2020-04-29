@@ -1,6 +1,6 @@
 import React from 'react';
 import './EditPostagens.css'
-import { api, baseURL }  from '../../Services/api'
+import {api,baseURL }  from '../../Services/api'
 import { faTimes, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CKEditor from '@ckeditor/ckeditor5-react';

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.css'
 import logo from '../../Imagem/logo.svg'
-import api from '../../Services/api'
+import {api} from '../../Services/api'
 import { login } from "../../Services/auth";
 import {  withRouter } from "react-router-dom";
   class Login extends React.Component {

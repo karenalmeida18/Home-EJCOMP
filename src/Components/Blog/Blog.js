@@ -3,7 +3,7 @@ import "./Blog.css";
 import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile';
 import Footer from '../Footer/Footer';
-import { api, baseURL }  from '../../Services/api'
+import {api,baseURL }  from '../../Services/api'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight, faArrowRight, faArrowLeft, faSpinner } from '@fortawesome/free-solid-svg-icons'
 export default class Blog extends React.Component {

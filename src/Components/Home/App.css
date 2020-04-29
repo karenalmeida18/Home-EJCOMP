@@ -64,6 +64,7 @@
     font-weight: bolder;
     outline: 0px;
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 #btn2:hover{
     background-color: rgb(2, 44, 90);

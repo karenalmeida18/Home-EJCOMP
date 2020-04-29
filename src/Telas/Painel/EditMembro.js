@@ -1,6 +1,6 @@
 import React from 'react';
 import './EditMembro.css'
-import { api, baseURL }  from '../../Services/api'
+import {api,baseURL }  from '../../Services/api'
 import { faTimes , faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 export default class EditMembro extends React.Component {

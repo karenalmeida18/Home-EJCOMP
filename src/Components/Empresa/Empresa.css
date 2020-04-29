@@ -49,6 +49,7 @@
 
 }
 .buttonEmpresa {
+    cursor: pointer;
     border-radius: 100px;
     background-color: #12264A;
     color:#fff;

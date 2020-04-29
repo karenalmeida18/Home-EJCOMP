@@ -1,6 +1,6 @@
 import React ,{Component} from 'react';
 import './PortfolioPainel.css';
-import api from '../../Services/api';
+import {api} from '../../Services/api';
 export default class PortfolioPainel extends Component {
     constructor(props) {
         super(props);

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { api, baseURL }  from '../../Services/api'
+import {api,baseURL }  from '../../Services/api'
 import { faTimes, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './EditPortfolio.css';
