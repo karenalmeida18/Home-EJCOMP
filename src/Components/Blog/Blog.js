@@ -104,7 +104,7 @@ export default class Blog extends React.Component {
                                 posts.length > 0 ?
                                     posts.map(post => (
                                         <div className="cardPost">
-                                            <img src={baseURL + '/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" />
+                                           <div> <img src={baseURL + '/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" /></div>
                                             <div className="containerPost">
                                                 <h3 className='titlePosts'>{post.title}</h3>
                                                 <p className='dataPost'>{post.createdAt.substr(0, 10)}</p>
