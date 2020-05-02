@@ -10,6 +10,16 @@
     grid-template-columns: 70% 30%;
     overflow-x: hidden;
 }
+.imagemPost{
+    max-width: 100%;
+    margin: 'auto';
+    display: 'block';
+    max-height: 100%;
+}
+.divImage{
+    width: 200px;
+    height: 180px,
+}
 .containerPostCompleto{
     margin-right: auto;
     margin-left: auto;
@@ -42,6 +52,7 @@
     border: 1px solid #12264A;
     color: #12264A;
     background-color: white;
+    cursor: pointer;
 }
 .headerTituloPost{
   border-bottom: 1px solid #12264A;
@@ -108,14 +119,11 @@
     flex-direction: row;
 }
 .cardPost {
-    margin-bottom: 2%;
-    width: 90%;
-    flex-direction: row;
+    margin-bottom: 3% !important;
     word-wrap: break-word;
-    display: flex;
-    flex-direction: row;
-    padding: 5% 2% 5% 2%;
     background-color: rgba(128, 128, 128, 0.123);
+    width: 90% !important;
+    padding: 2%;
 }
 .containerPost >h2 {
     margin-bottom: 2%;
@@ -123,11 +131,6 @@
 .dataPost{
     font-size: 10pt;
     padding: 0 0 10px;
-    color: gray;
-}
-.imagemPost{
-    width: 20%;
-    height:auto;
 }
 .containerPost{
     margin-left: 2%;
@@ -137,16 +140,12 @@
    flex-direction: column;
    align-items: center;
    height: 100vh;
+   flex-wrap: nowrap;
 
 }
 .descricaoPost{
-    padding: 0 0 10px;
     color: rgba(0, 0, 0, 0.623);
     font-size: 11pt;
-}
-.btnPost{
-    font-size: 10pt;
-   margin-top: 5%;
 }
 .titleB::before {
     content: "•"; color: black;
@@ -159,6 +158,7 @@
 .buttonsPagination{
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 .containerTitulosB{
     border-bottom: 1px solid #12264A;
@@ -168,7 +168,8 @@
 .Postagens{
  padding: 10px;
 }
-@media screen and (max-width: 768px){
+
+@media all and (max-width: 778px){
     .Aside{
         display: none;
     }
@@ -182,10 +183,14 @@
     .cardPost{
         flex-direction: column;
     }
-    .imagemPost{
-        margin-bottom: 5%;
-        width: 100%;
-        height: 50%;
+    .divImage{
+        width: 100% !important;
+    }
+    .containerPost{
+        width: 100% !important;
+    }
+    .MuiGrid-spacing-xs-2{
+        margin: auto !important;
     }
 
 }

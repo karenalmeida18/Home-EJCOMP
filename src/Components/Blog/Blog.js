@@ -3,9 +3,11 @@ import "./Blog.css";
 import Navbar from '../Navbar/Navbar';
 import MenuMobile from '../MenuMobile/MenuMobile';
 import Footer from '../Footer/Footer';
-import {api,baseURL }  from '../../Services/api'
+import { api, baseURL } from '../../Services/api'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleRight, faArrowRight, faArrowLeft, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 export default class Blog extends React.Component {
     constructor(props) {
         super(props);
@@ -25,10 +27,10 @@ export default class Blog extends React.Component {
         }
     }
     listPosts = async (pagina) => {
-        this.setState({loading: true})
+        this.setState({ loading: true })
         const response = await api.get(`/projects/`);
-        this.setState({  posts: response.data.projects, loading: false})
-        const indice = response.data.projects.length - 1;       
+        this.setState({ posts: response.data.projects, loading: false })
+        const indice = response.data.projects.length - 1;
         if (response.data.projects.length > 1) {
             this.setState({
                 ultimaPostagem: response.data.projects[indice],
@@ -44,8 +46,9 @@ export default class Blog extends React.Component {
                 displayButtons: 'flex',
                 displayButton1: 'flex',
 
-            })}
-            this.listItens(this.state.posts.reverse(), pagina, 2)
+            })
+        }
+        this.listItens(this.state.posts.reverse(), pagina, 2)
     }
     listItens = (items, pageAtual, limite) => {
         let result = [];
@@ -95,7 +98,7 @@ export default class Blog extends React.Component {
                                     <h2 style={{ marginTop: '5%', fontSize: '20pt' }}>{this.state.title}</h2>
                                     <img className='imagePreview' alt='imagemBlog' src={baseURL + '/projects/' + this.state.image.filename} />
                                 </div>
-                                <div dangerouslySetInnerHTML={{ __html: this.state.description}}/> 
+                                <div dangerouslySetInnerHTML={{ __html: this.state.description }} />
                                 <button onClick={() => { this.setState({ isVisible: false, displayPostagens: 'flex' }) }} className='btnVoltar'>voltar</button>
                             </div> : null
                         }
@@ -104,15 +107,35 @@ export default class Blog extends React.Component {
                                 posts.length > 0 ?
                                     posts.map(post => (
                                         <div className="cardPost">
-                                            <img src={baseURL + '/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" />
-                                            <div className="containerPost">
-                                                <h3 className='titlePosts'>{post.title}</h3>
-                                                <p className='dataPost'>{post.createdAt.substr(0, 10)}</p>
-                                                <div className='descricaoPost'dangerouslySetInnerHTML={{__html:this.limitText(post.description)}}/>
-                                                <p onClick={() => this.postCompleto(post)} className='btnPost'>Veja mais
+                                            <Grid container spacing={2}>
+                                                <Grid item>
+                                                    <div className='divImage'>
+                                                        <img src={baseURL + '/projects/' + post.image.filename} alt='imagemBlogCard' className="imagemPost" />
+                                                    </div>
+                                                </Grid>
+                                                <Grid item xs={12} sm container>
+                                                    <Grid item xs container direction="column" spacing={2}>
+                                                        <Grid item xs>
+                                                            <Typography gutterBottom variant="subtitle1">
+                                                                <h3 className='titlePosts'>{post.title}</h3>
+                                                            </Typography>
+                                                            <Typography variant="body2" color="textSecondary">
+                                                                <p className='dataPost'>{post.createdAt.substr(0, 10)}</p>
+                                                            </Typography>
+                                                            <Typography variant="body2" gutterBottom>
+                                                                <div className='descricaoPost' dangerouslySetInnerHTML={{ __html: this.limitText(post.description) }} />
+                                                            </Typography>
+                                                        </Grid>
+                                                        <Grid item>
+                                                            <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                                                                <p onClick={() => this.postCompleto(post)}>Veja mais
                                          <FontAwesomeIcon icon={faAngleDoubleRight} color='black' size='xs' style={{ marginLeft: '2px' }} />
-                                                </p>
-                                            </div>
+                                                                </p>
+                                                            </Typography>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </Grid>
                                         </div>
                                     )) : <h3 className='textPost'>Ainda não contém nenhuma postagem</h3>
                             }
