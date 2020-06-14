@@ -15,7 +15,6 @@ export default class Portfolio extends React.Component {
   }
   async componentDidMount() {
     const response = await api.get(`/portfolio/`)
-    console.log(response.data.portfolio);
     this.setState({
         ports: response.data.portfolio,
     })

@@ -4,7 +4,7 @@
     box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     -moz-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
     -webkit-box-shadow: inset 0 0 0 10000px rgba(25, 38, 54, 0.82);
-    background-image:  url("../../Imagem/fundomej.png");;
+    background-image:  url("../../Imagem/fundomej.jpg");;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
@@ -58,7 +58,7 @@
     margin: 20px;
     box-shadow:  0 4px 4px black;
     animation-duration: 1s;
-    background-image: url('../../Imagem/mej.png');
+    background-image: url('../../Imagem/mej.jpg');
     background-size: 100% 100%;
   }
   .itemMenuMej{

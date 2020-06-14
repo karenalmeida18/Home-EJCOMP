@@ -38,8 +38,7 @@ export default class Equipe extends React.Component {
   }
 
   async componentDidMount() {
-    const response = await api.get(`/members/`)
-    console.log(response.data.members);
+    const response = await api.get(`/members/`);
     const tam = parseInt(response.data.members.length / 2);
     let aux1 = [];
     let aux2 = [];
